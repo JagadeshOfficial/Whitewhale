@@ -14,8 +14,8 @@ export default function AboutPage() {
   return (
     <div>
       <PageHeader
-        title="About Investor Insights Hub"
-        description="We are a forward-thinking investment firm dedicated to identifying and nurturing the most promising ventures that will shape tomorrow's world."
+        title="About Innovate Solutions"
+        description="We are a passionate team of engineers, designers, and strategists dedicated to building exceptional digital products."
         imageUrl={placeholderImages.heroAbout.imageUrl}
         imageHint={placeholderImages.heroAbout.imageHint}
       />
@@ -26,10 +26,10 @@ export default function AboutPage() {
             <div className="prose prose-lg max-w-none text-muted-foreground">
               <h2 className="text-3xl font-headline text-foreground">Our Story</h2>
               <p>
-                Founded in 2010 by a group of passionate investors and entrepreneurs, Investor Insights Hub was built on a simple premise: to be a true partner to visionaries. We saw a gap in the market for an investment firm that provided not only capital but also deep operational expertise and unwavering support.
+                Founded in 2015, Innovate Solutions was built on the idea that technology can solve real-world problems. We saw a need for a software partner that was agile, collaborative, and deeply committed to client success.
               </p>
               <p>
-                Over the past decade, we have grown from a small fund to a multi-strategy investment platform, but our core philosophy remains unchanged. We believe in building lasting relationships and growing together with our portfolio companies.
+                Over the years, we've grown into a full-service digital product agency, but our core philosophy remains the same: we build software that people love to use, and we build relationships that last.
               </p>
             </div>
             <div className="space-y-8">
@@ -38,7 +38,7 @@ export default function AboutPage() {
                   <CardTitle className="font-headline">Our Mission</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground">To empower visionary entrepreneurs and businesses with the capital, strategic guidance, and network they need to create transformative and lasting value.</p>
+                  <p className="text-muted-foreground">To empower businesses with innovative and reliable technology, turning ambitious ideas into powerful digital realities.</p>
                 </CardContent>
               </Card>
               <Card>
@@ -46,7 +46,7 @@ export default function AboutPage() {
                   <CardTitle className="font-headline">Our Vision</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground">To be the investment partner of choice for the next generation of industry-defining companies, fostering innovation that drives positive global change.</p>
+                  <p className="text-muted-foreground">To be the most trusted technology partner for businesses looking to innovate, scale, and lead their industries.</p>
                 </CardContent>
               </Card>
             </div>
@@ -59,7 +59,7 @@ export default function AboutPage() {
           <div className="text-center">
             <h2 className="text-3xl md:text-4xl font-headline font-bold">Meet Our Team</h2>
             <p className="mt-2 text-lg text-muted-foreground max-w-2xl mx-auto">
-              A blend of experienced investors, operators, and technologists passionate about building great companies.
+              A blend of experienced architects, creative designers, and passionate developers.
             </p>
           </div>
           <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">

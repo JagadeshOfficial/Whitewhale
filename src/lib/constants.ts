@@ -8,13 +8,13 @@ export const NAV_LINKS: NavLink[] = [
     href: "#",
     label: "Services",
     subLinks: [
-      { href: "/venture-capital", label: "Venture Capital" },
-      { href: "/equity-markets", label: "Equity Markets" },
-      { href: "/secondaries", label: "Secondaries" },
+      { href: "/custom-software", label: "Custom Software" },
+      { href: "/web-mobile-apps", label: "Web & Mobile Apps" },
+      { href: "/ai-solutions", label: "AI Solutions" },
     ],
   },
-  { href: "/insights", label: "Insights" },
-  { href: "/media", label: "Media" },
+  { href: "/insights", label: "Blog" },
+  { href: "/media", label: "Case Studies" },
   { href: "/contact", label: "Contact Us" },
 ];
 

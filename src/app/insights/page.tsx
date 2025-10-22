@@ -9,16 +9,16 @@ import { insights } from '@/lib/data';
 import { placeholderImages } from '@/lib/constants';
 
 export const metadata: Metadata = {
-  title: "Insights",
-  description: "Explore our latest market analysis, reports, and investment perspectives from our team of experts.",
+  title: "Blog",
+  description: "Explore our latest articles, tutorials, and perspectives on technology and software development.",
 };
 
 export default function InsightsPage() {
   return (
     <div>
       <PageHeader
-        title="Market Insights & Analysis"
-        description="Stay ahead of the curve with our expert commentary on the trends shaping the future of investment."
+        title="Tech Insights & Ideas"
+        description="Stay ahead of the curve with our expert commentary on the trends shaping the future of technology."
         imageUrl={placeholderImages.heroInsights.imageUrl}
         imageHint={placeholderImages.heroInsights.imageHint}
       />
@@ -33,7 +33,7 @@ export default function InsightsPage() {
                     <h2 className="text-3xl font-headline font-bold">AI-Powered Summarizer</h2>
                   </div>
                   <p className="text-primary-foreground/80 mt-2">
-                    Pressed for time? Paste any investment report or article into our intelligent tool and get a concise, easy-to-read summary in seconds.
+                    Pressed for time? Paste any technical article or document into our intelligent tool and get a concise, easy-to-read summary in seconds.
                   </p>
                   <Button asChild size="lg" variant="secondary" className="mt-6">
                     <Link href="/summarize">Try the Summarizer <ArrowRight className="ml-2 h-4 w-4" /></Link>

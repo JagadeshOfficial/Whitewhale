@@ -1,51 +1,51 @@
-import { Rocket, BarChart2, Repeat, Target, BrainCircuit, Users } from 'lucide-react';
+import { Code, Smartphone, BrainCircuit, Target, Users, BarChart2 } from 'lucide-react';
 import type { Service, Insight, TeamMember, PortfolioCompany, MediaMention } from './types';
 import { placeholderImages } from './constants';
 
 export const services: Service[] = [
   {
-    title: 'Venture Capital',
-    description: 'Investing in early-stage, visionary companies that are set to redefine their industries.',
-    longDescription: 'Our Venture Capital arm focuses on identifying and nurturing high-growth, early-stage companies with the potential for significant market disruption. We provide not just capital, but also strategic guidance and access to our extensive network to help our portfolio companies achieve their full potential. We look for innovative ideas, strong leadership, and scalable business models.',
-    icon: Rocket,
-    href: '/venture-capital',
+    title: 'Custom Software',
+    description: 'Bespoke software solutions tailored to your unique business needs and challenges.',
+    longDescription: 'Our custom software development services are designed to bring your vision to life. We work closely with you to understand your requirements and build scalable, secure, and high-performance applications that drive business growth. From enterprise systems to specialized tools, we deliver solutions that provide a competitive edge.',
+    icon: Code,
+    href: '/custom-software',
   },
   {
-    title: 'Equity Markets',
-    description: 'Strategic investments in public markets to generate consistent, long-term growth.',
-    longDescription: 'In the public Equity Markets, our strategy is centered around fundamental analysis and a long-term perspective. We invest in high-quality businesses with durable competitive advantages, strong management teams, and attractive valuations. Our goal is to compound capital at superior rates over the long haul, navigating market cycles with discipline and patience.',
-    icon: BarChart2,
-    href: '/equity-markets',
+    title: 'Web & Mobile Apps',
+    description: 'Engaging and responsive applications for web and mobile platforms.',
+    longDescription: 'We build beautiful and intuitive web and mobile applications that captivate users and deliver exceptional experiences. Our team leverages the latest technologies to create cross-platform apps that are fast, reliable, and easy to use. Whether it\'s a consumer-facing app or an internal business tool, we have you covered.',
+    icon: Smartphone,
+    href: '/web-mobile-apps',
   },
   {
-    title: 'Secondaries',
-    description: 'Providing liquidity solutions in the private markets for investors and founders.',
-    longDescription: 'Our Secondaries platform offers liquidity solutions to private market stakeholders, including limited partners, founders, and early employees. We acquire interests in venture-backed companies and venture capital funds, providing a crucial mechanism for realizing value prior to a traditional exit. We act as a trusted partner, facilitating smooth and efficient transactions.',
-    icon: Repeat,
-    href: '/secondaries',
+    title: 'AI Solutions',
+    description: 'Integrating artificial intelligence to automate processes and unlock insights.',
+    longDescription: 'Harness the power of Artificial Intelligence with our custom AI and machine learning solutions. We help businesses automate complex processes, gain valuable insights from data, and create intelligent products. From natural language processing to predictive analytics, we build AI-driven systems that deliver tangible results.',
+    icon: BrainCircuit,
+    href: '/ai-solutions',
   },
 ];
 
 export const investmentApproach = [
     {
-      title: "Data-Driven Decisions",
-      description: "Our investment theses are built on rigorous quantitative and qualitative analysis, ensuring we identify true market leaders.",
-      icon: BarChart2,
+      title: "Agile Development",
+      description: "Our iterative approach ensures we can adapt to changing requirements and deliver value quickly and efficiently.",
+      icon: Target,
     },
     {
-      title: "Long-Term Partnerships",
-      description: "We see ourselves as partners, not just investors. We work closely with management teams to build enduring value.",
+      title: "User-Centric Design",
+      description: "We place users at the center of our design process, creating intuitive and engaging experiences.",
       icon: Users,
     },
     {
-      title: "Sector-Specific Expertise",
-      description: "Our team possesses deep domain knowledge across key technology and growth sectors, from AI to life sciences.",
-      icon: BrainCircuit,
+      title: "Scalable Architecture",
+      description: "We build robust and scalable systems that can grow with your business and handle increasing demand.",
+      icon: BarChart2,
     },
     {
-      title: "Global Vision",
-      description: "We identify and invest in opportunities across the globe, recognizing that innovation knows no borders.",
-      icon: Target,
+      title: "Cutting-Edge Technology",
+      description: "We stay at the forefront of technology to deliver modern, high-performance solutions.",
+      icon: BrainCircuit,
     },
 ]
 
@@ -61,20 +61,20 @@ export const insights: Insight[] = [
   },
   {
     id: '2',
-    title: 'Navigating the Green Transition: Investment Opportunities in Renewable Energy',
-    description: 'Exploring the burgeoning opportunities within the renewable energy sector as the world shifts towards a more sustainable future.',
+    title: 'Building Scalable Web Apps with Next.js',
+    description: 'Exploring the advantages of using Next.js for modern web development and best practices for building scalable applications.',
     imageUrl: placeholderImages.insight2.imageUrl,
     imageHint: placeholderImages.insight2.imageHint,
-    category: 'Sustainability',
+    category: 'Web Development',
     date: 'July 28, 2024',
   },
   {
     id: '3',
-    title: 'Understanding the Secondary Market Boom',
-    description: 'A look into why the secondary market for private assets is experiencing unprecedented growth and what it means for investors.',
+    title: 'The Importance of UX in Enterprise Software',
+    description: 'A look into why user experience is critical for the success of enterprise applications and how to design for usability.',
     imageUrl: placeholderImages.insight3.imageUrl,
     imageHint: placeholderImages.insight3.imageHint,
-    category: 'Secondaries',
+    category: 'UX Design',
     date: 'July 10, 2024',
   },
   {
@@ -88,20 +88,20 @@ export const insights: Insight[] = [
   },
   {
     id: '5',
-    title: 'Biotech Breakthroughs: Where We\'re Placing Our Bets',
-    description: 'An overview of the most promising areas in biotechnology, from gene editing to personalized medicine.',
+    title: 'AI-Powered Summarization: A Case Study',
+    description: 'An overview of how we built an AI-powered text summarization tool and the challenges we overcame.',
     imageUrl: placeholderImages.insight5.imageUrl,
     imageHint: placeholderImages.insight5.imageHint,
-    category: 'Biotechnology',
+    category: 'AI Solutions',
     date: 'June 5, 2024',
   },
   {
     id: '6',
-    title: 'The Resilience of SaaS: A Post-Pandemic Analysis',
-    description: 'SaaS business models have shown remarkable resilience. We analyze the key factors and future growth drivers for the sector.',
+    title: 'Choosing the Right Tech Stack for Your Mobile App',
+    description: 'A guide to help you decide on the best technology stack for your mobile application based on your needs and goals.',
     imageUrl: placeholderImages.insight6.imageUrl,
     imageHint: placeholderImages.insight6.imageHint,
-    category: 'Venture Capital',
+    category: 'Mobile Development',
     date: 'May 21, 2024',
   },
 ];
@@ -110,28 +110,28 @@ export const teamMembers: TeamMember[] = [
   {
     id: '1',
     name: 'Eleanor Vance',
-    role: 'Managing Partner',
+    role: 'CEO & Founder',
     imageUrl: placeholderImages.teamMember1.imageUrl,
     imageHint: placeholderImages.teamMember1.imageHint,
   },
   {
     id: '2',
     name: 'Marcus Thorne',
-    role: 'Partner, Head of Venture',
+    role: 'CTO',
     imageUrl: placeholderImages.teamMember2.imageUrl,
     imageHint: placeholderImages.teamMember2.imageHint,
   },
   {
     id: '3',
     name: 'Isabelle Rossi',
-    role: 'Partner, Head of Equities',
+    role: 'Head of Product',
     imageUrl: placeholderImages.teamMember3.imageUrl,
     imageHint: placeholderImages.teamMember3.imageHint,
   },
   {
     id: '4',
     name: 'Julian Chen',
-    role: 'Principal, Secondaries',
+    role: 'Lead Engineer',
     imageUrl: placeholderImages.teamMember4.imageUrl,
     imageHint: placeholderImages.teamMember4.imageHint,
   },
@@ -149,8 +149,8 @@ export const portfolioCompanies: PortfolioCompany[] = [
 export const mediaMentions: MediaMention[] = [
     {
         id: '1',
-        title: 'Investor Insights Hub Announces $500M Fund for AI Startups',
-        publication: 'TechCrunch',
+        title: 'Case Study: How We Boosted E-commerce Sales by 300%',
+        publication: 'Client: Retailify',
         date: 'August 1, 2024',
         link: '#',
         imageUrl: placeholderImages.mediaPublication1.imageUrl,
@@ -158,8 +158,8 @@ export const mediaMentions: MediaMention[] = [
     },
     {
         id: '2',
-        title: 'The Vision of Eleanor Vance: A New Era of Venture Capital',
-        publication: 'Forbes',
+        title: 'Building a Scalable AI Platform for a FinTech Leader',
+        publication: 'Client: FinSecure',
         date: 'July 20, 2024',
         link: '#',
         imageUrl: placeholderImages.mediaPublication2.imageUrl,
@@ -167,8 +167,8 @@ export const mediaMentions: MediaMention[] = [
     },
     {
         id: '3',
-        title: 'How Secondary Markets are Unlocking Trillions in Value',
-        publication: 'The Wall Street Journal',
+        title: 'Developing a Cross-Platform Mobile App for Healthcare',
+        publication: 'Client: HealthSphere',
         date: 'July 5, 2024',
         link: '#',
         imageUrl: placeholderImages.mediaPublication3.imageUrl,

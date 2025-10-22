@@ -6,7 +6,7 @@ import { placeholderImages } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Contact Us",
-  description: "Get in touch with our team for investment inquiries or other questions.",
+  description: "Get in touch with our team for project inquiries or other questions.",
 };
 
 export default function ContactPage() {
@@ -25,21 +25,21 @@ export default function ContactPage() {
             <div>
               <h2 className="text-3xl font-headline font-bold">Get In Touch</h2>
               <p className="mt-2 text-lg text-muted-foreground">
-                Please use the form to send us a message, or contact us directly using the information below.
+                Have a project in mind? Use the form to send us a message, or contact us directly using the information below.
               </p>
               <div className="mt-8 space-y-4">
                 <div className="flex items-start gap-4">
                   <MapPin className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold">Our Office</h3>
-                    <p className="text-muted-foreground">123 Investment Drive, Suite 100<br/>New York, NY 10001</p>
+                    <p className="text-muted-foreground">123 Innovation Drive, Suite 100<br/>San Francisco, CA 94105</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
                   <Mail className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold">Email Us</h3>
-                    <a href="mailto:contact@investorhub.com" className="text-muted-foreground hover:text-primary">contact@investorhub.com</a>
+                    <a href="mailto:contact@innovatesolutions.com" className="text-muted-foreground hover:text-primary">contact@innovatesolutions.com</a>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">

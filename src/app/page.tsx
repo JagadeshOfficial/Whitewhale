@@ -14,8 +14,8 @@ export default function Home() {
       <section className="relative w-full h-[60vh] md:h-[80vh] flex items-center justify-center text-center">
         <Image
           src={placeholderImages.heroHome.imageUrl}
-          alt="Abstract financial background"
-          data-ai-hint={placeholderImages.heroHome.imageHint}
+          alt="Abstract technology background"
+          data-ai-hint="abstract technology"
           fill
           className="object-cover"
           priority
@@ -23,17 +23,17 @@ export default function Home() {
         <div className="absolute inset-0 bg-primary/80" />
         <div className="relative z-10 px-4 text-primary-foreground max-w-4xl">
           <h1 className="text-4xl md:text-6xl font-headline font-bold tracking-tight">
-            Building Legacies, Together.
+            Engineering Digital Excellence.
           </h1>
           <p className="mt-4 md:mt-6 text-lg md:text-xl max-w-2xl mx-auto">
-            We specialize in unlocking potential through strategic investments in venture capital, equity markets, and secondaries.
+            We build innovative software solutions that power businesses and delight users.
           </p>
           <div className="mt-8 flex justify-center gap-4">
             <Button asChild size="lg" className="font-bold">
-              <Link href="/about">Learn More</Link>
+              <Link href="/about">Our Process</Link>
             </Button>
             <Button asChild size="lg" variant="secondary">
-              <Link href="/contact">Contact Us</Link>
+              <Link href="/contact">Get a Quote</Link>
             </Button>
           </div>
         </div>
@@ -42,9 +42,9 @@ export default function Home() {
       {/* Services Section */}
       <section className="container mx-auto px-4">
         <div className="text-center">
-          <h2 className="text-3xl md:text-4xl font-headline font-bold">Our Expertise</h2>
+          <h2 className="text-3xl md:text-4xl font-headline font-bold">Our Services</h2>
           <p className="mt-2 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Navigating the complexities of modern markets to deliver exceptional value and growth.
+            From custom software to intelligent solutions, we have the expertise to bring your ideas to life.
           </p>
         </div>
         <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -62,7 +62,7 @@ export default function Home() {
               <CardFooter>
                 <Button asChild variant="link" className="text-primary font-bold">
                   <Link href={service.href}>
-                    Explore {service.title} <ArrowRight className="ml-2 h-4 w-4" />
+                    Learn More <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
               </CardFooter>
@@ -75,9 +75,9 @@ export default function Home() {
       <section className="bg-secondary">
         <div className="container mx-auto px-4">
           <div className="text-center">
-            <h2 className="text-3xl md:text-4xl font-headline font-bold">Latest Insights</h2>
+            <h2 className="text-3xl md:text-4xl font-headline font-bold">From the Blog</h2>
             <p className="mt-2 text-lg text-muted-foreground max-w-2xl mx-auto">
-              Stay informed with our expert analysis on market trends and investment opportunities.
+              Stay informed with our expert analysis on technology, development, and innovation.
             </p>
           </div>
           <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -109,7 +109,7 @@ export default function Home() {
           </div>
            <div className="text-center mt-12">
             <Button asChild size="lg">
-              <Link href="/insights">View All Insights</Link>
+              <Link href="/insights">View All Posts</Link>
             </Button>
           </div>
         </div>
@@ -117,8 +117,8 @@ export default function Home() {
 
       {/* CTA Section */}
       <PageHeader
-        title="Ready to Build the Future?"
-        description="Let's connect and explore how our investment strategies can align with your vision for growth."
+        title="Ready to Build Something Great?"
+        description="Let's connect and explore how our development services can bring your project to life."
         ctaLabel="Get in Touch"
         ctaLink="/contact"
         withBackground={false}

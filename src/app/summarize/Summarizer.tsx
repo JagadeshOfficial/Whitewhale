@@ -46,14 +46,14 @@ export function Summarizer() {
       <form onSubmit={handleSubmit} className="space-y-6">
         <Card>
           <CardHeader>
-            <CardTitle className="font-headline">Investment Report Text</CardTitle>
+            <CardTitle className="font-headline">Document Text</CardTitle>
             <CardDescription>
-              Paste the full text of the report you want to summarize.
+              Paste the full text of the article or document you want to summarize.
             </CardDescription>
           </CardHeader>
           <CardContent>
             <Textarea
-              placeholder="Start pasting your report here..."
+              placeholder="Start pasting your document here..."
               className="min-h-[250px] text-base"
               value={reportText}
               onChange={(e) => setReportText(e.target.value)}

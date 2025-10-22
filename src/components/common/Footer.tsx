@@ -16,7 +16,7 @@ export function Footer() {
               <Logo />
             </Link>
             <p className="text-sm text-muted-foreground mt-2">
-              Pioneering the Future of Investment.
+              Engineering Digital Excellence.
             </p>
             <div className="flex space-x-4 mt-4">
               <Link href="#" aria-label="Facebook" className="text-muted-foreground hover:text-foreground"><Facebook size={20} /></Link>
@@ -50,15 +50,15 @@ export function Footer() {
           <div>
             <h3 className="font-headline font-semibold text-foreground">Contact</h3>
             <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
-              <li>123 Investment Drive</li>
-              <li>New York, NY 10001</li>
-              <li className="pt-2"><a href="mailto:contact@investorhub.com" className="hover:text-foreground">contact@investorhub.com</a></li>
+              <li>123 Innovation Drive</li>
+              <li>San Francisco, CA 94105</li>
+              <li className="pt-2"><a href="mailto:contact@innovatesolutions.com" className="hover:text-foreground">contact@innovatesolutions.com</a></li>
               <li><a href="tel:+1234567890" className="hover:text-foreground">+1 (234) 567-890</a></li>
             </ul>
           </div>
         </div>
         <div className="mt-8 pt-8 border-t text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} Investor Insights Hub. All Rights Reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Innovate Solutions. All Rights Reserved.</p>
         </div>
       </div>
     </footer>

@@ -6,10 +6,10 @@ import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
   title: {
-    default: 'Investor Insights Hub',
-    template: '%s | Investor Insights Hub',
+    default: 'Innovate Solutions',
+    template: '%s | Innovate Solutions',
   },
-  description: 'An investment-focused platform showcasing venture capital, equity markets, secondary investments, insights, and media updates.',
+  description: 'A software company building innovative digital products and solutions.',
   icons: {
     icon: '/favicon.ico',
   }

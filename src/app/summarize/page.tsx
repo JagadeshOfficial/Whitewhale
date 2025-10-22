@@ -3,8 +3,8 @@ import { PageHeader } from '@/components/common/PageHeader';
 import { Summarizer } from './Summarizer';
 
 export const metadata: Metadata = {
-  title: 'AI Report Summarizer',
-  description: 'Summarize long investment reports or articles into concise, easy-to-understand summaries using our AI-powered tool.',
+  title: 'AI Document Summarizer',
+  description: 'Summarize long technical documents or articles into concise, easy-to-understand summaries using our AI-powered tool.',
 };
 
 export default function SummarizePage() {
@@ -12,7 +12,7 @@ export default function SummarizePage() {
     <>
       <PageHeader
         title="AI-Powered Summarizer"
-        description="Paste any investment report or article below to get a concise summary in seconds. Save time and get to the key insights faster."
+        description="Paste any technical document or article below to get a concise summary in seconds. Save time and get to the key insights faster."
         withBackground={true}
       />
       <section className="py-12 md:py-16">

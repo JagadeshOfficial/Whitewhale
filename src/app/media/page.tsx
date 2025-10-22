@@ -8,16 +8,16 @@ import { mediaMentions } from '@/lib/data';
 import { placeholderImages } from '@/lib/constants';
 
 export const metadata: Metadata = {
-  title: "Media",
-  description: "Read our latest press releases, news mentions, and featured articles from top-tier publications.",
+  title: "Case Studies",
+  description: "Explore our success stories and see how we've helped our clients achieve their goals.",
 };
 
 export default function MediaPage() {
   return (
     <div>
       <PageHeader
-        title="In The News"
-        description="Our work and insights, as featured in leading financial and technology publications."
+        title="Our Work in Action"
+        description="A look at some of the solutions we've delivered for our clients."
         imageUrl={placeholderImages.heroMedia.imageUrl}
         imageHint={placeholderImages.heroMedia.imageHint}
       />
@@ -39,10 +39,10 @@ export default function MediaPage() {
                       />
                     </div>
                     <div className="sm:col-span-3">
-                      <p className="text-sm text-muted-foreground">{mention.date} &bull; {mention.publication}</p>
+                      <p className="text-sm text-muted-foreground">{mention.publication}</p>
                       <h3 className="font-headline text-lg font-semibold mt-1 text-foreground">{mention.title}</h3>
                       <div className="flex items-center text-sm text-accent-foreground mt-2 font-semibold">
-                        Read Article <ExternalLink className="ml-2 h-4 w-4" />
+                        Read Case Study <ExternalLink className="ml-2 h-4 w-4" />
                       </div>
                     </div>
                   </CardContent>
