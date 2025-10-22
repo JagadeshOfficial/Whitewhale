@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Metadata } from "next";
 import { PageHeader } from "@/components/common/PageHeader";
 import { CheckCircle } from "lucide-react";
-import { placeholderImages } from "@/lib/constants";
+import { placeholderImages } from "@/lib/image-map";
 import { services } from "@/lib/data";
 
 export const metadata: Metadata = {

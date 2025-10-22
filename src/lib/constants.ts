@@ -1,29 +1,15 @@
-import { PlaceHolderImages } from "./placeholder-images";
 import type { NavLink } from "./types";
+import { services } from "./data";
 
 export const NAV_LINKS: NavLink[] = [
   { href: "/", label: "Home" },
-  { href: "/about", label: "About Us" },
+  { href: "/about", label: "About" },
   {
     href: "#",
     label: "Services",
-    subLinks: [
-      { href: "/custom-software", label: "Custom Software" },
-      { href: "/web-mobile-apps", label: "Web & Mobile Apps" },
-      { href: "/ai-solutions", label: "AI Solutions" },
-    ],
+    subLinks: services.slice(0, 6).map(service => ({ href: service.href, label: service.title })),
   },
   { href: "/insights", label: "Blog" },
   { href: "/media", label: "Case Studies" },
-  { href: "/contact", label: "Contact Us" },
+  { href: "/contact", label: "Contact" },
 ];
-
-function createImageMap() {
-  const map: { [key: string]: { imageUrl: string; imageHint: string } } = {};
-  PlaceHolderImages.forEach(img => {
-    map[img.id] = { imageUrl: img.imageUrl, imageHint: img.imageHint };
-  });
-  return map;
-}
-
-export const placeholderImages = createImageMap();

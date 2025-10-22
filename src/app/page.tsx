@@ -5,7 +5,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { ArrowRight } from 'lucide-react';
 import { services, insights } from '@/lib/data';
 import { PageHeader } from '@/components/common/PageHeader';
-import { placeholderImages } from '@/lib/constants';
+import { placeholderImages } from '@/lib/image-map';
 
 export default function Home() {
   return (
@@ -15,7 +15,7 @@ export default function Home() {
         <Image
           src={placeholderImages.heroHome.imageUrl}
           alt="Abstract technology background"
-          data-ai-hint="abstract technology"
+          data-ai-hint={placeholderImages.heroHome.imageHint}
           fill
           className="object-cover"
           priority
@@ -48,7 +48,7 @@ export default function Home() {
           </p>
         </div>
         <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {services.map((service) => (
+          {services.slice(0, 6).map((service) => (
             <Card key={service.title} className="flex flex-col text-center items-center hover:shadow-lg transition-shadow duration-300">
               <CardHeader>
                 <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary text-primary-foreground mb-4">

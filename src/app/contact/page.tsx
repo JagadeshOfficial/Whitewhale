@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { PageHeader } from "@/components/common/PageHeader";
 import { ContactForm } from "./ContactForm";
 import { Mail, Phone, MapPin } from "lucide-react";
-import { placeholderImages } from "@/lib/constants";
+import { placeholderImages } from "@/lib/image-map";
 
 export const metadata: Metadata = {
   title: "Contact Us",

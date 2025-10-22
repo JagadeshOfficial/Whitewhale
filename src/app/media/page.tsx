@@ -5,7 +5,7 @@ import { PageHeader } from '@/components/common/PageHeader';
 import { Card, CardContent } from '@/components/ui/card';
 import { ExternalLink } from 'lucide-react';
 import { mediaMentions } from '@/lib/data';
-import { placeholderImages } from '@/lib/constants';
+import { placeholderImages } from '@/lib/image-map';
 
 export const metadata: Metadata = {
   title: "Case Studies",

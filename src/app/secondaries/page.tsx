@@ -3,7 +3,7 @@ import { Metadata } from "next";
 import { PageHeader } from "@/components/common/PageHeader";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Users, FileText, TrendingUp, ShieldCheck } from "lucide-react";
-import { placeholderImages } from "@/lib/constants";
+import { placeholderImages } from "@/lib/image-map";
 import { services } from "@/lib/data";
 
 export const metadata: Metadata = {

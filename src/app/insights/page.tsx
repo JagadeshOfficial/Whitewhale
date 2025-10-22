@@ -6,7 +6,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Sparkles } from 'lucide-react';
 import { insights } from '@/lib/data';
-import { placeholderImages } from '@/lib/constants';
+import { placeholderImages } from '@/lib/image-map';
 
 export const metadata: Metadata = {
   title: "Blog",
