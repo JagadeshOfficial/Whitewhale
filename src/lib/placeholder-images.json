@@ -1,3 +1,166 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "heroHome",
+      "description": "Hero image for the home page",
+      "imageUrl": "https://images.unsplash.com/photo-1462556791646-c201b8241a94?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMGZpbmFuY2V8ZW58MHx8fHwxNzYxMTA5Mzk0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "abstract finance"
+    },
+    {
+      "id": "heroAbout",
+      "description": "Hero image for the about page",
+      "imageUrl": "https://images.unsplash.com/photo-1551434678-e076c223a692?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8b2ZmaWNlJTIwdGVhbXxlbnwwfHx8fDE3NjEwMTA1MjR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "office team"
+    },
+    {
+      "id": "heroVentureCapital",
+      "description": "Hero image for the venture capital page",
+      "imageUrl": "https://images.unsplash.com/photo-1553877690-c351cc96375a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxzdGFydHVwJTIwbWVldGluZ3xlbnwwfHx8fDE3NjEwNTE3NjJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "startup meeting"
+    },
+    {
+      "id": "heroEquityMarkets",
+      "description": "Hero image for the equity markets page",
+      "imageUrl": "https://images.unsplash.com/photo-1645226880663-81561dcab0ae?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxzdG9jayUyMGNoYXJ0fGVufDB8fHx8MTc2MTA2MTgxOHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "stock chart"
+    },
+    {
+      "id": "heroSecondaries",
+      "description": "Hero image for the secondaries page",
+      "imageUrl": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxidXNpbmVzcyUyMGhhbmRzaGFrZXxlbnwwfHx8fDE3NjEwNjcwNTF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "business handshake"
+    },
+    {
+      "id": "heroInsights",
+      "description": "Hero image for the insights page",
+      "imageUrl": "https://images.unsplash.com/photo-1532294220147-279399e4e00f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwZXJzb24lMjByZWFkaW5nfGVufDB8fHx8MTc2MTA3Mzk3N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person reading"
+    },
+    {
+      "id": "heroMedia",
+      "description": "Hero image for the media page",
+      "imageUrl": "https://images.unsplash.com/photo-1689421754396-a9d40abc07e5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxuZXdzJTIwcHJlc3N8ZW58MHx8fHwxNzYxMTA5Mzk0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "news press"
+    },
+    {
+      "id": "heroContact",
+      "description": "Hero image for the contact page",
+      "imageUrl": "https://images.unsplash.com/photo-1497366811353-6870744d04b2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBvZmZpY2V8ZW58MHx8fHwxNzYxMDM1MDEyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "modern office"
+    },
+    {
+      "id": "teamMember1",
+      "description": "Team Member 1 Photo",
+      "imageUrl": "https://images.unsplash.com/photo-1607990283143-e81e7a2c9349?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxwcm9mZXNzaW9uYWwlMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjEwNTc1NjZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "professional portrait"
+    },
+    {
+      "id": "teamMember2",
+      "description": "Team Member 2 Photo",
+      "imageUrl": "https://images.unsplash.com/photo-1684919556999-a42d37ffccc1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cHJvZmVzc2lvbmFsJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzYxMDU3NTY2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "professional portrait"
+    },
+    {
+      "id": "teamMember3",
+      "description": "Team Member 3 Photo",
+      "imageUrl": "https://images.unsplash.com/photo-1684919556999-a42d37ffccc1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cHJvZmVzc2lvbmFsJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzYxMDU3NTY2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "professional portrait"
+    },
+    {
+      "id": "teamMember4",
+      "description": "Team Member 4 Photo",
+      "imageUrl": "https://images.unsplash.com/photo-1607990283143-e81e7a2c9349?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxwcm9mZXNzaW9uYWwlMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjEwNTc1NjZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "professional portrait"
+    },
+    {
+      "id": "insight1",
+      "description": "Image for insight article 1",
+      "imageUrl": "https://images.unsplash.com/photo-1645169603402-2b062c94e99c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHx0ZWNoJTIwbWFya2V0fGVufDB8fHx8MTc2MTEwOTM5NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "tech market"
+    },
+    {
+      "id": "insight2",
+      "description": "Image for insight article 2",
+      "imageUrl": "https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxncmVlbiUyMGVuZXJneXxlbnwwfHx8fDE3NjExMDkzOTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "green energy"
+    },
+    {
+      "id": "insight3",
+      "description": "Image for insight article 3",
+      "imageUrl": "https://images.unsplash.com/photo-1579621970588-a35d0e7ab9b6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxmaW5hbmNpYWwlMjBncm93dGh8ZW58MHx8fHwxNzYxMDM2NTIyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "financial growth"
+    },
+    {
+      "id": "insight4",
+      "description": "Image for insight article 4",
+      "imageUrl": "https://images.unsplash.com/photo-1614028674026-a65e31bfd27c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxnbG9iYWwlMjBlY29ub215fGVufDB8fHx8MTc2MTEwODYyMXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "global economy"
+    },
+    {
+      "id": "insight5",
+      "description": "Image for insight article 5",
+      "imageUrl": "https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxBSSUyMHRlY2hub2xvZ3l8ZW58MHx8fHwxNzYxMDM2MzExfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "AI technology"
+    },
+    {
+      "id": "insight6",
+      "description": "Image for insight article 6",
+      "imageUrl": "https://images.unsplash.com/photo-1760861715390-d85bd4eb617e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxiaW90ZWNobm9sb2d5JTIwcmVzZWFyY2h8ZW58MHx8fHwxNzYxMTA5Mzk0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "biotechnology research"
+    },
+    {
+      "id": "portfolioLogo1",
+      "description": "Logo for portfolio company 1",
+      "imageUrl": "https://images.unsplash.com/photo-1569605803663-e9337d901ff9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx0ZWNoJTIwbG9nb3xlbnwwfHx8fDE3NjEwNjE1MTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "tech logo"
+    },
+    {
+      "id": "portfolioLogo2",
+      "description": "Logo for portfolio company 2",
+      "imageUrl": "https://images.unsplash.com/photo-1636249253913-40e83d5423e9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxoZWFsdGglMjBsb2dvfGVufDB8fHx8MTc2MTAwMjkxNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "health logo"
+    },
+    {
+      "id": "portfolioLogo3",
+      "description": "Logo for portfolio company 3",
+      "imageUrl": "https://images.unsplash.com/photo-1693801874720-05ae2c89ede1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxmaW5hbmNlJTIwbG9nb3xlbnwwfHx8fDE3NjEwOTUzODF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "finance logo"
+    },
+    {
+      "id": "portfolioLogo4",
+      "description": "Logo for portfolio company 4",
+      "imageUrl": "https://images.unsplash.com/flagged/photo-1587096472434-8b65b343980d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxlbmVyZ3klMjBsb2dvfGVufDB8fHx8MTc2MTEwOTM5NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "energy logo"
+    },
+    {
+      "id": "portfolioLogo5",
+      "description": "Logo for portfolio company 5",
+      "imageUrl": "https://images.unsplash.com/photo-1637489981573-e45e9297cb21?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzYWFzJTIwbG9nb3xlbnwwfHx8fDE3NjExMDkzOTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "saas logo"
+    },
+    {
+      "id": "portfolioLogo6",
+      "description": "Logo for portfolio company 6",
+      "imageUrl": "https://images.unsplash.com/photo-1720175646435-fec97e1fcd2b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxyZXRhaWwlMjBsb2dvfGVufDB8fHx8MTc2MTEwMDM4MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "retail logo"
+    },
+    {
+      "id": "mediaPublication1",
+      "description": "Logo for media publication 1",
+      "imageUrl": "https://images.unsplash.com/photo-1663813116840-cef0040331fe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxuZXdzJTIwbG9nb3xlbnwwfHx8fDE3NjExMDI4Nzl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "news logo"
+    },
+    {
+      "id": "mediaPublication2",
+      "description": "Logo for media publication 2",
+      "imageUrl": "https://images.unsplash.com/photo-1641935944286-f64230aa1bd2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxtYWdhemluZSUyMGxvZ298ZW58MHx8fHwxNzYxMTA5Mzk0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "magazine logo"
+    },
+    {
+      "id": "mediaPublication3",
+      "description": "Logo for media publication 3",
+      "imageUrl": "https://images.unsplash.com/photo-1581019055756-93b5361f9536?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxmaW5hbmNlJTIwam91cm5hbHxlbnwwfHx8fDE3NjExMDkzOTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "finance journal"
+    }
+  ]
 }
