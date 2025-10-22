@@ -20,10 +20,10 @@ export default function Home() {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-primary/70" />
+        <div className="absolute inset-0 bg-primary/80" />
         <div className="relative z-10 px-4 text-primary-foreground max-w-4xl">
           <h1 className="text-4xl md:text-6xl font-headline font-bold tracking-tight">
-            Pioneering the Future of Investment
+            Building Legacies, Together.
           </h1>
           <p className="mt-4 md:mt-6 text-lg md:text-xl max-w-2xl mx-auto">
             We specialize in unlocking potential through strategic investments in venture capital, equity markets, and secondaries.
@@ -60,7 +60,7 @@ export default function Home() {
                 <p className="text-muted-foreground">{service.description}</p>
               </CardContent>
               <CardFooter>
-                <Button asChild variant="link" className="text-accent-foreground font-bold">
+                <Button asChild variant="link" className="text-primary font-bold">
                   <Link href={service.href}>
                     Explore {service.title} <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
