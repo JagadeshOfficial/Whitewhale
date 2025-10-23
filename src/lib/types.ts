@@ -28,15 +28,6 @@ export interface Client {
   logoUrl: string;
 }
 
-export interface MediaMention {
-    id: string;
-    title: string;
-    publication: string;
-    date: string;
-    link: string;
-    imageUrl: string;
-}
-
 export interface JobOpening {
   id: string;
   title: string;
