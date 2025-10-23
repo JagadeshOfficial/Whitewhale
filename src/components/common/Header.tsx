@@ -29,7 +29,13 @@ export function Header() {
       if (isMobile) {
         return (
           <div key={link.label}>
-            <span className="font-bold text-lg px-4 py-2 w-full text-left">{link.label}</span>
+            <Link
+                href={link.href}
+                className="font-bold text-lg px-4 py-2 w-full text-left"
+                onClick={() => setIsMobileMenuOpen(false)}
+            >
+              {link.label}
+            </Link>
             <div className="flex flex-col pl-4 border-l border-border ml-4">
               {link.subLinks.map((subLink) => (
                 <Link
@@ -55,7 +61,7 @@ export function Header() {
               variant="ghost"
               className={cn(
                 "text-sm font-medium",
-                link.subLinks.some(sl => pathname.startsWith(sl.href)) ? "text-primary" : "text-muted-foreground hover:text-foreground"
+                pathname.startsWith(link.href) ? "text-primary" : "text-muted-foreground hover:text-foreground"
               )}
             >
               {link.label}

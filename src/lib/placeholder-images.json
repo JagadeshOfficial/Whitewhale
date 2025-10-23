@@ -179,6 +179,24 @@
       "description": "Hero image for the secondaries page",
       "imageUrl": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxidXNpbmVzcyUyMGhhbmRzaGFrZXxlbnwwfHx8fDE3NjEwNjcwNTF8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "business handshake"
+    },
+    {
+      "id": "project1",
+      "description": "Image for project 1",
+      "imageUrl": "https://images.unsplash.com/photo-1518770660439-4636190af475?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxBSSUyMHRlY2hub2xvZ3l8ZW58MHx8fHwxNzYxMTkwNTI3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "AI technology"
+    },
+    {
+      "id": "project2",
+      "description": "Image for project 2",
+      "imageUrl": "https://images.unsplash.com/photo-1607252650355-f7fd0460ccdb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBhcHAlMjBkZXZlbG9wbWVudHxlbnwwfHx8fDE3NjExOTA1Mjd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "mobile app development"
+    },
+    {
+      "id": "project3",
+      "description": "Image for project 3",
+      "imageUrl": "https://images.unsplash.com/photo-1556740738-b6a63e27c4df?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzb2Z0d2FyZSUyMGRldmVsb3BtZW50fGVufDB8fHx8MTc2MTE5MDUyN3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "software development"
     }
   ]
 }

@@ -1,8 +1,7 @@
 import Image from "next/image";
 import { Metadata } from "next";
-import { PageHeader } from "@/components/common/PageHeader";
+import { PageHeader } from "@/app/common/PageHeader";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { placeholderImages } from "@/lib/image-map";
 import { teamMembers } from "@/lib/data";
 
 export const metadata: Metadata = {
@@ -16,8 +15,8 @@ export default function AboutPage() {
       <PageHeader
         title="About Innovate Solutions"
         description="We are a team of passionate innovators, dedicated to crafting exceptional software that drives results."
-        imageUrl={placeholderImages.heroAbout.imageUrl}
-        imageHint={placeholderImages.heroAbout.imageHint}
+        imageUrl="https://picsum.photos/seed/about-hero/1920/1080"
+        imageHint="A modern, collaborative office space"
         ctaLabel="Get in Touch"
         ctaLink="/contact"
       />
@@ -36,9 +35,9 @@ export default function AboutPage() {
             </div>
             <div className="relative h-80 rounded-lg overflow-hidden shadow-lg">
               <Image
-                src={placeholderImages.heroContact.imageUrl}
-                alt="Our Office"
-                data-ai-hint={placeholderImages.heroContact.imageHint}
+                src="https://picsum.photos/seed/office-interior/800/600"
+                alt="Our Office Interior"
+                data-ai-hint="A vibrant and modern office interior"
                 fill
                 className="object-cover"
               />
@@ -95,10 +94,11 @@ export default function AboutPage() {
                 <CardContent className="p-6">
                   <div className="relative h-48 w-48 rounded-full mx-auto overflow-hidden mb-4">
                     <Image
-                      src={member.imageUrl}
+                      src={`https://i.pravatar.cc/300?u=${member.id}`}
                       alt={member.name}
-                      data-ai-hint={member.imageHint}
-                      fill
+                      data-ai-hint={`A professional headshot of ${member.name}`}
+                      width={300}
+                      height={300}
                       className="object-cover"
                     />
                   </div>

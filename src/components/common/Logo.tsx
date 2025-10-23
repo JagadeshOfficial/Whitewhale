@@ -2,10 +2,10 @@ import Image from 'next/image';
 
 export function Logo() {
   return (
-    <div className="flex items-center gap-2" aria-label="White Whale Software Solutions">
-      <Image src="/logo.png" alt="White Whale Software Solutions Logo" width={40} height={40} />
+    <div className="flex items-center gap-2" aria-label="Innovate Solutions">
+      <Image src="/logo.png" alt="Innovate Solutions Logo" width={32} height={32} />
       <span className="font-headline text-xl font-bold text-foreground">
-        White Whale Software Solutions
+        Innovate
       </span>
     </div>
   );

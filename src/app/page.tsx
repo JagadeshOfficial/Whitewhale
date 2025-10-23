@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { ArrowRight } from 'lucide-react';
 import { services, insights } from '@/lib/data';
-import { PageHeader } from '@/components/common/PageHeader';
+import { PageHeader } from '@/app/common/PageHeader';
 import { placeholderImages } from '@/lib/image-map';
 
 export default function Home() {
@@ -61,7 +61,7 @@ export default function Home() {
               </CardContent>
               <CardFooter>
                 <Button asChild variant="link" className="text-primary font-bold">
-                  <Link href={service.href}>
+                  <Link href={`/services/${service.id}`}>
                     Learn More <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
@@ -87,7 +87,6 @@ export default function Home() {
                   <Image
                     src={insight.imageUrl}
                     alt={insight.title}
-                    data-ai-hint={insight.imageHint}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                   />
@@ -101,7 +100,7 @@ export default function Home() {
                 </CardContent>
                 <CardFooter>
                   <Button asChild variant="link" className="p-0 font-bold">
-                    <Link href={`/insights`}>Read More <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                    <Link href={`/insights/${insight.id}`}>Read More <ArrowRight className="ml-2 h-4 w-4" /></Link>
                   </Button>
                 </CardFooter>
               </Card>

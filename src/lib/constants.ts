@@ -5,11 +5,12 @@ export const NAV_LINKS: NavLink[] = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   {
-    href: "#",
+    href: "/services",
     label: "Services",
-    subLinks: services.slice(0, 6).map(service => ({ href: service.href, label: service.title })),
+    subLinks: services.map(service => ({ href: service.href, label: service.title })),
   },
+  { href: "/projects", label: "Projects" },
+  { href: "/case-studies", label: "Case Studies"},
   { href: "/insights", label: "Blog" },
-  { href: "/media", label: "Case Studies" },
   { href: "/contact", label: "Contact" },
 ];

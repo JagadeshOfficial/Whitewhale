@@ -5,11 +5,14 @@ export type NavLink = {
 };
 
 export type Service = {
+  id: string;
   title: string;
   description: string;
   longDescription: string;
   icon: React.ComponentType<{ className?: string }>;
   href: string;
+  imageUrl?: string;
+  imageHint?: string;
 };
 
 export type Insight = {
@@ -30,7 +33,7 @@ export type TeamMember = {
   imageHint: string;
 };
 
-export type PortfolioCompany = {
+export type Client = {
   id: string;
   name:string;
   logoUrl: string;
@@ -46,3 +49,23 @@ export type MediaMention = {
   imageUrl: string;
   imageHint: string;
 }
+
+export type Project = {
+  id: string;
+  name: string;
+  description: string;
+  imageUrl: string;
+  imageHint: string;
+  category: string;
+};
+
+export type CaseStudy = {
+  id: string;
+  title: string;
+  client: string;
+  description: string;
+  challenge: string;
+  solution: string;
+  results: string[];
+  imageUrl: string;
+};

@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Metadata } from 'next';
-import { PageHeader } from '@/components/common/PageHeader';
+import { PageHeader } from '@/app/common/PageHeader';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Sparkles } from 'lucide-react';
@@ -70,7 +70,7 @@ export default function InsightsPage() {
                 </CardContent>
                 <CardFooter>
                   <Button asChild variant="link" className="p-0 font-bold">
-                    <Link href="#">Read More <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                    <Link href={`/insights/${insight.id}`}>Read More <ArrowRight className="ml-2 h-4 w-4" /></Link>
                   </Button>
                 </CardFooter>
               </Card>

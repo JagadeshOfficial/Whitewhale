@@ -1,8 +1,7 @@
 import { Metadata } from "next";
-import { PageHeader } from "@/components/common/PageHeader";
+import { PageHeader } from "@/app/common/PageHeader";
 import { ContactForm } from "./ContactForm";
 import { Mail, Phone, MapPin } from "lucide-react";
-import { placeholderImages } from "@/lib/image-map";
 
 export const metadata: Metadata = {
   title: "Contact Us",
@@ -15,8 +14,8 @@ export default function ContactPage() {
       <PageHeader
         title="Contact Us"
         description="We're here to answer your questions. Reach out to us and we'll respond as soon as we can."
-        imageUrl={placeholderImages.heroContact.imageUrl}
-        imageHint={placeholderImages.heroContact.imageHint}
+        imageUrl="https://picsum.photos/seed/contact-hero/1920/1080"
+        imageHint="A modern office space"
       />
 
       <section>

@@ -1,23 +1,23 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Metadata } from 'next';
-import { PageHeader } from '@/components/common/PageHeader';
+import { PageHeader } from '@/app/common/PageHeader';
 import { Card, CardContent } from '@/components/ui/card';
 import { ExternalLink } from 'lucide-react';
 import { mediaMentions } from '@/lib/data';
 import { placeholderImages } from '@/lib/image-map';
 
 export const metadata: Metadata = {
-  title: "Case Studies",
-  description: "Explore our success stories and see how we've helped our clients achieve their goals.",
+  title: "Media",
+  description: "See what others are saying about our work and our impact on the industry.",
 };
 
 export default function MediaPage() {
   return (
     <div>
       <PageHeader
-        title="Our Work in Action"
-        description="A look at some of the solutions we've delivered for our clients."
+        title="Innovate Solutions in the News"
+        description="A collection of press mentions, articles, and other features about our company and our projects."
         imageUrl={placeholderImages.heroMedia.imageUrl}
         imageHint={placeholderImages.heroMedia.imageHint}
       />
@@ -42,7 +42,7 @@ export default function MediaPage() {
                       <p className="text-sm text-muted-foreground">{mention.publication}</p>
                       <h3 className="font-headline text-lg font-semibold mt-1 text-foreground">{mention.title}</h3>
                       <div className="flex items-center text-sm text-accent-foreground mt-2 font-semibold">
-                        Read Case Study <ExternalLink className="ml-2 h-4 w-4" />
+                        Read Article <ExternalLink className="ml-2 h-4 w-4" />
                       </div>
                     </div>
                   </CardContent>

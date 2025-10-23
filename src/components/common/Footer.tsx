@@ -4,8 +4,8 @@ import { Logo } from './Logo';
 import { NAV_LINKS } from '@/lib/constants';
 
 export function Footer() {
-  const servicesLinks = NAV_LINKS.find(link => link.label === "Services")?.subLinks || [];
-  const mainLinks = NAV_LINKS.filter(link => link.label !== "Home" && !link.subLinks);
+  const servicesLinks = NAV_LINKS.find(link => link.label === "Services")?.subLinks?.slice(0, 5) || [];
+  const companyLinks = NAV_LINKS.filter(link => link.label !== "Home" && !link.subLinks);
 
   return (
     <footer className="bg-secondary text-secondary-foreground border-t">
@@ -33,13 +33,16 @@ export function Footer() {
                   <Link href={link.href} className="text-sm text-muted-foreground hover:text-foreground">{link.label}</Link>
                 </li>
               ))}
+               <li>
+                  <Link href="/services" className="text-sm font-bold text-primary hover:underline">View All</Link>
+                </li>
             </ul>
           </div>
 
           <div>
             <h3 className="font-headline font-semibold text-foreground">Company</h3>
             <ul className="mt-4 space-y-2">
-              {mainLinks.map(link => (
+              {companyLinks.map(link => (
                 <li key={link.href}>
                   <Link href={link.href} className="text-sm text-muted-foreground hover:text-foreground">{link.label}</Link>
                 </li>
