@@ -9,7 +9,7 @@ import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 export const metadata: Metadata = {
-  title: 'Case Studies | Innovate Solutions',
+  title: 'Case Studies | WHITEWHALE SOFTWARE SOLUTIONS',
   description: 'Explore our successful projects and see how we have helped our clients achieve their goals.',
 };
 

@@ -9,7 +9,7 @@ import { MapPin, ArrowRight } from 'lucide-react';
 import { ApplyForm } from './ApplyForm';
 
 export const metadata: Metadata = {
-  title: 'Careers | Innovate Solutions',
+  title: 'Careers | WHITEWHALE SOFTWARE SOLUTIONS',
   description: 'Join our team of innovators and help us build the future of software.',
 };
 

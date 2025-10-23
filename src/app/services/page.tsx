@@ -8,7 +8,7 @@ import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 export const metadata: Metadata = {
-  title: 'Our Services | Innovate Solutions',
+  title: 'Our Services | WHITEWHALE SOFTWARE SOLUTIONS',
   description: 'Explore the wide range of software development services we offer to help your business grow.',
 };
 

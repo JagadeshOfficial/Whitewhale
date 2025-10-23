@@ -6,15 +6,15 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { teamMembers } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "About Us | Innovate Solutions",
-  description: "Learn about our mission, vision, and the dedicated team at Innovate Solutions.",
+  title: "About Us | WHITEWHALE SOFTWARE SOLUTIONS",
+  description: "Learn about our mission, vision, and the dedicated team at WHITEWHALE SOFTWARE SOLUTIONS.",
 };
 
 export default function AboutPage() {
   return (
     <div className="bg-background">
       <PageHeader
-        title="About Innovate Solutions"
+        title="About WHITEWHALE SOFTWARE SOLUTIONS"
         description="We are a team of passionate innovators, dedicated to crafting exceptional software that drives results."
         imageUrl="https://images.unsplash.com/photo-1551434678-e076c223a692?w=1920&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fG9mZmljZSUyMHRlYW18ZW58MHx8MHx8fDA%3D"
         ctaLabel="Get in Touch"
@@ -27,7 +27,7 @@ export default function AboutPage() {
             <div className="prose prose-lg max-w-none text-muted-foreground">
               <h2 className="text-3xl font-headline text-foreground mb-4">Our Story</h2>
               <p>
-                Founded with the vision of making a mark in the software industry, Innovate Solutions is committed to delivering excellence. We believe in building strong partnerships with our clients, understanding their needs, and providing solutions that are not only effective but also elegant.
+                Founded with the vision of making a mark in the software industry, WHITEWHALE SOFTWARE SOLUTIONS is committed to delivering excellence. We believe in building strong partnerships with our clients, understanding their needs, and providing solutions that are not only effective but also elegant.
               </p>
               <p>
                 Our journey has been one of continuous learning and growth. We have evolved from a small team of enthusiasts to a full-fledged software house, but our core values of innovation, quality, and integrity have remained unchanged.

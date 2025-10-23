@@ -1,6 +1,6 @@
 
 import { Metadata } from "next";
-import { PageHeader } from "@/app/common/PageHeader";
+import { PageHeader } from "@/components/common/PageHeader";
 import { ContactForm } from "./ContactForm";
 import { Mail, Phone, MapPin } from "lucide-react";
 

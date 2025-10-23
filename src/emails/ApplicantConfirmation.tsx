@@ -32,14 +32,14 @@ export default function ApplicantConfirmation({
               <Text>Dear {applicantName},</Text>
               <Text>
                 This email is to confirm that we have successfully received your application for the
-                <strong>{jobTitle}</strong> position at Innovate Solutions.
+                <strong>{jobTitle}</strong> position at WHITEWHALE SOFTWARE SOLUTIONS.
               </Text>
               <Text>
                 Our hiring team is currently reviewing all applications and we will get back to you as soon as possible if your qualifications match our requirements.
               </Text>
               <Text>Thank you for your interest in joining our team.</Text>
               <Hr />
-              <Text>Sincerely,<br />The Innovate Solutions Team</Text>
+              <Text>Sincerely,<br />The WHITEWHALE SOFTWARE SOLUTIONS Team</Text>
             </Section>
           </Container>
         </Body>

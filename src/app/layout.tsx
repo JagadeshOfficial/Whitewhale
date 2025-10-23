@@ -6,12 +6,12 @@ import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
   title: {
-    default: 'Innovate Solutions',
-    template: '%s | Innovate Solutions',
+    default: 'WHITEWHALE SOFTWARE SOLUTIONS',
+    template: '%s | WHITEWHALE SOFTWARE SOLUTIONS',
   },
   description: 'A software company building innovative digital products and solutions.',
   icons: {
-    icon: '/favicon.ico',
+    icon: '/logo.png',
   }
 };
 
