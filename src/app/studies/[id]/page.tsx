@@ -9,12 +9,11 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { ArrowLeft } from 'lucide-react';
 
-type Props = {
+type CaseStudyDetailPageProps = {
   params: { id: string };
-  searchParams: { [key: string]: string | string[] | undefined };
 };
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata({ params }: CaseStudyDetailPageProps): Promise<Metadata> {
   const study = caseStudies.find((p) => p.id === params.id);
   if (!study) {
     return {
@@ -27,7 +26,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default function CaseStudyDetailPage({ params }: Props) {
+export default function CaseStudyDetailPage({ params }: CaseStudyDetailPageProps) {
   const study = caseStudies.find((p) => p.id === params.id);
 
   if (!study) {
@@ -115,4 +114,10 @@ export default function CaseStudyDetailPage({ params }: Props) {
       </section>
     </div>
   );
+}
+
+export async function generateStaticParams() {
+  return caseStudies.map((study) => ({
+    id: study.id,
+  }));
 }
