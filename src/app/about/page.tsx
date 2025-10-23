@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Metadata } from "next";
-import { PageHeader } from "@/app/common/PageHeader";
+import { PageHeader } from "@/components/common/PageHeader";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { teamMembers } from "@/lib/data";
 
@@ -94,7 +94,7 @@ export default function AboutPage() {
                 <CardContent className="p-6">
                   <div className="relative h-48 w-48 rounded-full mx-auto overflow-hidden mb-4">
                     <Image
-                      src={`https://i.pravatar.cc/300?u=${member.id}`}
+                      src={member.imageUrl}
                       alt={member.name}
                       data-ai-hint={`A professional headshot of ${member.name}`}
                       width={300}

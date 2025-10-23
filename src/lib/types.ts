@@ -30,7 +30,6 @@ export type TeamMember = {
   name: string;
   role: string;
   imageUrl: string;
-  imageHint: string;
 };
 
 export type Client = {
@@ -68,4 +67,14 @@ export type CaseStudy = {
   solution: string;
   results: string[];
   imageUrl: string;
+};
+
+export type JobOpening = {
+  id: string;
+  title: string;
+  location: string;
+  department: string;
+  description: string;
+  responsibilities: string[];
+  qualifications: string[];
 };

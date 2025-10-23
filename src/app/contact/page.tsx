@@ -18,7 +18,7 @@ export default function ContactPage() {
         imageHint="A modern office space"
       />
 
-      <section>
+      <section className="py-16 sm:py-24">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12">
             <div>
@@ -26,26 +26,33 @@ export default function ContactPage() {
               <p className="mt-2 text-lg text-muted-foreground">
                 Have a project in mind? Use the form to send us a message, or contact us directly using the information below.
               </p>
-              <div className="mt-8 space-y-4">
+              <div className="mt-8 space-y-6">
                 <div className="flex items-start gap-4">
                   <MapPin className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="font-semibold">Our Office</h3>
-                    <p className="text-muted-foreground">123 Innovation Drive, Suite 100<br/>San Francisco, CA 94105</p>
+                    <h3 className="font-semibold">Our Location (India)</h3>
+                    <p className="text-muted-foreground">Plot no.18, iLabs Centre, Level 2, Oval Building, Inorbit Mall Rd, Hyderabad, Telangana 500081</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <MapPin className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
+                  <div>
+                    <h3 className="font-semibold">Our Location (USA)</h3>
+                    <p className="text-muted-foreground">1010 E Elm St, Springfield, Missouri 65806, USA</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
                   <Mail className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="font-semibold">Email Us</h3>
-                    <a href="mailto:contact@innovatesolutions.com" className="text-muted-foreground hover:text-primary">contact@innovatesolutions.com</a>
+                    <h3 className="font-semibold">For Business</h3>
+                    <a href="mailto:business@whitewhalesoft.in" className="text-muted-foreground hover:text-primary">business@whitewhalesoft.in</a>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <Phone className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
+                  <Mail className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="font-semibold">Call Us</h3>
-                    <a href="tel:+1234567890" className="text-muted-foreground hover:text-primary">+1 (234) 567-890</a>
+                    <h3 className="font-semibold">For Careers</h3>
+                    <a href="mailto:contact@whitewhalesoft.in" className="text-muted-foreground hover:text-primary">contact@whitewhalesoft.in</a>
                   </div>
                 </div>
               </div>
@@ -56,6 +63,37 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+
+      <section className="pb-16 sm:pb-24">
+        <div className="container mx-auto px-4">
+           <h2 className="text-3xl font-headline font-bold text-center mb-8">Our Locations</h2>
+           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
+                 <iframe 
+                    src="https://maps.google.com/maps?q=Plot%20no.18,%20iLabs%20Centre,%20Level%202,%20Oval%20Building,%20Inorbit%20Mall%20Rd,%20Hyderabad,%20Telangana%20500081&t=&z=13&ie=UTF8&iwloc=&output=embed" 
+                    width="100%" 
+                    height="100%" 
+                    style={{ border: 0 }} 
+                    allowFullScreen 
+                    loading="lazy" 
+                    referrerPolicy="no-referrer-when-downgrade">
+                 </iframe>
+              </div>
+              <div className="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
+                 <iframe 
+                    src="https://maps.google.com/maps?q=1010%20E%20Elm%20St,%20Springfield,%20Missouri%2065806,%20USA&t=&z=13&ie=UTF8&iwloc=&output=embed" 
+                    width="100%" 
+                    height="100%" 
+                    style={{ border: 0 }} 
+                    allowFullScreen 
+                    loading="lazy" 
+                    referrerPolicy="no-referrer-when-downgrade">
+                 </iframe>
+              </div>
+           </div>
+        </div>
+      </section>
+
     </div>
   );
 }

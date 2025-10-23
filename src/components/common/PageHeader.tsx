@@ -22,7 +22,7 @@ export function PageHeader({
   withBackground = true,
 }: PageHeaderProps) {
   const content = (
-    <div className="relative z-10 px-4 text-center max-w-3xl mx-auto">
+    <div className="relative z-10 px-4 text-center max-w-3xl mx-auto py-20">
       <h1 className="text-4xl md:text-5xl font-headline font-bold tracking-tight">
         {title}
       </h1>

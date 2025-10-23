@@ -61,7 +61,7 @@ export function Header() {
               variant="ghost"
               className={cn(
                 "text-sm font-medium",
-                pathname.startsWith(link.href) ? "text-primary" : "text-muted-foreground hover:text-foreground"
+                pathname.startsWith(link.href || '') ? "text-primary" : "text-muted-foreground hover:text-foreground"
               )}
             >
               {link.label}

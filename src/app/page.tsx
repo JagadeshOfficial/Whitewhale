@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { ArrowRight } from 'lucide-react';
 import { services, insights } from '@/lib/data';
-import { PageHeader } from '@/app/common/PageHeader';
+import { PageHeader } from '@/components/common/PageHeader';
 import { placeholderImages } from '@/lib/image-map';
 
 export default function Home() {
@@ -61,7 +61,7 @@ export default function Home() {
               </CardContent>
               <CardFooter>
                 <Button asChild variant="link" className="text-primary font-bold">
-                  <Link href={`/services/${service.id}`}>
+                  <Link href={service.href}>
                     Learn More <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>

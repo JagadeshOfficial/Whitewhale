@@ -3,14 +3,14 @@ import { Metadata } from "next";
 import { PageHeader } from "@/components/common/PageHeader";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { placeholderImages } from "@/lib/image-map";
-import { portfolioCompanies, investmentApproach, services } from "@/lib/data";
+import { clients, investmentApproach, services } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "Venture Capital",
   description: "Our approach to investing in and supporting the next generation of market-defining companies.",
 };
 
-const vcService = services.find(s => s.title === 'Venture Capital');
+const vcService = services.find(s => s.title === 'Blockchain Solutions');
 
 export default function VentureCapitalPage() {
   return (
@@ -75,7 +75,7 @@ export default function VentureCapitalPage() {
             </p>
           </div>
           <div className="mt-12 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
-            {portfolioCompanies.map((company) => (
+            {clients.map((company) => (
               <div key={company.id} className="relative h-20 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
                 <Image
                   src={company.logoUrl}

@@ -2,18 +2,17 @@ import { caseStudies } from '@/lib/data';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Metadata } from 'next';
-import { PageHeader } from '@/app/common/PageHeader';
+import { Metadata, ResolvingMetadata } from 'next';
+import { PageHeader } from '@/components/common/PageHeader';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { ArrowLeft, CheckCircle } from 'lucide-react';
+import { ArrowLeft } from 'lucide-react';
 
-type Props = {
-  params: { id: string };
-};
-
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const study = caseStudies.find((s) => s.id === params.id);
+export async function generateMetadata(
+  { params }: { params: { id: string } },
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  const study = caseStudies.find((p) => p.id === params.id);
   if (!study) {
     return {
       title: 'Case Study Not Found',
@@ -25,60 +24,56 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default function CaseStudyDetailPage({ params }: Props) {
-  const study = caseStudies.find((s) => s.id === params.id);
+export default function CaseStudyDetailPage({ params }: { params: { id: string } }) {
+  const study = caseStudies.find((p) => p.id === params.id);
 
   if (!study) {
     notFound();
   }
 
-  const otherStudies = caseStudies.filter(s => s.id !== study.id).slice(0, 3);
+  const recentStudies = caseStudies.filter(p => p.id !== study.id).slice(0, 4);
 
   return (
     <div>
       <PageHeader
         title={study.title}
-        description={`A case study on how we helped ${study.client} achieve their goals.`}
-        imageUrl={`https://picsum.photos/seed/${study.id}/1920/1080`}
-        imageHint={`An image representing the ${study.title} project`}
+        description={`A deep dive into our work with ${study.client}`}
+        imageUrl={study.imageUrl}
       />
       <section className="py-12 sm:py-16">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-3 lg:gap-12">
             <main className="lg:col-span-2">
               <div className="prose prose-lg sm:prose-xl max-w-none text-muted-foreground">
-                <p className="lead">
-                  {study.description}
-                </p>
-                <p>
-                  In this case study, we'll walk you through the journey of how we collaborated with {study.client} to overcome their challenges and deliver a solution that not only met but exceeded their expectations. Our team was tasked with a significant challenge, and through a combination of expertise, dedication, and a client-focused approach, we were able to deliver outstanding results.
-                </p>
+                <p className="lead">{study.description}</p>
+                
+                <h3>The Challenge</h3>
+                <p>{study.challenge}</p>
                 
                 <div className="relative my-8 rounded-lg overflow-hidden not-prose">
                   <Image 
-                    src={`https://picsum.photos/seed/${study.id}-detail/1200/600`} 
-                    alt={`A detailed view of the ${study.title} project`}
+                    src="https://picsum.photos/seed/case-study-content/1200/600" 
+                    alt={`Illustrative image for the ${study.title} case study`}
                     width={1200}
                     height={600}
                     className="object-cover"
                    />
                 </div>
 
-                <h3>The Challenge</h3>
-                <p>{study.challenge}</p>
-
                 <h3>Our Solution</h3>
                 <p>{study.solution}</p>
-
+                
                 <h3>Key Results</h3>
-                <ul className="not-prose pl-0">
+                <ul>
                   {study.results.map((result, index) => (
-                    <li key={index} className="flex items-start mb-2">
-                      <CheckCircle className="h-6 w-6 text-primary mr-3 mt-1 flex-shrink-0" />
-                      <span>{result}</span>
-                    </li>
+                    <li key={index}>{result}</li>
                   ))}
                 </ul>
+                
+                <h3>Conclusion</h3>
+                <p>
+                  The {study.title} case study is a testament to our commitment to excellence and our ability to solve complex challenges with innovative solutions. We are proud of the results achieved and look forward to continuing our partnership with {study.client}.
+                </p>
               </div>
             </main>
 
@@ -86,15 +81,16 @@ export default function CaseStudyDetailPage({ params }: Props) {
               <div className="sticky top-24">
                 <Card>
                   <CardHeader>
-                    <CardTitle>Other Case Studies</CardTitle>
+                    <CardTitle>Recent Case Studies</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <ul className="space-y-4">
-                      {otherStudies.map(s => (
-                        <li key={s.id}>
-                          <Link href={`/case-studies/${s.id}`} className="font-semibold text-foreground hover:text-primary transition-colors">
-                            {s.title}
+                      {recentStudies.map(post => (
+                        <li key={post.id}>
+                          <Link href={`/case-studies/${post.id}`} className="font-semibold text-foreground hover:text-primary transition-colors">
+                            {post.title}
                           </Link>
+                          <p className="text-sm text-muted-foreground mt-1">{post.client}</p>
                         </li>
                       ))}
                     </ul>
