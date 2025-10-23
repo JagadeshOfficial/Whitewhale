@@ -1,6 +1,6 @@
 
 import { Code, Smartphone, BrainCircuit, Target, Users, BarChart2, Globe, Cloud, PenTool, Cpu, Shield, ArrowRight } from 'lucide-react';
-import type { Service, Insight, TeamMember, Client, MediaMention, Project, CaseStudy, JobOpening } from './types';
+import type { Service, Insight, TeamMember, Client, MediaMention, JobOpening, CaseStudy } from './types';
 
 export const services: Service[] = [
   {
@@ -167,78 +167,6 @@ export const mediaMentions: MediaMention[] = [
     }
 ]
 
-export const projects: Project[] = [
-  {
-    id: '1',
-    name: 'E-commerce Platform',
-    description: 'A feature-rich online store with a custom CMS and payment gateway integration.',
-    imageUrl: 'https://images.unsplash.com/photo-1556740738-b6a63e27c4df?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c29mdHdhcmUlMjBkZXZlbG9wbWVudHxlbnwwfHwwfHx8MA%3D%3D',
-    category: 'E-commerce',
-  },
-  {
-    id: '2',
-    name: 'FinTech Mobile App',
-    description: 'An iOS and Android app for personal finance management and investment tracking.',
-    imageUrl: 'https://images.unsplash.com/photo-1607252650355-f7fd0460ccdb?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bW9iaWxlJTIwYXBwJTIwZGV2ZWxvcG1lbnR8ZW58MHx8MHx8fDA%3D',
-    category: 'FinTech',
-  },
-  {
-    id: '3',
-    name: 'AI-Powered Analytics Dashboard',
-    description: 'A web-based platform that uses machine learning to provide business intelligence.',
-    imageUrl: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8QUklMjB0ZWNobm9sb2d5fGVufDB8fDB8fHww',
-    category: 'AI & Machine Learning',
-  },
-];
-
-export const caseStudies: CaseStudy[] = [
-  {
-    id: "e-commerce-boost",
-    title: "Boosting E-commerce Sales by 300% for Retailify",
-    client: "Retailify",
-    description: "A comprehensive overhaul of Retailify's online presence, leading to a massive increase in sales and customer engagement.",
-    challenge: "Retailify's existing e-commerce platform was outdated, slow, and not mobile-friendly. They were losing customers and revenue due to a poor user experience.",
-    solution: "We designed and developed a new, modern e-commerce platform from the ground up using Next.js and Shopify. The new site is fast, responsive, and features a streamlined checkout process. We also implemented a new SEO strategy to improve their search engine rankings.",
-    results: [
-      "300% increase in online sales within 6 months.",
-      "50% reduction in page load times.",
-      "40% increase in mobile conversion rates.",
-      "Top 3 ranking on Google for key product categories."
-    ],
-    imageUrl: 'https://images.unsplash.com/photo-1556740738-b6a63e27c4df?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c29mdHdhcmUlMjBkZXZlbG9wbWVudHxlbnwwfHwwfHx8MA%3D%3D'
-  },
-  {
-    id: "fintech-ai-platform",
-    title: "Building a Scalable AI Platform for FinSecure",
-    client: "FinSecure",
-    description: "Delivering a cutting-edge AI platform for a leading FinTech company to enhance their fraud detection capabilities.",
-    challenge: "FinSecure needed to improve the accuracy and speed of their fraud detection system to combat increasingly sophisticated fraudulent activities.",
-    solution: "Our team developed a real-time AI-powered fraud detection platform using machine learning models. The system analyzes transaction data in real-time to identify and flag suspicious activities, significantly reducing false positives and improving detection rates.",
-    results: [
-      "95% accuracy in fraud detection.",
-      "Reduced false positives by 60%.",
-      "Real-time processing of over 10,000 transactions per second.",
-      "Enhanced security and trust for millions of users."
-    ],
-    imageUrl: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8QUklMjB0ZWNobm9sb2d5fGVufDB8fDB8fHww'
-  },
-  {
-    id: "healthcare-mobile-app",
-    title: "Cross-Platform Mobile App for HealthSphere",
-    client: "HealthSphere",
-    description: "Creating an intuitive mobile app to help patients manage their health records and appointments.",
-    challenge: "HealthSphere wanted to provide their patients with a convenient way to access their health information, book appointments, and communicate with their doctors. They needed a secure and user-friendly app that worked on both iOS and Android.",
-    solution: "We developed a cross-platform mobile app using React Native that allows patients to securely access their medical records, schedule appointments, and communicate with their healthcare providers. The app integrates with their existing EHR system and features a clean, intuitive interface.",
-    results: [
-      "Over 100,000 downloads in the first year.",
-      "Improved patient engagement and satisfaction.",
-      "Streamlined appointment booking process, reducing administrative overhead.",
-      "Secure and HIPAA-compliant data handling."
-    ],
-    imageUrl: 'https://images.unsplash.com/photo-1607252650355-f7fd0460ccdb?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bW9iaWxlJTIwYXBwJTIwZGV2ZWxvcG1lbnR8ZW58MHx8MHx8fDA%3D'
-  }
-];
-
 export const jobOpenings: JobOpening[] = [
   {
     id: "frontend-engineer",
@@ -296,5 +224,53 @@ export const jobOpenings: JobOpening[] = [
       "Excellent written and verbal communication skills",
       "Proven ability to influence cross-functional teams without formal authority",
     ]
+  }
+];
+
+export const caseStudies: CaseStudy[] = [
+  {
+    id: "e-commerce-boost",
+    title: "Boosting E-commerce Sales by 300% for Retailify",
+    client: "Retailify",
+    description: "A comprehensive overhaul of Retailify's online presence, leading to a massive increase in sales and customer engagement.",
+    challenge: "Retailify's existing e-commerce platform was outdated, slow, and not mobile-friendly. They were losing customers and revenue due to a poor user experience.",
+    solution: "We designed and developed a new, modern e-commerce platform from the ground up using Next.js and Shopify. The new site is fast, responsive, and features a streamlined checkout process. We also implemented a new SEO strategy to improve their search engine rankings.",
+    results: [
+      "300% increase in online sales within 6 months.",
+      "50% reduction in page load times.",
+      "40% increase in mobile conversion rates.",
+      "Top 3 ranking on Google for key product categories."
+    ],
+    imageUrl: 'https://images.unsplash.com/photo-1556740738-b6a63e27c4df?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c29mdHdhcmUlMjBkZXZlbG9wbWVudHxlbnwwfHwwfHx8MA%3D%3D'
+  },
+  {
+    id: "fintech-ai-platform",
+    title: "Building a Scalable AI Platform for FinSecure",
+    client: "FinSecure",
+    description: "Delivering a cutting-edge AI platform for a leading FinTech company to enhance their fraud detection capabilities.",
+    challenge: "FinSecure needed to improve the accuracy and speed of their fraud detection system to combat increasingly sophisticated fraudulent activities.",
+    solution: "Our team developed a real-time AI-powered fraud detection platform using machine learning models. The system analyzes transaction data in real-time to identify and flag suspicious activities, significantly reducing false positives and improving detection rates.",
+    results: [
+      "95% accuracy in fraud detection.",
+      "Reduced false positives by 60%.",
+      "Real-time processing of over 10,000 transactions per second.",
+      "Enhanced security and trust for millions of users."
+    ],
+    imageUrl: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8QUklMjB0ZWNobm9sb2d5fGVufDB8fDB8fHww'
+  },
+  {
+    id: "healthcare-mobile-app",
+    title: "Cross-Platform Mobile App for HealthSphere",
+    client: "HealthSphere",
+    description: "Creating an intuitive mobile app to help patients manage their health records and appointments.",
+    challenge: "HealthSphere wanted to provide their patients with a convenient way to access their health information, book appointments, and communicate with their doctors. They needed a secure and user-friendly app that worked on both iOS and Android.",
+    solution: "We developed a cross-platform mobile app using React Native that allows patients to securely access their medical records, schedule appointments, and communicate with their healthcare providers. The app integrates with their existing EHR system and features a clean, intuitive interface.",
+    results: [
+      "Over 100,000 downloads in the first year.",
+      "Improved patient engagement and satisfaction.",
+      "Streamlined appointment booking process, reducing administrative overhead.",
+      "Secure and HIPAA-compliant data handling."
+    ],
+    imageUrl: 'https://images.unsplash.com/photo-1607252650355-f7fd0460ccdb?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bW9iaWxlJTIwYXBwJTIwZGV2ZWxvcG1lbnR8ZW58MHx8MHx8fDA%3D'
   }
 ];

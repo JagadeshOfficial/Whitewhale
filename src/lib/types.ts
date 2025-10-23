@@ -1,3 +1,4 @@
+
 import { LucideIcon } from "lucide-react";
 
 export interface NavLink {
@@ -64,12 +65,4 @@ export interface CaseStudy {
   solution: string;
   results: string[];
   imageUrl: string;
-}
-
-export interface Project {
-  id: string;
-  name: string;
-  description: string;
-  imageUrl: string;
-  category: string;
 }

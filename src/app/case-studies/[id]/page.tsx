@@ -1,13 +1,13 @@
 
-import { caseStudies } from '@/lib/data';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Metadata, ResolvingMetadata } from 'next';
+import { Metadata } from 'next';
 import { PageHeader } from '@/components/common/PageHeader';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { ArrowLeft } from 'lucide-react';
+import { caseStudies } from '@/lib/data';
 
 interface CaseStudyDetailPageProps {
   params: {
@@ -103,4 +103,23 @@ export default function CaseStudyDetailPage({ params }: CaseStudyDetailPageProps
       </section>
     </div>
   );
+}
+
+export async function generateStaticParams() {
+    return caseStudies.map((study) => ({
+        id: study.id,
+    }))
+}
+
+export async function generateMetadata({ params }: CaseStudyDetailPageProps): Promise<Metadata> {
+  const study = caseStudies.find((p) => p.id === params.id);
+  if (!study) {
+    return {
+      title: 'Case Study Not Found',
+    };
+  }
+  return {
+    title: study.title,
+    description: `Case study for ${study.client}: ${study.description}`,
+  };
 }
