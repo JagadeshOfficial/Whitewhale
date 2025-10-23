@@ -9,7 +9,7 @@ export const NAV_LINKS: NavLink[] = [
     label: "Services",
     subLinks: services.map(service => ({ href: `/services/${service.id}`, label: service.title })),
   },
-  { href: "/case-studies", label: "Case Studies"},
+  { href: "/studies", label: "Case Studies"},
   { href: "/about", label: "About" },
   { href: "/insights", label: "Blog" },
   { href: "/careers", label: "Careers" },

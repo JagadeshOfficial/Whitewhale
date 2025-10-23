@@ -1,4 +1,5 @@
 
+import { caseStudies } from '@/lib/data';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -7,15 +8,26 @@ import { PageHeader } from '@/components/common/PageHeader';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { ArrowLeft } from 'lucide-react';
-import { caseStudies } from '@/lib/data';
 
-interface CaseStudyDetailPageProps {
-  params: {
-    id: string;
+type Props = {
+  params: { id: string };
+  searchParams: { [key: string]: string | string[] | undefined };
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const study = caseStudies.find((p) => p.id === params.id);
+  if (!study) {
+    return {
+      title: 'Case Study Not Found',
+    };
+  }
+  return {
+    title: study.title,
+    description: study.description,
   };
 }
 
-export default function CaseStudyDetailPage({ params }: CaseStudyDetailPageProps) {
+export default function CaseStudyDetailPage({ params }: Props) {
   const study = caseStudies.find((p) => p.id === params.id);
 
   if (!study) {
@@ -78,7 +90,7 @@ export default function CaseStudyDetailPage({ params }: CaseStudyDetailPageProps
                     <ul className="space-y-4">
                       {recentStudies.map(post => (
                         <li key={post.id}>
-                          <Link href={`/case-studies/${post.id}`} className="font-semibold text-foreground hover:text-primary transition-colors">
+                          <Link href={`/studies/${post.id}`} className="font-semibold text-foreground hover:text-primary transition-colors">
                             {post.title}
                           </Link>
                           <p className="text-sm text-muted-foreground mt-1">{post.client}</p>
@@ -93,7 +105,7 @@ export default function CaseStudyDetailPage({ params }: CaseStudyDetailPageProps
 
           <div className="text-center pt-16">
             <Button asChild variant="outline">
-                <Link href="/case-studies">
+                <Link href="/studies">
                     <ArrowLeft className="mr-2 h-4 w-4" />
                     Back to All Case Studies
                 </Link>
@@ -103,23 +115,4 @@ export default function CaseStudyDetailPage({ params }: CaseStudyDetailPageProps
       </section>
     </div>
   );
-}
-
-export async function generateStaticParams() {
-    return caseStudies.map((study) => ({
-        id: study.id,
-    }))
-}
-
-export async function generateMetadata({ params }: CaseStudyDetailPageProps): Promise<Metadata> {
-  const study = caseStudies.find((p) => p.id === params.id);
-  if (!study) {
-    return {
-      title: 'Case Study Not Found',
-    };
-  }
-  return {
-    title: study.title,
-    description: `Case study for ${study.client}: ${study.description}`,
-  };
 }

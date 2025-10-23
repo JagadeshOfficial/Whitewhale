@@ -15,15 +15,6 @@ export interface Service {
   icon: LucideIcon;
 }
 
-export interface Insight {
-  id: string;
-  title: string;
-  description: string;
-  imageUrl: string;
-  category: string;
-  date: string;
-}
-
 export interface TeamMember {
   id: string;
   name: string;

@@ -43,7 +43,7 @@ export default function CaseStudiesPage() {
                 </CardContent>
                 <CardFooter>
                   <Button asChild variant="link" className="p-0 font-bold">
-                    <Link href={`/case-studies/${study.id}`}>Read More <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                    <Link href={`/studies/${study.id}`}>Read More <ArrowRight className="ml-2 h-4 w-4" /></Link>
                   </Button>
                 </CardFooter>
               </Card>

@@ -1,6 +1,6 @@
 
 import { Code, Smartphone, BrainCircuit, Target, Users, BarChart2, Globe, Cloud, PenTool, Cpu, Shield } from 'lucide-react';
-import type { Service, Insight, TeamMember, Client, MediaMention, JobOpening, CaseStudy } from './types';
+import type { Service, TeamMember, Client, MediaMention, JobOpening, CaseStudy } from './types';
 
 export const services: Service[] = [
   {
@@ -76,33 +76,6 @@ export const investmentApproach = [
       icon: BrainCircuit,
     },
 ]
-
-export const insights: Insight[] = [
-  {
-    id: '1',
-    title: 'The Future of AI in FinTech: A 2024 Perspective',
-    description: 'An in-depth analysis of how artificial intelligence is reshaping the financial technology landscape, from automated trading to personalized banking.',
-    imageUrl: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8QUklMjB0ZWNobm9sb2d5fGVufDB8fDB8fHww',
-    category: 'AI & Machine Learning',
-    date: 'August 15, 2024',
-  },
-  {
-    id: '2',
-    title: 'Building Scalable Web Apps with Next.js',
-    description: 'Exploring the advantages of using Next.js for modern web development and best practices for building scalable applications.',
-    imageUrl: 'https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y29kaW5nfGVufDB8fDB8fHww',
-    category: 'Web Development',
-    date: 'July 28, 2024',
-  },
-  {
-    id: '3',
-    title: 'The Importance of UX in Enterprise Software',
-    description: 'A look into why user experience is critical for the success of enterprise applications and how to design for usability.',
-    imageUrl: 'https://images.unsplash.com/photo-1559028005-4c1b1050b48b?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8VUlTJTIwZGVzaWdufGVufDB8fDB8fHww',
-    category: 'UX Design',
-    date: 'July 10, 2024',
-  },
-];
 
 export const teamMembers: TeamMember[] = [
   {
