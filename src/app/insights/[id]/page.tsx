@@ -41,7 +41,6 @@ export default function InsightDetailPage({ params }: Props) {
         title={insight.title}
         description={`Published on ${insight.date} in ${insight.category}`}
         imageUrl={insight.imageUrl}
-        imageHint={insight.imageHint}
       />
       <section className="py-12 sm:py-16">
         <div className="container mx-auto px-4">

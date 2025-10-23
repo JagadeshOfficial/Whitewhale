@@ -1,3 +1,4 @@
+
 import { services } from '@/lib/data';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
@@ -40,7 +41,6 @@ export default function ServiceDetailPage({ params }: Props) {
         title={service.title}
         description={service.description}
         imageUrl={`https://picsum.photos/seed/${service.id}/1920/1080`}
-        imageHint={`Abstract image representing ${service.title}`}
       />
       <section className="py-12 sm:py-16">
         <div className="container mx-auto px-4">

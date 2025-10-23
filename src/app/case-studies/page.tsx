@@ -20,7 +20,6 @@ export default function CaseStudiesPage() {
         title="Case Studies"
         description="We are proud of the work we do. Explore some of our most successful projects and see how we have helped our clients achieve their goals."
         imageUrl="https://picsum.photos/seed/case-studies-hero/1920/1080"
-        imageHint="A team collaborating on a project"
       />
 
       <section className="py-16 sm:py-24">

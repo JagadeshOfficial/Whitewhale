@@ -15,7 +15,6 @@ export default function Home() {
         <Image
           src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?w=1920&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c29mdHdhcmUlMjBkZXZlbG9wbWVudHxlbnwwfHwwfHx8MA%3D%3D"
           alt="Abstract technology background"
-          data-ai-hint="software development"
           fill
           className="object-cover"
           priority
@@ -87,7 +86,6 @@ export default function Home() {
                   <Image
                     src={insight.imageUrl}
                     alt={insight.title}
-                    data-ai-hint={insight.imageHint}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                   />

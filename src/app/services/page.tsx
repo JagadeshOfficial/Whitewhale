@@ -1,3 +1,4 @@
+
 import { Metadata } from 'next';
 import { PageHeader } from '@/components/common/PageHeader';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -18,7 +19,6 @@ export default function ServicesPage() {
         title="Our Services"
         description="From custom software to mobile apps, we have the expertise to bring your vision to life."
         imageUrl="https://picsum.photos/seed/services-hero/1920/1080"
-        imageHint="A developer working on a laptop with code on the screen"
       />
 
       <section className="py-16 sm:py-24">

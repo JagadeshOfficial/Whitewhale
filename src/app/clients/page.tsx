@@ -22,7 +22,6 @@ export default function ClientsPage() {
                     alt={client.name} 
                     fill
                     className="object-contain" 
-                    data-ai-hint={client.logoHint}
                   />
                 </div>
               </CardContent>

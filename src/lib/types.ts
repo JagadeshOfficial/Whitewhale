@@ -1,3 +1,4 @@
+
 export type NavLink = {
   href: string;
   label: string;
@@ -17,7 +18,6 @@ export type Insight = {
   title: string;
   description: string;
   imageUrl: string;
-  imageHint: string;
   category: string;
   date: string;
 };
@@ -33,7 +33,6 @@ export type Client = {
   id: string;
   name:string;
   logoUrl: string;
-  logoHint: string;
 }
 
 export type MediaMention = {
@@ -43,7 +42,6 @@ export type MediaMention = {
   date: string;
   link: string;
   imageUrl: string;
-  imageHint: string;
 }
 
 export type Project = {
@@ -51,7 +49,6 @@ export type Project = {
   name: string;
   description: string;
   imageUrl: string;
-  imageHint: string;
   category: string;
 };
 

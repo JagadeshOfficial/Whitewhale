@@ -20,7 +20,6 @@ export default function InsightsPage() {
         title="Tech Insights & Ideas"
         description="Stay ahead of the curve with our expert commentary on the trends shaping the future of technology."
         imageUrl="https://images.unsplash.com/photo-1532294220147-279399e4e00f?w=1920&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29uJTIwcmVhZGluZ3xlbnwwfHwwfHx8MA%3D%3D"
-        imageHint="person reading"
       />
 
       <section className="bg-secondary">
@@ -40,7 +39,7 @@ export default function InsightsPage() {
                   </Button>
                 </div>
                 <div className="relative h-64 md:h-full hidden md:block">
-                  <Image src="https://picsum.photos/seed/aisummarizer/800/600" alt="AI abstract" data-ai-hint="AI abstract" fill className="object-cover" />
+                  <Image src="https://picsum.photos/seed/aisummarizer/800/600" alt="AI abstract" fill className="object-cover" />
                 </div>
              </div>
            </Card>
@@ -56,7 +55,6 @@ export default function InsightsPage() {
                   <Image
                     src={insight.imageUrl}
                     alt={insight.title}
-                    data-ai-hint={insight.imageHint}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                   />

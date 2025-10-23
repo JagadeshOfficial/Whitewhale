@@ -48,7 +48,6 @@ export default function ProjectsPage() {
                   alt={project.name} 
                   fill
                   className="object-cover transition-transform duration-300 ease-in-out group-hover:scale-105"
-                  data-ai-hint={project.imageHint}
                 />
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors" />
               </div>

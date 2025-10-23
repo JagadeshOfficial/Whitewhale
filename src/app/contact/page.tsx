@@ -1,3 +1,4 @@
+
 import { Metadata } from "next";
 import { PageHeader } from "@/app/common/PageHeader";
 import { ContactForm } from "./ContactForm";
@@ -15,7 +16,6 @@ export default function ContactPage() {
         title="Contact Us"
         description="We're here to answer your questions. Reach out to us and we'll respond as soon as we can."
         imageUrl="https://picsum.photos/seed/contact-hero/1920/1080"
-        imageHint="A modern office space"
       />
 
       <section className="py-16 sm:py-24">

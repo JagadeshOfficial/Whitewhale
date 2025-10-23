@@ -1,3 +1,4 @@
+
 import { Metadata } from 'next';
 import { PageHeader } from '@/components/common/PageHeader';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
@@ -19,7 +20,6 @@ export default function CareersPage() {
         title="Join Our Team"
         description="We are always looking for talented individuals to join us. Explore our open positions and find your next opportunity."
         imageUrl="https://picsum.photos/seed/careers-hero/1920/1080"
-        imageHint="A diverse team working together in a modern office"
       />
 
       <section className="py-16 sm:py-24">

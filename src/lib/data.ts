@@ -76,7 +76,6 @@ export const insights: Insight[] = [
     title: 'The Future of AI in FinTech: A 2024 Perspective',
     description: 'An in-depth analysis of how artificial intelligence is reshaping the financial technology landscape, from automated trading to personalized banking.',
     imageUrl: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8QUklMjB0ZWNobm9sb2d5fGVufDB8fDB8fHww',
-    imageHint: 'AI technology',
     category: 'AI & Machine Learning',
     date: 'August 15, 2024',
   },
@@ -85,7 +84,6 @@ export const insights: Insight[] = [
     title: 'Building Scalable Web Apps with Next.js',
     description: 'Exploring the advantages of using Next.js for modern web development and best practices for building scalable applications.',
     imageUrl: 'https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y29kaW5nfGVufDB8fDB8fHww',
-    imageHint: 'coding',
     category: 'Web Development',
     date: 'July 28, 2024',
   },
@@ -94,7 +92,6 @@ export const insights: Insight[] = [
     title: 'The Importance of UX in Enterprise Software',
     description: 'A look into why user experience is critical for the success of enterprise applications and how to design for usability.',
     imageUrl: 'https://images.unsplash.com/photo-1559028005-4c1b1050b48b?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8VUlTJTIwZGVzaWdufGVufDB8fDB8fHww',
-    imageHint: 'UI design',
     category: 'UX Design',
     date: 'July 10, 2024',
   },
@@ -128,12 +125,12 @@ export const teamMembers: TeamMember[] = [
 ];
 
 export const clients: Client[] = [
-    { id: '1', name: "InnovateAI", logoUrl: "https://logodix.com/logo/23577.png", logoHint: "tech company logo" },
-    { id: '2', name: "QuantumLeap", logoUrl: "https://logodix.com/logo/20126.png", logoHint: "innovative logo" },
-    { id: '3', name: "BioGenex", logoUrl: "https://logodix.com/logo/18855.png", logoHint: "software logo" },
-    { id: '4', name: "FutureSynth", logoUrl: "https://logodix.com/logo/23871.png", logoHint: "creative logo" },
-    { id: '5', name: "NextGen Mobility", logoUrl: "https://logodix.com/logo/25619.png", logoHint: "abstract logo" },
-    { id: '6', name: "DataWeave", logoUrl: "https://logodix.com/logo/28434.png", logoHint: "modern logo" },
+    { id: '1', name: "InnovateAI", logoUrl: "https://logodix.com/logo/23577.png"},
+    { id: '2', name: "QuantumLeap", logoUrl: "https://logodix.com/logo/20126.png"},
+    { id: '3', name: "BioGenex", logoUrl: "https://logodix.com/logo/18855.png"},
+    { id: '4', name: "FutureSynth", logoUrl: "https://logodix.com/logo/23871.png"},
+    { id: '5', name: "NextGen Mobility", logoUrl: "https://logodix.com/logo/25619.png"},
+    { id: '6', name: "DataWeave", logoUrl: "https://logodix.com/logo/28434.png"},
 ]
 
 export const mediaMentions: MediaMention[] = [
@@ -144,7 +141,6 @@ export const mediaMentions: MediaMention[] = [
         date: 'August 1, 2024',
         link: '#',
         imageUrl: 'https://logodix.com/logo/100.png',
-        imageHint: 'client logo',
     },
     {
         id: '2',
@@ -153,7 +149,6 @@ export const mediaMentions: MediaMention[] = [
         date: 'July 20, 2024',
         link: '#',
         imageUrl: 'https://logodix.com/logo/12.png',
-        imageHint: 'client logo',
     },
     {
         id: '3',
@@ -162,7 +157,6 @@ export const mediaMentions: MediaMention[] = [
         date: 'July 5, 2024',
         link: '#',
         imageUrl: 'https://logodix.com/logo/42.png',
-        imageHint: 'client logo',
     }
 ]
 
@@ -172,7 +166,6 @@ export const projects: Project[] = [
     name: 'E-commerce Platform',
     description: 'A feature-rich online store with a custom CMS and payment gateway integration.',
     imageUrl: 'https://images.unsplash.com/photo-1556740738-b6a63e27c4df?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c29mdHdhcmUlMjBkZXZlbG9wbWVudHxlbnwwfHwwfHx8MA%3D%3D',
-    imageHint: 'software development',
     category: 'E-commerce',
   },
   {
@@ -180,7 +173,6 @@ export const projects: Project[] = [
     name: 'FinTech Mobile App',
     description: 'An iOS and Android app for personal finance management and investment tracking.',
     imageUrl: 'https://images.unsplash.com/photo-1607252650355-f7fd0460ccdb?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bW9iaWxlJTIwYXBwJTIwZGV2ZWxvcG1lbnR8ZW58MHx8MHx8fDA%3D',
-    imageHint: 'mobile app development',
     category: 'FinTech',
   },
   {
@@ -188,7 +180,6 @@ export const projects: Project[] = [
     name: 'AI-Powered Analytics Dashboard',
     description: 'A web-based platform that uses machine learning to provide business intelligence.',
     imageUrl: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8QUklMjB0ZWNobm9sb2d5fGVufDB8fDB8fHww',
-    imageHint: 'AI technology',
     category: 'AI & Machine Learning',
   },
 ];
