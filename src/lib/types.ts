@@ -10,9 +10,6 @@ export type Service = {
   description: string;
   longDescription: string;
   icon: React.ComponentType<{ className?: string }>;
-  href: string;
-  imageUrl?: string;
-  imageHint?: string;
 };
 
 export type Insight = {

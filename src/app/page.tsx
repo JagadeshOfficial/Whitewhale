@@ -61,7 +61,7 @@ export default function Home() {
               </CardContent>
               <CardFooter>
                 <Button asChild variant="link" className="text-primary font-bold">
-                  <Link href={service.href}>
+                  <Link href={`/services/${service.id}`}>
                     Learn More <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>

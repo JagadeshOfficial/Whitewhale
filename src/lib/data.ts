@@ -1,4 +1,4 @@
-import { Code, Smartphone, BrainCircuit, Target, Users, BarChart2, Globe, Cloud, PenTool, Cpu, Shield, Megaphone, GitMerge, Bitcoin, Building, Plug, ClipboardCheck, Briefcase, PieChart, Router, History, Layers, AppWindow, Database } from 'lucide-react';
+import { Code, Smartphone, BrainCircuit, Target, Users, BarChart2, Globe, Cloud, PenTool, Cpu, Shield, ArrowRight } from 'lucide-react';
 import type { Service, Insight, TeamMember, Client, MediaMention, Project, CaseStudy, JobOpening } from './types';
 import { placeholderImages } from './image-map';
 
@@ -9,9 +9,6 @@ export const services: Service[] = [
     description: 'Custom websites, e-commerce, CMS platforms.',
     longDescription: 'We build beautiful and intuitive web and mobile applications that captivate users and deliver exceptional experiences. Our team leverages the latest technologies to create cross-platform apps that are fast, reliable, and easy to use. Whether it\'s a consumer-facing app or an internal business tool, we have you covered.',
     icon: Globe,
-    href: '/services/web-development',
-    imageUrl: placeholderImages.heroWebDev.imageUrl,
-    imageHint: placeholderImages.heroWebDev.imageHint,
   },
   {
     id: 'mobile-app-development',
@@ -19,9 +16,6 @@ export const services: Service[] = [
     description: 'Android, iOS, and cross-platform mobile applications.',
     longDescription: 'We build beautiful and intuitive web and mobile applications that captivate users and deliver exceptional experiences. Our team leverages the latest technologies to create cross-platform apps that are fast, reliable, and easy to use. Whether it\'s a consumer-facing app or an internal business tool, we have you covered.',
     icon: Smartphone,
-    href: '/services/mobile-app-development',
-    imageUrl: placeholderImages.heroMobileDev.imageUrl,
-    imageHint: placeholderImages.heroMobileDev.imageHint,
   },
   {
     id: 'cloud-services',
@@ -29,9 +23,6 @@ export const services: Service[] = [
     description: 'Cloud computing, storage, and migration solutions.',
     longDescription: 'Harness the power of the cloud with our comprehensive cloud services. We offer cloud strategy, migration, and management services to help you build a scalable and resilient infrastructure. Our expertise spans across major cloud platforms, including AWS, Azure, and Google Cloud.',
     icon: Cloud,
-    href: '/services/cloud-services',
-    imageUrl: placeholderImages.heroCloud.imageUrl,
-    imageHint: placeholderImages.heroCloud.imageHint,
   },
   {
     id: 'ui-ux-design',
@@ -39,9 +30,6 @@ export const services: Service[] = [
     description: 'User interface and user experience design for websites and apps.',
     longDescription: 'Great software is more than just code; it\'s about creating a seamless and intuitive user experience. Our UI/UX design team works to understand your users and design interfaces that are not only beautiful but also easy to use and navigate.',
     icon: PenTool,
-    href: '/services/ui-ux-design',
-    imageUrl: placeholderImages.insight3.imageUrl,
-    imageHint: placeholderImages.insight3.imageHint,
   },
   {
     id: 'artificial-intelligence-machine-learning',
@@ -49,9 +37,6 @@ export const services: Service[] = [
     description: 'AI tools, chatbots, and predictive analytics.',
     longDescription: 'Harness the power of Artificial Intelligence with our custom AI and machine learning solutions. We help businesses automate complex processes, gain valuable insights from data, and create intelligent products. From natural language processing to predictive analytics, we build AI-driven systems that deliver tangible results.',
     icon: Cpu,
-    href: '/services/artificial-intelligence-machine-learning',
-    imageUrl: placeholderImages.insight1.imageUrl,
-    imageHint: placeholderImages.insight1.imageHint,
   },
   {
     id: 'cybersecurity',
@@ -59,9 +44,6 @@ export const services: Service[] = [
     description: 'Data protection, security audits, and threat prevention.',
     longDescription: 'In an increasingly digital world, security is paramount. Our cybersecurity services are designed to protect your data and infrastructure from evolving threats. We offer security audits, penetration testing, and a range of other services to help you stay ahead of the curve.',
     icon: Shield,
-    href: '/services/cybersecurity',
-    imageUrl: placeholderImages.project1.imageUrl,
-    imageHint: placeholderImages.project1.imageHint,
   },
 ];
 

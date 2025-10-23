@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { PageHeader } from '@/app/common/PageHeader';
+import { PageHeader } from '@/components/common/PageHeader';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { services } from '@/lib/data';
 import Link from 'next/link';
