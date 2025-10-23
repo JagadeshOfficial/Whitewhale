@@ -1,6 +1,6 @@
+
 import { Code, Smartphone, BrainCircuit, Target, Users, BarChart2, Globe, Cloud, PenTool, Cpu, Shield, ArrowRight } from 'lucide-react';
 import type { Service, Insight, TeamMember, Client, MediaMention, Project, CaseStudy, JobOpening } from './types';
-import { placeholderImages } from './image-map';
 
 export const services: Service[] = [
   {
@@ -75,8 +75,8 @@ export const insights: Insight[] = [
     id: '1',
     title: 'The Future of AI in FinTech: A 2024 Perspective',
     description: 'An in-depth analysis of how artificial intelligence is reshaping the financial technology landscape, from automated trading to personalized banking.',
-    imageUrl: placeholderImages.insight1.imageUrl,
-    imageHint: placeholderImages.insight1.imageHint,
+    imageUrl: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8QUklMjB0ZWNobm9sb2d5fGVufDB8fDB8fHww',
+    imageHint: 'AI technology',
     category: 'AI & Machine Learning',
     date: 'August 15, 2024',
   },
@@ -84,8 +84,8 @@ export const insights: Insight[] = [
     id: '2',
     title: 'Building Scalable Web Apps with Next.js',
     description: 'Exploring the advantages of using Next.js for modern web development and best practices for building scalable applications.',
-    imageUrl: placeholderImages.insight2.imageUrl,
-    imageHint: placeholderImages.insight2.imageHint,
+    imageUrl: 'https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y29kaW5nfGVufDB8fDB8fHww',
+    imageHint: 'coding',
     category: 'Web Development',
     date: 'July 28, 2024',
   },
@@ -93,37 +93,10 @@ export const insights: Insight[] = [
     id: '3',
     title: 'The Importance of UX in Enterprise Software',
     description: 'A look into why user experience is critical for the success of enterprise applications and how to design for usability.',
-    imageUrl: placeholderImages.insight3.imageUrl,
-    imageHint: placeholderImages.insight3.imageHint,
+    imageUrl: 'https://images.unsplash.com/photo-1559028005-4c1b1050b48b?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8VUlTJTIwZGVzaWdufGVufDB8fDB8fHww',
+    imageHint: 'UI design',
     category: 'UX Design',
     date: 'July 10, 2024',
-  },
-  {
-    id: '4',
-    title: 'The Metaverse: Hype vs. Reality for Enterprise',
-    description: 'Cutting through the noise to identify real-world enterprise applications and investment theses for the metaverse.',
-    imageUrl: placeholderImages.insight4.imageUrl,
-    imageHint: placeholderImages.insight4.imageHint,
-    category: 'Future Tech',
-    date: 'June 22, 2024',
-  },
-  {
-    id: '5',
-    title: 'AI-Powered Summarization: A Case Study',
-    description: 'An overview of how we built an AI-powered text summarization tool and the challenges we overcame.',
-    imageUrl: placeholderImages.insight5.imageUrl,
-    imageHint: placeholderImages.insight5.imageHint,
-    category: 'AI Solutions',
-    date: 'June 5, 2024',
-  },
-  {
-    id: '6',
-    title: 'Choosing the Right Tech Stack for Your Mobile App',
-    description: 'A guide to help you decide on the best technology stack for your mobile application based on your needs and goals.',
-    imageUrl: placeholderImages.insight6.imageUrl,
-    imageHint: placeholderImages.insight6.imageHint,
-    category: 'Mobile Development',
-    date: 'May 21, 2024',
   },
 ];
 
@@ -132,35 +105,35 @@ export const teamMembers: TeamMember[] = [
     id: '1',
     name: 'Eleanor Vance',
     role: 'CEO & Founder',
-    imageUrl: "https://i.pravatar.cc/300?u=1",
+    imageUrl: 'https://picsum.photos/seed/1/300/300',
   },
   {
     id: '2',
     name: 'Marcus Thorne',
     role: 'CTO',
-    imageUrl: "https://i.pravatar.cc/300?u=2",
+    imageUrl: 'https://picsum.photos/seed/2/300/300',
   },
   {
     id: '3',
     name: 'Isabelle Rossi',
     role: 'Head of Product',
-    imageUrl: "https://i.pravatar.cc/300?u=3",
+    imageUrl: 'https://picsum.photos/seed/3/300/300',
   },
   {
     id: '4',
     name: 'Julian Chen',
     role: 'Lead Engineer',
-    imageUrl: "https://i.pravatar.cc/300?u=4",
+    imageUrl: 'https://picsum.photos/seed/4/300/300',
   },
 ];
 
 export const clients: Client[] = [
-    { id: '1', name: "InnovateAI", logoUrl: placeholderImages.portfolioLogo1.imageUrl, logoHint: placeholderImages.portfolioLogo1.imageHint },
-    { id: '2', name: "QuantumLeap", logoUrl: placeholderImages.portfolioLogo2.imageUrl, logoHint: placeholderImages.portfolioLogo2.imageHint },
-    { id: '3', name: "BioGenex", logoUrl: placeholderImages.portfolioLogo3.imageUrl, logoHint: placeholderImages.portfolioLogo3.imageHint },
-    { id: '4', name: "FutureSynth", logoUrl: placeholderImages.portfolioLogo4.imageUrl, logoHint: placeholderImages.portfolioLogo4.imageHint },
-    { id: '5', name: "NextGen Mobility", logoUrl: placeholderImages.portfolioLogo5.imageUrl, logoHint: placeholderImages.portfolioLogo5.imageHint },
-    { id: '6', name: "DataWeave", logoUrl: placeholderImages.portfolioLogo6.imageUrl, logoHint: placeholderImages.portfolioLogo6.imageHint },
+    { id: '1', name: "InnovateAI", logoUrl: "https://logodix.com/logo/23577.png", logoHint: "tech company logo" },
+    { id: '2', name: "QuantumLeap", logoUrl: "https://logodix.com/logo/20126.png", logoHint: "innovative logo" },
+    { id: '3', name: "BioGenex", logoUrl: "https://logodix.com/logo/18855.png", logoHint: "software logo" },
+    { id: '4', name: "FutureSynth", logoUrl: "https://logodix.com/logo/23871.png", logoHint: "creative logo" },
+    { id: '5', name: "NextGen Mobility", logoUrl: "https://logodix.com/logo/25619.png", logoHint: "abstract logo" },
+    { id: '6', name: "DataWeave", logoUrl: "https://logodix.com/logo/28434.png", logoHint: "modern logo" },
 ]
 
 export const mediaMentions: MediaMention[] = [
@@ -170,8 +143,8 @@ export const mediaMentions: MediaMention[] = [
         publication: 'Client: Retailify',
         date: 'August 1, 2024',
         link: '#',
-        imageUrl: placeholderImages.mediaPublication1.imageUrl,
-        imageHint: placeholderImages.mediaPublication1.imageHint,
+        imageUrl: 'https://logodix.com/logo/100.png',
+        imageHint: 'client logo',
     },
     {
         id: '2',
@@ -179,8 +152,8 @@ export const mediaMentions: MediaMention[] = [
         publication: 'Client: FinSecure',
         date: 'July 20, 2024',
         link: '#',
-        imageUrl: placeholderImages.mediaPublication2.imageUrl,
-        imageHint: placeholderImages.mediaPublication2.imageHint,
+        imageUrl: 'https://logodix.com/logo/12.png',
+        imageHint: 'client logo',
     },
     {
         id: '3',
@@ -188,8 +161,8 @@ export const mediaMentions: MediaMention[] = [
         publication: 'Client: HealthSphere',
         date: 'July 5, 2024',
         link: '#',
-        imageUrl: placeholderImages.mediaPublication3.imageUrl,
-        imageHint: placeholderImages.mediaPublication3.imageHint,
+        imageUrl: 'https://logodix.com/logo/42.png',
+        imageHint: 'client logo',
     }
 ]
 
@@ -198,50 +171,26 @@ export const projects: Project[] = [
     id: '1',
     name: 'E-commerce Platform',
     description: 'A feature-rich online store with a custom CMS and payment gateway integration.',
-    imageUrl: placeholderImages.project3.imageUrl,
-    imageHint: placeholderImages.project3.imageHint,
+    imageUrl: 'https://images.unsplash.com/photo-1556740738-b6a63e27c4df?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c29mdHdhcmUlMjBkZXZlbG9wbWVudHxlbnwwfHwwfHx8MA%3D%3D',
+    imageHint: 'software development',
     category: 'E-commerce',
   },
   {
     id: '2',
     name: 'FinTech Mobile App',
     description: 'An iOS and Android app for personal finance management and investment tracking.',
-    imageUrl: placeholderImages.project2.imageUrl,
-    imageHint: placeholderImages.project2.imageHint,
+    imageUrl: 'https://images.unsplash.com/photo-1607252650355-f7fd0460ccdb?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bW9iaWxlJTIwYXBwJTIwZGV2ZWxvcG1lbnR8ZW58MHx8MHx8fDA%3D',
+    imageHint: 'mobile app development',
     category: 'FinTech',
   },
   {
     id: '3',
     name: 'AI-Powered Analytics Dashboard',
     description: 'A web-based platform that uses machine learning to provide business intelligence.',
-    imageUrl: placeholderImages.project1.imageUrl,
-    imageHint: placeholderImages.project1.imageHint,
+    imageUrl: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8QUklMjB0ZWNobm9sb2d5fGVufDB8fDB8fHww',
+    imageHint: 'AI technology',
     category: 'AI & Machine Learning',
   },
-  {
-    id: '4',
-    name: 'Healthcare Management System',
-    description: 'A comprehensive software solution for hospitals and clinics.',
-    imageUrl: placeholderImages.heroMobileDev.imageUrl, // Placeholder
-    imageHint: 'healthcare management system',
-    category: 'Healthcare',
-  },
-  {
-    id: '5',
-    name: 'Education Tech Platform',
-    description: 'An online learning platform with interactive courses and a student management system.',
-    imageUrl: placeholderImages.insight3.imageUrl, // Placeholder
-    imageHint: 'education tech platform',
-    category: 'Education Tech',
-  },
-  {
-    id: '6',
-    name: 'Real Estate Portal',
-    description: 'A web and mobile platform for property listings, virtual tours, and agent management.',
-    imageUrl: placeholderImages.heroAbout.imageUrl, // Placeholder
-    imageHint: 'real estate portal',
-    category: 'Real Estate',
-  }
 ];
 
 export const caseStudies: CaseStudy[] = [
@@ -258,7 +207,7 @@ export const caseStudies: CaseStudy[] = [
       "40% increase in mobile conversion rates.",
       "Top 3 ranking on Google for key product categories."
     ],
-    imageUrl: placeholderImages.project3.imageUrl
+    imageUrl: 'https://images.unsplash.com/photo-1556740738-b6a63e27c4df?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c29mdHdhcmUlMjBkZXZlbG9wbWVudHxlbnwwfHwwfHx8MA%3D%3D'
   },
   {
     id: "fintech-ai-platform",
@@ -273,7 +222,7 @@ export const caseStudies: CaseStudy[] = [
       "Real-time processing of over 10,000 transactions per second.",
       "Enhanced security and trust for millions of users."
     ],
-    imageUrl: placeholderImages.project1.imageUrl
+    imageUrl: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8QUklMjB0ZWNobm9sb2d5fGVufDB8fDB8fHww'
   },
   {
     id: "healthcare-mobile-app",
@@ -288,7 +237,7 @@ export const caseStudies: CaseStudy[] = [
       "Streamlined appointment booking process, reducing administrative overhead.",
       "Secure and HIPAA-compliant data handling."
     ],
-    imageUrl: placeholderImages.heroMobileDev.imageUrl
+    imageUrl: 'https://images.unsplash.com/photo-1607252650355-f7fd0460ccdb?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bW9iaWxlJTIwYXBwJTIwZGV2ZWxvcG1lbnR8ZW58MHx8MHx8fDA%3D'
   }
 ];
 

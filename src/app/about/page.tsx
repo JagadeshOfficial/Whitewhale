@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 import { Metadata } from "next";
 import { PageHeader } from "@/components/common/PageHeader";
@@ -15,8 +16,8 @@ export default function AboutPage() {
       <PageHeader
         title="About Innovate Solutions"
         description="We are a team of passionate innovators, dedicated to crafting exceptional software that drives results."
-        imageUrl="https://picsum.photos/seed/about-hero/1920/1080"
-        imageHint="A modern, collaborative office space"
+        imageUrl="https://images.unsplash.com/photo-1551434678-e076c223a692?w=1920&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fG9mZmljZSUyMHRlYW18ZW58MHx8MHx8fDA%3D"
+        imageHint="office team"
         ctaLabel="Get in Touch"
         ctaLink="/contact"
       />

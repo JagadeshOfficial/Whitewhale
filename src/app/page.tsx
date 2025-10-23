@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -5,7 +6,6 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { ArrowRight } from 'lucide-react';
 import { services, insights } from '@/lib/data';
 import { PageHeader } from '@/components/common/PageHeader';
-import { placeholderImages } from '@/lib/image-map';
 
 export default function Home() {
   return (
@@ -13,9 +13,9 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative w-full h-[60vh] md:h-[80vh] flex items-center justify-center text-center">
         <Image
-          src={placeholderImages.heroHome.imageUrl}
+          src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?w=1920&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c29mdHdhcmUlMjBkZXZlbG9wbWVudHxlbnwwfHwwfHx8MA%3D%3D"
           alt="Abstract technology background"
-          data-ai-hint={placeholderImages.heroHome.imageHint}
+          data-ai-hint="software development"
           fill
           className="object-cover"
           priority
@@ -87,6 +87,7 @@ export default function Home() {
                   <Image
                     src={insight.imageUrl}
                     alt={insight.title}
+                    data-ai-hint={insight.imageHint}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                   />

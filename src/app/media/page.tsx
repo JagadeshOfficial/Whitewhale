@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { Metadata } from 'next';
@@ -5,7 +6,6 @@ import { PageHeader } from '@/app/common/PageHeader';
 import { Card, CardContent } from '@/components/ui/card';
 import { ExternalLink } from 'lucide-react';
 import { mediaMentions } from '@/lib/data';
-import { placeholderImages } from '@/lib/image-map';
 
 export const metadata: Metadata = {
   title: "Media",
@@ -18,8 +18,8 @@ export default function MediaPage() {
       <PageHeader
         title="Innovate Solutions in the News"
         description="A collection of press mentions, articles, and other features about our company and our projects."
-        imageUrl={placeholderImages.heroMedia.imageUrl}
-        imageHint={placeholderImages.heroMedia.imageHint}
+        imageUrl="https://images.unsplash.com/photo-1556740758-90de374c12ad?w=1920&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Y2xpZW50JTIwcHJlc2VudGF0aW9ufGVufDB8fDB8fHww"
+        imageHint="client presentation"
       />
 
       <section>

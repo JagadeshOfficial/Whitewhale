@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { Metadata } from 'next';
@@ -6,7 +7,6 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Sparkles } from 'lucide-react';
 import { insights } from '@/lib/data';
-import { placeholderImages } from '@/lib/image-map';
 
 export const metadata: Metadata = {
   title: "Blog",
@@ -19,8 +19,8 @@ export default function InsightsPage() {
       <PageHeader
         title="Tech Insights & Ideas"
         description="Stay ahead of the curve with our expert commentary on the trends shaping the future of technology."
-        imageUrl={placeholderImages.heroInsights.imageUrl}
-        imageHint={placeholderImages.heroInsights.imageHint}
+        imageUrl="https://images.unsplash.com/photo-1532294220147-279399e4e00f?w=1920&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29uJTIwcmVhZGluZ3xlbnwwfHwwfHx8MA%3D%3D"
+        imageHint="person reading"
       />
 
       <section className="bg-secondary">
