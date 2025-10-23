@@ -6,7 +6,6 @@ interface PageHeaderProps {
   title: string;
   description: string;
   imageUrl?: string;
-  imageHint?: string;
   ctaLabel?: string;
   ctaLink?: string;
   withBackground?: boolean;
@@ -16,7 +15,6 @@ export function PageHeader({
   title, 
   description, 
   imageUrl, 
-  imageHint, 
   ctaLabel, 
   ctaLink,
   withBackground = true,
@@ -45,7 +43,6 @@ export function PageHeader({
         <Image
           src={imageUrl}
           alt={title}
-          data-ai-hint={imageHint}
           fill
           className="object-cover"
         />

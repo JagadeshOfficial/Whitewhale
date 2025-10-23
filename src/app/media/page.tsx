@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Metadata } from 'next';
-import { PageHeader } from '@/app/common/PageHeader';
+import { PageHeader } from '@/components/common/PageHeader';
 import { Card, CardContent } from '@/components/ui/card';
 import { ExternalLink } from 'lucide-react';
 import { mediaMentions } from '@/lib/data';

@@ -1,11 +1,11 @@
 import Link from 'next/link';
-import { Facebook, Twitter, Linkedin } from 'lucide-react';
-import { Logo } from './Logo';
+import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin } from 'lucide-react';
 import { NAV_LINKS } from '@/lib/constants';
+import { Logo } from '@/components/common/Logo';
 
 export function Footer() {
-  const servicesLinks = NAV_LINKS.find(link => link.label === "Services")?.subLinks?.slice(0, 5) || [];
-  const companyLinks = NAV_LINKS.filter(link => link.label !== "Home" && !link.subLinks);
+    const servicesLinks = NAV_LINKS.find(link => link.label === "Services")?.subLinks?.slice(0, 5) || [];
+    const companyLinks = NAV_LINKS.filter(link => link.label !== "Home" && !link.subLinks);
 
   return (
     <footer className="bg-secondary text-secondary-foreground border-t">
@@ -51,17 +51,43 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="font-headline font-semibold text-foreground">Contact</h3>
-            <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
-              <li>123 Innovation Drive</li>
-              <li>San Francisco, CA 94105</li>
-              <li className="pt-2"><a href="mailto:contact@innovatesolutions.com" className="hover:text-foreground">contact@innovatesolutions.com</a></li>
-              <li><a href="tel:+1234567890" className="hover:text-foreground">+1 (234) 567-890</a></li>
-            </ul>
+            <h3 className="font-headline font-semibold text-foreground">Contact Us</h3>
+            <div className="mt-4 space-y-4">
+              <div className="flex items-start gap-4">
+                <MapPin className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
+                <div>
+                  <h5 className="font-semibold">Our Location (India)</h5>
+                  <p className="text-muted-foreground">Plot no.18, iLabs Centre, Level 2, Oval Building, Inorbit Mall Rd, Hyderabad, Telangana 500081</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <MapPin className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
+                <div>
+                  <h5 className="font-semibold">Our Location (USA)</h5>
+                  <p className="text-muted-foreground">1010 E Elm St, Springfield, Missouri 65806, USA</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <Mail className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
+                <div>
+                  <h5 className="font-semibold">For Business</h5>
+                  <a href="mailto:business@whitewhalesoft.in" className="text-muted-foreground hover:text-primary">business@whitewhalesoft.in</a>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <Mail className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
+                <div>
+                  <h5 className="font-semibold">For Careers</h5>
+                  <a href="mailto:contact@whitewhalesoft.in" className="text-muted-foreground hover:text-primary">contact@whitewhalesoft.in</a>
+                </div>
+              </div>
+            </div>
           </div>
+
         </div>
-        <div className="mt-8 pt-8 border-t text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} Innovate Solutions. All Rights Reserved.</p>
+
+        <div className="mt-8 border-t pt-8 text-center text-muted-foreground">
+          <p>&copy; {new Date().getFullYear()} Innovate Solutions. All rights reserved.</p>
         </div>
       </div>
     </footer>
