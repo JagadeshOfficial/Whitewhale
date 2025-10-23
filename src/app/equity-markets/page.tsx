@@ -1,8 +1,8 @@
+
 import Image from "next/image";
 import { Metadata } from "next";
 import { PageHeader } from "@/components/common/PageHeader";
 import { CheckCircle } from "lucide-react";
-import { placeholderImages } from "@/lib/image-map";
 import { services } from "@/lib/data";
 
 export const metadata: Metadata = {
@@ -26,9 +26,8 @@ export default function EquityMarketsPage() {
     <div>
       <PageHeader
         title="Equity Markets"
-        description={equityService?.description || "Strategic investments in public markets to generate consistent, long-term growth."}
-        imageUrl={placeholderImages.heroEquityMarkets.imageUrl}
-        imageHint={placeholderImages.heroEquityMarkets.imageHint}
+        description={"Strategic investments in public markets to generate consistent, long-term growth."}
+        imageUrl={"https://picsum.photos/seed/equity-hero/1920/1080"}
       />
 
       <section>
@@ -37,9 +36,6 @@ export default function EquityMarketsPage() {
             <div className="prose prose-lg max-w-none text-muted-foreground">
               <h2 className="text-3xl font-headline text-foreground">Our Strategy</h2>
               <p>
-                {equityService?.longDescription}
-              </p>
-              <p>
                 We believe that superior returns are achieved by being patient, disciplined, and focused on the underlying fundamentals of the businesses we own. Our process is designed to mitigate behavioral biases and focus on what truly matters: the long-term intrinsic value of a company.
               </p>
             </div>
@@ -47,7 +43,6 @@ export default function EquityMarketsPage() {
                 <Image 
                     src="https://picsum.photos/seed/equity-strategy/800/600"
                     alt="Financial charts and graphs"
-                    data-ai-hint="financial charts"
                     fill
                     className="object-cover"
                 />

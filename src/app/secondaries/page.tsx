@@ -1,9 +1,9 @@
+
 import Image from "next/image";
 import { Metadata } from "next";
 import { PageHeader } from "@/components/common/PageHeader";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Users, FileText, TrendingUp, ShieldCheck } from "lucide-react";
-import { placeholderImages } from "@/lib/image-map";
 import { services } from "@/lib/data";
 
 export const metadata: Metadata = {
@@ -41,9 +41,8 @@ export default function SecondariesPage() {
     <div>
       <PageHeader
         title="Secondaries"
-        description={secondariesService?.description || "Providing liquidity solutions in the private markets for investors and founders."}
-        imageUrl={placeholderImages.heroSecondaries.imageUrl}
-        imageHint={placeholderImages.heroSecondaries.imageHint}
+        description={"Providing liquidity solutions in the private markets for investors and founders."}
+        imageUrl={"https://picsum.photos/seed/secondaries-hero/1920/1080"}
       />
 
        <section>
@@ -53,16 +52,12 @@ export default function SecondariesPage() {
                 <Image 
                     src="https://picsum.photos/seed/secondaries-process/800/600"
                     alt="Two people shaking hands over a deal"
-                    data-ai-hint="business deal"
                     fill
                     className="object-cover"
                 />
             </div>
             <div className="prose prose-lg max-w-none text-muted-foreground md:order-1">
               <h2 className="text-3xl font-headline text-foreground">A Trusted Partner in Private Market Liquidity</h2>
-              <p>
-                {secondariesService?.longDescription}
-              </p>
               <p>
                 The private markets have grown exponentially, but liquidity remains a challenge. Our secondaries team specializes in navigating this complex landscape, offering customized solutions that align the interests of sellers, general partners, and the underlying companies.
               </p>
