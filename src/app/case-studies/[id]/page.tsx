@@ -9,22 +9,6 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { ArrowLeft } from 'lucide-react';
 
-export async function generateMetadata(
-  { params }: { params: { id: string } },
-  parent: ResolvingMetadata
-): Promise<Metadata> {
-  const study = caseStudies.find((p) => p.id === params.id);
-  if (!study) {
-    return {
-      title: 'Case Study Not Found',
-    };
-  }
-  return {
-    title: study.title,
-    description: study.description,
-  };
-}
-
 export default function CaseStudyDetailPage({ params }: { params: { id: string } }) {
   const study = caseStudies.find((p) => p.id === params.id);
 

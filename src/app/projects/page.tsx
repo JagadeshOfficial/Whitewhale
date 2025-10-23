@@ -3,7 +3,7 @@
 
 import { useState } from 'react';
 import { projects } from "@/lib/data";
-import { PageHeader } from "@/app/common/PageHeader";
+import { PageHeader } from "@/components/common/PageHeader";
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";

@@ -1,8 +1,8 @@
+
 import Image from "next/image";
 import { Metadata } from "next";
 import { PageHeader } from "@/components/common/PageHeader";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { placeholderImages } from "@/lib/image-map";
 import { clients, investmentApproach, services } from "@/lib/data";
 
 export const metadata: Metadata = {
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description: "Our approach to investing in and supporting the next generation of market-defining companies.",
 };
 
-const vcService = services.find(s => s.title === 'Blockchain Solutions');
+const vcService = services.find(s => s.title === 'Venture Capital');
 
 export default function VentureCapitalPage() {
   return (
@@ -18,8 +18,7 @@ export default function VentureCapitalPage() {
       <PageHeader
         title="Venture Capital"
         description={vcService?.description || "Investing in visionary founders building the future."}
-        imageUrl={placeholderImages.heroVentureCapital.imageUrl}
-        imageHint={placeholderImages.heroVentureCapital.imageHint}
+        imageUrl="https://picsum.photos/seed/vc-hero/1920/1080"
       />
 
       <section>
@@ -35,7 +34,6 @@ export default function VentureCapitalPage() {
                 <Image 
                     src="https://picsum.photos/seed/vc-philosophy/800/600"
                     alt="Team discussing strategy"
-                    data-ai-hint="team strategy"
                     fill
                     className="object-cover"
                 />
@@ -80,7 +78,6 @@ export default function VentureCapitalPage() {
                 <Image
                   src={company.logoUrl}
                   alt={`${company.name} logo`}
-                  data-ai-hint={company.logoHint}
                   fill
                   className="object-contain"
                 />

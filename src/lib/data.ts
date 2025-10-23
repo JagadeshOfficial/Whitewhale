@@ -45,6 +45,13 @@ export const services: Service[] = [
     longDescription: 'In an increasingly digital world, security is paramount. Our cybersecurity services are designed to protect your data and infrastructure from evolving threats. We offer security audits, penetration testing, and a range of other services to help you stay ahead of the curve.',
     icon: Shield,
   },
+  {
+    id: 'venture-capital',
+    title: 'Venture Capital',
+    description: "Investing in visionary founders building the future.",
+    longDescription: "We partner with early-stage, mission-driven founders who are creating the next generation of transformative companies. Our approach goes beyond capital, providing hands-on support in strategy, product, and growth.",
+    icon: BrainCircuit
+  },
 ];
 
 export const investmentApproach = [
