@@ -9,7 +9,13 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { ArrowLeft } from 'lucide-react';
 
-export default function CaseStudyDetailPage({ params }: { params: { id: string } }) {
+interface CaseStudyDetailPageProps {
+  params: {
+    id: string;
+  };
+}
+
+export default function CaseStudyDetailPage({ params }: CaseStudyDetailPageProps) {
   const study = caseStudies.find((p) => p.id === params.id);
 
   if (!study) {

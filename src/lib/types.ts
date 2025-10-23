@@ -54,3 +54,22 @@ export interface JobOpening {
   responsibilities: string[];
   qualifications: string[];
 }
+
+export interface CaseStudy {
+  id: string;
+  title: string;
+  client: string;
+  description: string;
+  challenge: string;
+  solution: string;
+  results: string[];
+  imageUrl: string;
+}
+
+export interface Project {
+  id: string;
+  name: string;
+  description: string;
+  imageUrl: string;
+  category: string;
+}
