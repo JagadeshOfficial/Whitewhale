@@ -9,11 +9,12 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { ArrowLeft } from 'lucide-react';
 
-type CaseStudyDetailPageProps = {
+type Props = {
   params: { id: string };
+  searchParams: { [key: string]: string | string[] | undefined };
 };
 
-export async function generateMetadata({ params }: CaseStudyDetailPageProps): Promise<Metadata> {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const study = caseStudies.find((p) => p.id === params.id);
   if (!study) {
     return {
@@ -26,7 +27,7 @@ export async function generateMetadata({ params }: CaseStudyDetailPageProps): Pr
   };
 }
 
-export default function CaseStudyDetailPage({ params }: CaseStudyDetailPageProps) {
+export default function CaseStudyDetailPage({ params }: Props) {
   const study = caseStudies.find((p) => p.id === params.id);
 
   if (!study) {
