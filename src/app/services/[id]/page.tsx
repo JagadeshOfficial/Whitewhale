@@ -9,12 +9,11 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { ArrowLeft, CheckCircle } from 'lucide-react';
 
-type Props = {
+type ServiceDetailPageProps = {
   params: { id: string };
-  searchParams: { [key: string]: string | string[] | undefined };
 };
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata({ params }: ServiceDetailPageProps): Promise<Metadata> {
   const service = services.find((s) => s.id === params.id);
   if (!service) {
     return {
@@ -27,7 +26,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default function ServiceDetailPage({ params }: Props) {
+export default function ServiceDetailPage({ params }: ServiceDetailPageProps) {
   const service = services.find((s) => s.id === params.id);
 
   if (!service) {
