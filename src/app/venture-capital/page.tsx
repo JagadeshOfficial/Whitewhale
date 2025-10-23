@@ -6,7 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { clients, investmentApproach, services } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Venture Capital",
+  title: "Venture Capital | WHITEWHALE SOFTWARE SOLUTIONS",
   description: "Our approach to investing in and supporting the next generation of market-defining companies.",
 };
 
