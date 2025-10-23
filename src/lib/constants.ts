@@ -11,7 +11,6 @@ export const NAV_LINKS: NavLink[] = [
   },
   { href: "/studies", label: "Case Studies"},
   { href: "/about", label: "About" },
-  { href: "/insights", label: "Blog" },
   { href: "/careers", label: "Careers" },
   { href: "/contact", label: "Contact" },
 ];

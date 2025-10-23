@@ -1,6 +1,6 @@
 
 import { Code, Smartphone, BrainCircuit, Target, Users, BarChart2, Globe, Cloud, PenTool, Cpu, Shield } from 'lucide-react';
-import type { Service, TeamMember, Client, MediaMention, JobOpening, CaseStudy } from './types';
+import type { Service, TeamMember, Client, JobOpening, CaseStudy } from './types';
 
 export const services: Service[] = [
   {
@@ -113,33 +113,6 @@ export const clients: Client[] = [
     { id: '6', name: "DataWeave", logoUrl: "https://logodix.com/logo/28434.png"},
 ]
 
-export const mediaMentions: MediaMention[] = [
-    {
-        id: '1',
-        title: 'Case Study: How We Boosted E-commerce Sales by 300%',
-        publication: 'Client: Retailify',
-        date: 'August 1, 2024',
-        link: '#',
-        imageUrl: 'https://logodix.com/logo/100.png',
-    },
-    {
-        id: '2',
-        title: 'Building a Scalable AI Platform for a FinTech Leader',
-        publication: 'Client: FinSecure',
-        date: 'July 20, 2024',
-        link: '#',
-        imageUrl: 'https://logodix.com/logo/12.png',
-    },
-    {
-        id: '3',
-        title: 'Developing a Cross-Platform Mobile App for Healthcare',
-        publication: 'Client: HealthSphere',
-        date: 'July 5, 2024',
-        link: '#',
-        imageUrl: 'https://logodix.com/logo/42.png',
-    }
-]
-
 export const jobOpenings: JobOpening[] = [
   {
     id: "frontend-engineer",
@@ -247,4 +220,3 @@ export const caseStudies: CaseStudy[] = [
     imageUrl: 'https://images.unsplash.com/photo-1607252650355-f7fd0460ccdb?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bW9iaWxlJTIwYXBwJTIwZGV2ZWxvcG1lbnR8ZW58MHx8MHx8fDA%3D'
   }
 ];
-
