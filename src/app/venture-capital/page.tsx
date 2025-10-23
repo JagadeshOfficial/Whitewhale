@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description: "Our approach to investing in and supporting the next generation of market-defining companies.",
 };
 
-const vcService = services.find(s => s.title === 'Venture Capital');
+const vcService = services.find(s => s.id === 'venture-capital');
 
 export default function VentureCapitalPage() {
   return (

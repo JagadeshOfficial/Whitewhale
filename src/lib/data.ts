@@ -1,5 +1,5 @@
 
-import { Code, Smartphone, BrainCircuit, Target, Users, BarChart2, Globe, Cloud, PenTool, Cpu, Shield, ArrowRight } from 'lucide-react';
+import { Code, Smartphone, BrainCircuit, Target, Users, BarChart2, Globe, Cloud, PenTool, Cpu, Shield } from 'lucide-react';
 import type { Service, Insight, TeamMember, Client, MediaMention, JobOpening, CaseStudy } from './types';
 
 export const services: Service[] = [
