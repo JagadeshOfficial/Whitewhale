@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -20,7 +20,12 @@ import type { NavLink } from "@/lib/types";
 
 export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
   const pathname = usePathname();
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   const renderNavLink = (link: NavLink, isMobile: boolean = false) => {
     const isActive = pathname === link.href;
@@ -106,39 +111,43 @@ export function Header() {
         <Link href="/" className="flex items-center gap-2">
           <Logo />
         </Link>
+        
+        {isMounted && (
+          <>
+            {/* Desktop Navigation */}
+            <nav className="hidden md:flex items-center gap-4">
+              {NAV_LINKS.map((link) => renderNavLink(link))}
+            </nav>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-4">
-          {NAV_LINKS.map((link) => renderNavLink(link))}
-        </nav>
-
-        {/* Mobile Navigation */}
-        <div className="md:hidden">
-          <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
-            <SheetTrigger asChild>
-              <Button variant="ghost" size="icon">
-                <Menu className="h-6 w-6" />
-                <span className="sr-only">Open menu</span>
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="right" className="w-full sm:w-[320px] p-0">
-              <div className="flex flex-col h-full">
-                <div className="flex items-center justify-between p-4 border-b">
-                   <Link href="/" onClick={() => setIsMobileMenuOpen(false)}>
-                      <Logo />
-                    </Link>
-                  <Button variant="ghost" size="icon" onClick={() => setIsMobileMenuOpen(false)}>
-                    <X className="h-6 w-6" />
-                    <span className="sr-only">Close menu</span>
+            {/* Mobile Navigation */}
+            <div className="md:hidden">
+              <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
+                <SheetTrigger asChild>
+                  <Button variant="ghost" size="icon">
+                    <Menu className="h-6 w-6" />
+                    <span className="sr-only">Open menu</span>
                   </Button>
-                </div>
-                <nav className="flex flex-col gap-4 p-4">
-                  {NAV_LINKS.map((link) => renderNavLink(link, true))}
-                </nav>
-              </div>
-            </SheetContent>
-          </Sheet>
-        </div>
+                </SheetTrigger>
+                <SheetContent side="right" className="w-full sm:w-[320px] p-0">
+                  <div className="flex flex-col h-full">
+                    <div className="flex items-center justify-between p-4 border-b">
+                      <Link href="/" onClick={() => setIsMobileMenuOpen(false)}>
+                          <Logo />
+                        </Link>
+                      <Button variant="ghost" size="icon" onClick={() => setIsMobileMenuOpen(false)}>
+                        <X className="h-6 w-6" />
+                        <span className="sr-only">Close menu</span>
+                      </Button>
+                    </div>
+                    <nav className="flex flex-col gap-4 p-4">
+                      {NAV_LINKS.map((link) => renderNavLink(link, true))}
+                    </nav>
+                  </div>
+                </SheetContent>
+              </Sheet>
+            </div>
+          </>
+        )}
       </div>
     </header>
   );
