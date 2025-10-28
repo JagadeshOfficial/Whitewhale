@@ -41,11 +41,6 @@ export default function CaseStudiesPage() {
                 <CardContent className="flex-grow">
                   <p className="text-muted-foreground line-clamp-3">{study.description}</p>
                 </CardContent>
-                <CardFooter>
-                  <Button asChild variant="link" className="p-0 font-bold">
-                    <Link href={`/studies/${study.id}`}>Read More <ArrowRight className="ml-2 h-4 w-4" /></Link>
-                  </Button>
-                </CardFooter>
               </Card>
             ))}
           </div>

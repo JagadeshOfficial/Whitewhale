@@ -179,8 +179,7 @@ export const caseStudies: CaseStudy[] = [
     title: "Boosting E-commerce Sales by 300% for Retailify",
     client: "Retailify",
     description: "A comprehensive overhaul of Retailify's online presence, leading to a massive increase in sales and customer engagement.",
-    challenge: "Retailify's existing e-commerce platform was outdated, slow, and not mobile-friendly. They were losing customers and revenue due to a poor user experience.",
-    solution: "We designed and developed a new, modern e-commerce platform from the ground up using Next.js and Shopify. The new site is fast, responsive, and features a streamlined checkout process. We also implemented a new SEO strategy to improve their search engine rankings.",
+    longDescription: "Retailify's existing e-commerce platform was outdated, slow, and not mobile-friendly. They were losing customers and revenue due to a poor user experience. We designed and developed a new, modern e-commerce platform from the ground up using Next.js and Shopify. The new site is fast, responsive, and features a streamlined checkout process. We also implemented a new SEO strategy to improve their search engine rankings.",
     results: [
       "300% increase in online sales within 6 months.",
       "50% reduction in page load times.",
@@ -194,8 +193,7 @@ export const caseStudies: CaseStudy[] = [
     title: "Building a Scalable AI Platform for FinSecure",
     client: "FinSecure",
     description: "Delivering a cutting-edge AI platform for a leading FinTech company to enhance their fraud detection capabilities.",
-    challenge: "FinSecure needed to improve the accuracy and speed of their fraud detection system to combat increasingly sophisticated fraudulent activities.",
-    solution: "Our team developed a real-time AI-powered fraud detection platform using machine learning models. The system analyzes transaction data in real-time to identify and flag suspicious activities, significantly reducing false positives and improving detection rates.",
+    longDescription: "FinSecure needed to improve the accuracy and speed of their fraud detection system to combat increasingly sophisticated fraudulent activities. Our team developed a real-time AI-powered fraud detection platform using machine learning models. The system analyzes transaction data in real-time to identify and flag suspicious activities, significantly reducing false positives and improving detection rates.",
     results: [
       "95% accuracy in fraud detection.",
       "Reduced false positives by 60%.",
@@ -209,8 +207,7 @@ export const caseStudies: CaseStudy[] = [
     title: "Cross-Platform Mobile App for HealthSphere",
     client: "HealthSphere",
     description: "Creating an intuitive mobile app to help patients manage their health records and appointments.",
-    challenge: "HealthSphere wanted to provide their patients with a convenient way to access their health information, book appointments, and communicate with their doctors. They needed a secure and user-friendly app that worked on both iOS and Android.",
-    solution: "We developed a cross-platform mobile app using React Native that allows patients to securely access their medical records, schedule appointments, and communicate with their healthcare providers. The app integrates with their existing EHR system and features a clean, intuitive interface.",
+    longDescription: "HealthSphere wanted to provide their patients with a convenient way to access their health information, book appointments, and communicate with their doctors. They needed a secure and user-friendly app that worked on both iOS and Android. We developed a cross-platform mobile app using React Native that allows patients to securely access their medical records, schedule appointments, and communicate with their healthcare providers. The app integrates with their existing EHR system and features a clean, intuitive interface.",
     results: [
       "Over 100,000 downloads in the first year.",
       "Improved patient engagement and satisfaction.",

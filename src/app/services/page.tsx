@@ -39,11 +39,6 @@ export default function ServicesPage() {
                 <CardContent className="flex-grow">
                   <p className="text-muted-foreground">{service.description}</p>
                 </CardContent>
-                <div className="p-6 pt-0">
-                   <Button asChild variant="link" className="p-0 font-bold text-base">
-                     <Link href={`/services/${service.id}`}>Learn More <ArrowRight className="ml-2 h-4 w-4" /></Link>
-                   </Button>
-                </div>
               </Card>
             ))}
           </div>
