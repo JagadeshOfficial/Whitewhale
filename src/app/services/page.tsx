@@ -18,7 +18,7 @@ export default function ServicesPage() {
       <PageHeader
         title="Our Services"
         description="From custom software to mobile apps, we have the expertise to bring your vision to life."
-        withBackground={true}
+        videoUrl="https://videos.pexels.com/video-files/3254013/3254013-hd_1920_1080_25fps.mp4"
       />
 
       <section className="py-16 sm:py-24">

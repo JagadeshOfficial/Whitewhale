@@ -16,7 +16,7 @@ export default function CaseStudiesPage() {
       <PageHeader
         title="Case Studies"
         description="We are proud of the work we do. Explore some of our most successful projects and see how we have helped our clients achieve their goals."
-        withBackground={true}
+        videoUrl="https://videos.pexels.com/video-files/5989934/5989934-hd_1920_1080_25fps.mp4"
       />
 
       <section className="py-16 sm:py-24">

@@ -15,7 +15,7 @@ export default function ContactPage() {
       <PageHeader
         title="Contact Us"
         description="We're here to answer your questions. Reach out to us and we'll respond as soon as we can."
-        withBackground={true}
+        videoUrl="https://videos.pexels.com/video-files/4255476/4255476-hd_1920_1080_25fps.mp4"
       />
 
       <section className="py-16 sm:py-24">

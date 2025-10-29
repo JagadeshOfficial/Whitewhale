@@ -27,7 +27,7 @@ export default function EquityMarketsPage() {
       <PageHeader
         title="Equity Markets"
         description={"Strategic investments in public markets to generate consistent, long-term growth."}
-        withBackground={true}
+        videoUrl="https://videos.pexels.com/video-files/8348981/8348981-hd_1920_1080_25fps.mp4"
       />
 
       <section>

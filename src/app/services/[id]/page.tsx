@@ -11,7 +11,6 @@ interface ServicePageProps {
   params: { id: string };
 }
 
-// A map of service IDs to Pexels video URLs
 const serviceVideos: { [key: string]: string } = {
   'web-development': 'https://videos.pexels.com/video-files/5740359/5740359-hd_1920_1080_30fps.mp4',
   'mobile-app-development': 'https://videos.pexels.com/video-files/5933240/5933240-hd_1920_1080_25fps.mp4',
