@@ -13,7 +13,7 @@ interface ServicePageProps {
 
 // A map of service IDs to Pexels video URLs
 const serviceVideos: { [key: string]: string } = {
-  'web-development': 'https://videos.pexels.com/video-files/3254013/3254013-hd_1920_1080_25fps.mp4',
+  'web-development': 'https://videos.pexels.com/video-files/5740359/5740359-hd_1920_1080_30fps.mp4',
   'mobile-app-development': 'https://videos.pexels.com/video-files/5933240/5933240-hd_1920_1080_25fps.mp4',
   'cloud-services': 'https://videos.pexels.com/video-files/4780517/4780517-hd_1920_1080_24fps.mp4',
   'ui-ux-design': 'https://videos.pexels.com/video-files/3209828/3209828-hd_1920_1080_25fps.mp4',

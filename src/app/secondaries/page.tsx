@@ -42,7 +42,7 @@ export default function SecondariesPage() {
       <PageHeader
         title="Secondaries"
         description={"Providing liquidity solutions in the private markets for investors and founders."}
-        imageUrl={"https://picsum.photos/seed/secondaries-hero/1920/1080"}
+        videoUrl={"https://videos.pexels.com/video-files/7553534/7553534-hd_1920_1080_25fps.mp4"}
       />
 
        <section>
@@ -54,6 +54,7 @@ export default function SecondariesPage() {
                     alt="Two people shaking hands over a deal"
                     fill
                     className="object-cover"
+                    data-ai-hint="business handshake"
                 />
             </div>
             <div className="prose prose-lg max-w-none text-muted-foreground md:order-1">

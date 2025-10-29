@@ -1,7 +1,7 @@
 
 import { Metadata } from 'next';
 import { PageHeader } from '@/components/common/PageHeader';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { services } from '@/lib/data';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
@@ -18,7 +18,7 @@ export default function ServicesPage() {
       <PageHeader
         title="Our Services"
         description="From custom software to mobile apps, we have the expertise to bring your vision to life."
-        imageUrl="https://picsum.photos/seed/services-hero/1920/1080"
+        videoUrl="https://videos.pexels.com/video-files/3254013/3254013-hd_1920_1080_25fps.mp4"
       />
 
       <section className="py-16 sm:py-24">
@@ -39,6 +39,13 @@ export default function ServicesPage() {
                 <CardContent className="flex-grow">
                   <p className="text-muted-foreground">{service.description}</p>
                 </CardContent>
+                 <CardFooter>
+                    <Button asChild variant="link" className="text-primary font-bold">
+                        <Link href={`/services/${service.id}`}>
+                            Learn More <ArrowRight className="ml-2 h-4 w-4" />
+                        </Link>
+                    </Button>
+                </CardFooter>
               </Card>
             ))}
           </div>
