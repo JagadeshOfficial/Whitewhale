@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   },
   description: 'A software company building innovative digital products and solutions.',
   icons: {
-    icon: '/logo.png',
+    icon: '/Logo.png',
   }
 };
 

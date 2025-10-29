@@ -4,7 +4,7 @@ export function Logo() {
   return (
     <div className="flex items-center gap-2" aria-label="WHITEWHALE SOFTWARE SOLUTIONS">
       <Image
-        src="/logo.png"
+        src="/Logo.png"
         alt="WHITEWHALE SOFTWARE SOLUTIONS Logo"
         width={40}
         height={40}
