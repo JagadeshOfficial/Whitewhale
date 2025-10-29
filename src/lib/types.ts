@@ -43,8 +43,7 @@ export interface CaseStudy {
   title: string;
   client: string;
   description: string;
-  challenge: string;
-  solution: string;
+  longDescription: string;
   results: string[];
   imageUrl: string;
 }
