@@ -1,12 +1,9 @@
 
 import { Metadata } from 'next';
 import { PageHeader } from '@/components/common/PageHeader';
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { caseStudies } from '@/lib/data';
 import Image from 'next/image';
-import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
-import { Button } from '@/components/ui/button';
 
 export const metadata: Metadata = {
   title: 'Case Studies | WHITEWHALE SOFTWARE SOLUTIONS',

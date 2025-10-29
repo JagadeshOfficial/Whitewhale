@@ -6,7 +6,6 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { CheckCircle } from "lucide-react";
 
 interface ServicePageProps {
   params: { id: string };
@@ -20,7 +19,6 @@ const serviceVideos: { [key: string]: string } = {
   'ui-ux-design': 'https://videos.pexels.com/video-files/3209828/3209828-hd_1920_1080_25fps.mp4',
   'artificial-intelligence-machine-learning': 'https://videos.pexels.com/video-files/853874/853874-hd_1920_1080_25fps.mp4',
   'cybersecurity': 'https://videos.pexels.com/video-files/5361234/5361234-hd_1920_1080_25fps.mp4',
-  'venture-capital': 'https://videos.pexels.com/video-files/7578844/7578844-hd_1920_1080_25fps.mp4',
 };
 
 export async function generateMetadata({ params }: ServicePageProps): Promise<Metadata> {
@@ -91,7 +89,7 @@ export default function ServicePage({ params }: ServicePageProps) {
 }
 
 export async function generateStaticParams() {
-  return services.map((service) => ({
+  return services.filter(s => s.id !== 'venture-capital').map((service) => ({
     id: service.id,
   }));
 }

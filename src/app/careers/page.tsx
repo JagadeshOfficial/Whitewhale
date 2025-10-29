@@ -3,9 +3,7 @@ import { Metadata } from 'next';
 import { PageHeader } from '@/components/common/PageHeader';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { jobOpenings } from '@/lib/data';
-import Link from 'next/link';
-import { Button } from '@/components/ui/button';
-import { MapPin, ArrowRight } from 'lucide-react';
+import { MapPin } from 'lucide-react';
 import { ApplyForm } from './ApplyForm';
 
 export const metadata: Metadata = {

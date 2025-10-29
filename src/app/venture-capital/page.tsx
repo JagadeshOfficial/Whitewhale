@@ -2,7 +2,6 @@
 import Image from "next/image";
 import { Metadata } from "next";
 import { PageHeader } from "@/components/common/PageHeader";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { clients, investmentApproach, services } from "@/lib/data";
 
 export const metadata: Metadata = {
