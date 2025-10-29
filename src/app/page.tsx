@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative w-full h-[60vh] md:h-[80vh] flex items-center justify-center text-center overflow-hidden">
+      <section className="relative w-full h-screen flex items-center justify-center text-center overflow-hidden -mt-16">
         <video
           autoPlay
           loop

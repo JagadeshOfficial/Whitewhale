@@ -21,10 +21,16 @@ import type { NavLink } from "@/lib/types";
 export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
     setIsMounted(true);
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const renderNavLink = (link: NavLink, isMobile: boolean = false) => {
@@ -65,8 +71,9 @@ export function Header() {
             <Button
               variant="ghost"
               className={cn(
-                "text-sm font-medium",
-                pathname.startsWith(link.href || '') ? "text-primary" : "text-muted-foreground hover:text-foreground"
+                "text-sm font-medium text-primary-foreground",
+                 isScrolled && "text-muted-foreground hover:text-foreground",
+                pathname.startsWith(link.href || '') ? "text-primary" : ""
               )}
             >
               {link.label}
@@ -86,7 +93,7 @@ export function Header() {
 
     const commonClasses = isMobile
       ? "text-lg px-4 py-2 w-full text-left"
-      : "text-sm font-medium";
+      : "text-sm font-medium text-primary-foreground";
     
     return (
       <Button key={link.href} asChild variant="ghost">
@@ -94,8 +101,11 @@ export function Header() {
           href={link.href}
           className={cn(
             commonClasses,
-            isActive ? "text-primary" : "text-muted-foreground hover:text-foreground",
-            isMobile && "block"
+            isScrolled && "text-muted-foreground hover:text-foreground",
+            isActive && !isScrolled ? "text-white font-bold" : "",
+            isActive && isScrolled ? "text-primary font-bold": "",
+            isMobile && "block",
+             isMobile && isActive && "text-primary font-bold",
           )}
           onClick={() => isMobile && setIsMobileMenuOpen(false)}
         >
@@ -106,10 +116,13 @@ export function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className={cn(
+      "sticky top-0 z-50 w-full transition-all duration-300",
+      isScrolled ? "border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60" : "bg-transparent"
+    )}>
       <div className="container flex h-16 max-w-screen-2xl items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
-          <Logo />
+          <Logo isScrolled={isScrolled} />
         </Link>
         
         {isMounted && (
@@ -123,16 +136,16 @@ export function Header() {
             <div className="md:hidden">
               <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
                 <SheetTrigger asChild>
-                  <Button variant="ghost" size="icon">
+                  <Button variant="ghost" size="icon" className={cn(!isScrolled && "text-primary-foreground hover:text-primary-foreground/80")}>
                     <Menu className="h-6 w-6" />
                     <span className="sr-only">Open menu</span>
                   </Button>
                 </SheetTrigger>
-                <SheetContent side="right" className="w-full sm:w-[320px] p-0">
+                <SheetContent side="right" className="w-full sm:w-[320px] p-0 bg-background">
                   <div className="flex flex-col h-full">
                     <div className="flex items-center justify-between p-4 border-b">
                       <Link href="/" onClick={() => setIsMobileMenuOpen(false)}>
-                          <Logo />
+                          <Logo isScrolled={true} />
                         </Link>
                       <Button variant="ghost" size="icon" onClick={() => setIsMobileMenuOpen(false)}>
                         <X className="h-6 w-6" />
