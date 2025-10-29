@@ -42,7 +42,7 @@ export default function SecondariesPage() {
       <PageHeader
         title="Secondaries"
         description={"Providing liquidity solutions in the private markets for investors and founders."}
-        videoUrl={"https://videos.pexels.com/video-files/7553534/7553534-hd_1920_1080_25fps.mp4"}
+        withBackground={true}
       />
 
        <section>

@@ -17,7 +17,7 @@ export default function CareersPage() {
       <PageHeader
         title="Join Our Team"
         description="We are always looking for talented individuals to join us. Explore our open positions and find your next opportunity."
-        videoUrl="https://videos.pexels.com/video-files/3194523/3194523-hd_1920_1080_25fps.mp4"
+        withBackground={true}
       />
 
       <section className="py-16 sm:py-24">

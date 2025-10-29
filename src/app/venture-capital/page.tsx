@@ -17,7 +17,7 @@ export default function VentureCapitalPage() {
       <PageHeader
         title="Venture Capital"
         description={vcService?.description || "Investing in visionary founders building the future."}
-        videoUrl="https://videos.pexels.com/video-files/7578844/7578844-hd_1920_1080_25fps.mp4"
+        withBackground={true}
       />
 
       <section>

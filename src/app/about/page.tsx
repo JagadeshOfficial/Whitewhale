@@ -16,9 +16,9 @@ export default function AboutPage() {
       <PageHeader
         title="About WHITEWHALE SOFTWARE SOLUTIONS"
         description="We are a team of passionate innovators, dedicated to crafting exceptional software that drives results."
-        videoUrl="https://videos.pexels.com/video-files/3194519/3194519-hd_1920_1080_25fps.mp4"
         ctaLabel="Get in Touch"
         ctaLink="/contact"
+        withBackground={true}
       />
 
       <section className="py-16 sm:py-24">
