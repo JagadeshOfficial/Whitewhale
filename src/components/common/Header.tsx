@@ -71,8 +71,7 @@ export function Header() {
             <Button
               variant="ghost"
               className={cn(
-                "text-sm font-medium text-primary-foreground",
-                 isScrolled && "text-muted-foreground hover:text-foreground",
+                "text-sm font-medium",
                 pathname.startsWith(link.href || '') ? "text-primary" : ""
               )}
             >
@@ -93,7 +92,7 @@ export function Header() {
 
     const commonClasses = isMobile
       ? "text-lg px-4 py-2 w-full text-left"
-      : "text-sm font-medium text-primary-foreground";
+      : "text-sm font-medium";
     
     return (
       <Button key={link.href} asChild variant="ghost">
@@ -101,11 +100,8 @@ export function Header() {
           href={link.href}
           className={cn(
             commonClasses,
-            isScrolled && "text-muted-foreground hover:text-foreground",
-            isActive && !isScrolled ? "text-white font-bold" : "",
-            isActive && isScrolled ? "text-primary font-bold": "",
-            isMobile && "block",
-             isMobile && isActive && "text-primary font-bold",
+            isActive ? "text-primary font-bold" : "",
+            isMobile && "block"
           )}
           onClick={() => isMobile && setIsMobileMenuOpen(false)}
         >
@@ -117,12 +113,12 @@ export function Header() {
 
   return (
     <header className={cn(
-      "sticky top-0 z-50 w-full transition-all duration-300",
-      isScrolled ? "border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60" : "bg-transparent"
+      "sticky top-0 z-50 w-full transition-all duration-300 text-[hsl(var(--header-foreground))]",
+      isScrolled ? "border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 text-foreground" : "bg-transparent"
     )}>
       <div className="container flex h-16 max-w-screen-2xl items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
-          <Logo isScrolled={isScrolled} />
+          <Logo />
         </Link>
         
         {isMounted && (
@@ -136,16 +132,16 @@ export function Header() {
             <div className="md:hidden">
               <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
                 <SheetTrigger asChild>
-                  <Button variant="ghost" size="icon" className={cn(!isScrolled && "text-primary-foreground hover:text-primary-foreground/80")}>
+                  <Button variant="ghost" size="icon" className="text-current">
                     <Menu className="h-6 w-6" />
                     <span className="sr-only">Open menu</span>
                   </Button>
                 </SheetTrigger>
                 <SheetContent side="right" className="w-full sm:w-[320px] p-0 bg-background">
-                  <div className="flex flex-col h-full">
+                  <div className="flex flex-col h-full text-foreground">
                     <div className="flex items-center justify-between p-4 border-b">
                       <Link href="/" onClick={() => setIsMobileMenuOpen(false)}>
-                          <Logo isScrolled={true} />
+                          <Logo />
                         </Link>
                       <Button variant="ghost" size="icon" onClick={() => setIsMobileMenuOpen(false)}>
                         <X className="h-6 w-6" />
