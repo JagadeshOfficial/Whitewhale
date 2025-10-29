@@ -4,6 +4,7 @@ import { Metadata } from "next";
 import { PageHeader } from "@/components/common/PageHeader";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Check } from "lucide-react";
+import { teamMembers } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "About Us | Whitewhale Software Solutions",
