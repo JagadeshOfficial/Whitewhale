@@ -6,8 +6,8 @@ import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
   title: {
-    default: 'WHITEWHALE SOFTWARE SOLUTIONS',
-    template: '%s | WHITEWHALE SOFTWARE SOLUTIONS',
+    default: 'WhiteWhale',
+    template: '%s | WhiteWhale',
   },
   description: 'A software company building innovative digital products and solutions.',
   icons: {
