@@ -4,20 +4,27 @@ import { Metadata } from "next";
 import { PageHeader } from "@/components/common/PageHeader";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { teamMembers } from "@/lib/data";
+import { Check } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "About Us | WHITEWHALE SOFTWARE SOLUTIONS",
-  description: "Learn about our mission, vision, and the dedicated team at WHITEWHALE SOFTWARE SOLUTIONS.",
+  title: "About Us | Whitewhale Software Solutions",
+  description: "Learn about our mission, vision, and the dedicated team at Whitewhale Software Solutions.",
 };
+
+const coreValues = [
+    { name: "Innovation", description: "Constantly exploring emerging technologies to create forward-thinking solutions." },
+    { name: "Collaboration", description: "Teamwork, trust, and open communication drive our success." },
+    { name: "Excellence", description: "Delivering quality, precision, and performance in every project." },
+    { name: "Integrity", description: "Acting with honesty, fairness, and long-term commitment." },
+    { name: "Customer Success", description: "Measuring our growth by the value we create for our clients." },
+]
 
 export default function AboutPage() {
   return (
     <div className="bg-background">
       <PageHeader
-        title="About WHITEWHALE SOFTWARE SOLUTIONS"
-        description="We are a team of passionate innovators, dedicated to crafting exceptional software that drives results."
-        ctaLabel="Get in Touch"
-        ctaLink="/contact"
+        title="About Whitewhale Software Solutions"
+        description="Innovating the Future, One Line of Code at a Time."
         withBackground={true}
       />
 
@@ -25,20 +32,24 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="prose prose-lg max-w-none text-muted-foreground">
-              <h2 className="text-3xl font-headline text-foreground mb-4">Our Story</h2>
+              <h2 className="text-3xl font-headline text-foreground mb-4">About Us</h2>
               <p>
-                Founded with the vision of making a mark in the software industry, WHITEWHALE SOFTWARE SOLUTIONS is committed to delivering excellence. We believe in building strong partnerships with our clients, understanding their needs, and providing solutions that are not only effective but also elegant.
+                At Whitewhale Software Solutions, innovation drives everything we do. Founded three years ago, we’ve grown into a modern tech company specializing in Java, Python, Blockchain, Cloud Computing, and Mobile Application Development. We craft scalable, secure, and high-performance digital solutions that help startups and enterprises thrive in the digital era.
               </p>
               <p>
-                Our journey has been one of continuous learning and growth. We have evolved from a small team of enthusiasts to a full-fledged software house, but our core values of innovation, quality, and integrity have remained unchanged.
+                From cloud-based enterprise systems to next-gen blockchain applications and intuitive mobile apps, we merge creativity with technology to bring ideas to life.
               </p>
+              <blockquote className="border-l-4 border-primary pl-4 italic text-foreground">
+                “At Whitewhale, we don’t just build software — we engineer possibilities.”
+              </blockquote>
             </div>
-            <div className="relative h-80 rounded-lg overflow-hidden shadow-lg">
+            <div className="relative h-96 rounded-lg overflow-hidden shadow-lg">
               <Image
-                src="https://picsum.photos/seed/office-interior/800/600"
-                alt="Our Office Interior"
+                src="https://picsum.photos/seed/office-team/800/600"
+                alt="Our Team Collaborating"
                 fill
                 className="object-cover"
+                data-ai-hint="team collaboration"
               />
             </div>
           </div>
@@ -54,7 +65,7 @@ export default function AboutPage() {
                   <CardTitle className="font-headline text-2xl">Our Mission</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground">To empower businesses with innovative and reliable technology, turning ambitious ideas into powerful digital realities.</p>
+                  <p className="text-muted-foreground">To empower businesses with smart, scalable, and future-ready software solutions that combine creativity, technology, and innovation across multiple platforms.</p>
                 </CardContent>
               </Card>
               <Card className="bg-card shadow-md">
@@ -62,18 +73,25 @@ export default function AboutPage() {
                   <CardTitle className="font-headline text-2xl">Our Vision</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground">To be the most trusted technology partner for businesses looking to innovate, scale, and lead their industries.</p>
+                  <p className="text-muted-foreground">To be a global technology innovator simplifying digital transformation and creating intelligent solutions for a connected, sustainable world.</p>
                 </CardContent>
               </Card>
             </div>
             <div className="prose prose-lg max-w-none text-muted-foreground">
-              <h2 className="text-3xl font-headline text-foreground mb-4">Our Philosophy</h2>
-              <p>
-                We believe in a collaborative approach, working closely with our clients to understand their unique challenges and opportunities. Our process is transparent, our communication is clear, and our focus is always on delivering the best possible outcome.
-              </p>
-              <p>
-                We are not just a software company; we are your technology partner. We are here to help you navigate the ever-changing digital landscape and achieve your business goals.
-              </p>
+                 <h2 className="text-3xl font-headline text-foreground mb-6">Our Core Values</h2>
+                 <div className="space-y-4">
+                    {coreValues.map((value) => (
+                        <div key={value.name} className="flex items-start">
+                            <div className="flex-shrink-0 h-6 w-6 rounded-full bg-primary text-primary-foreground flex items-center justify-center mr-4 mt-1">
+                                <Check className="h-4 w-4" />
+                            </div>
+                            <div>
+                                <h3 className="text-xl font-semibold text-foreground !m-0">{value.name}</h3>
+                                <p className="text-muted-foreground !m-0">{value.description}</p>
+                            </div>
+                        </div>
+                    ))}
+                 </div>
             </div>
           </div>
         </div>
