@@ -3,7 +3,6 @@ import Image from "next/image";
 import { Metadata } from "next";
 import { PageHeader } from "@/components/common/PageHeader";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { teamMembers } from "@/lib/data";
 import { Check } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -25,7 +24,7 @@ export default function AboutPage() {
       <PageHeader
         title="About Whitewhale Software Solutions"
         description="Innovating the Future, One Line of Code at a Time."
-        withBackground={true}
+        videoUrl="https://videos.pexels.com/video-files/3254013/3254013-hd_1920_1080_25fps.mp4"
       />
 
       <section className="py-16 sm:py-24">
@@ -79,19 +78,7 @@ export default function AboutPage() {
             </div>
             <div className="prose prose-lg max-w-none text-muted-foreground">
                  <h2 className="text-3xl font-headline text-foreground mb-6">Our Core Values</h2>
-                 <div className="space-y-4">
-                    {coreValues.map((value) => (
-                        <div key={value.name} className="flex items-start">
-                            <div className="flex-shrink-0 h-6 w-6 rounded-full bg-primary text-primary-foreground flex items-center justify-center mr-4 mt-1">
-                                <Check className="h-4 w-4" />
-                            </div>
-                            <div>
-                                <h3 className="text-xl font-semibold text-foreground !m-0">{value.name}</h3>
-                                <p className="text-muted-foreground !m-0">{value.description}</p>
-                            </div>
-                        </div>
-                    ))}
-                 </div>
+                 <p>At Whitewhale Software Solutions, our core values define who we are and how we work. We believe in Innovation, constantly exploring emerging technologies to create forward-thinking solutions. Our culture thrives on Collaboration, where teamwork, trust, and open communication drive success. We pursue Excellence in every project, delivering quality, precision, and performance. Integrity lies at the heart of our work, guiding us to act with honesty, fairness, and long-term commitment. Above all, we are dedicated to Customer Success, measuring our growth by the value we create for our clients.</p>
             </div>
           </div>
         </div>
