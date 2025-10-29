@@ -30,9 +30,17 @@ export function Header() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
     };
+    handleScroll(); // Check on mount
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const headerClasses = cn(
+      "sticky top-0 z-50 w-full transition-all duration-300",
+      isScrolled 
+        ? "border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 text-foreground" 
+        : "bg-transparent text-primary-foreground"
+    );
 
   const renderNavLink = (link: NavLink, isMobile: boolean = false) => {
     const isActive = pathname === link.href;
@@ -113,14 +121,9 @@ export function Header() {
   };
 
   return (
-    <header className={cn(
-      "sticky top-0 z-50 w-full transition-all duration-300",
-      isScrolled 
-        ? "border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 text-foreground" 
-        : "bg-transparent text-primary-foreground"
-    )}>
+    <header className={headerClasses}>
       <div className="container flex h-16 max-w-screen-2xl items-center justify-between">
-        <Link href="/" className="flex items-center gap-2">
+        <Link href="/" className="flex items-center gap-2 text-current">
           <Logo />
         </Link>
         
