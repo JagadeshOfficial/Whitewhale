@@ -1,17 +1,22 @@
 import Image from "next/image";
+import { cn } from "@/lib/utils";
 
-export function Logo() {
+interface LogoProps {
+  className?: string;
+}
+
+export function Logo({ className }: LogoProps) {
   return (
-    <div className="flex items-center gap-2" aria-label="WHITEWHALE SOFTWARE SOLUTIONS">
+    <div className={cn("flex items-center gap-3", className)} aria-label="WHITEWHALE SOFTWARE SOLUTIONS">
       <Image
         src="/Logo.png"
         alt="WHITEWHALE SOFTWARE SOLUTIONS Logo"
-        width={40}
-        height={40}
-        className="h-8 w-auto"
+        width={56}
+        height={56}
+        className="h-10 w-auto"
         priority
       />
-      <span className="font-headline text-xl font-bold text-current">
+      <span className="font-headline text-2xl font-bold">
         WhiteWhale
       </span>
     </div>
