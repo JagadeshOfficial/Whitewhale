@@ -41,7 +41,7 @@ export function PageHeader({
 
   if (videoUrl) {
     return (
-      <section className="relative w-full h-[40vh] flex items-center justify-center overflow-hidden">
+      <section className="relative w-full h-[60vh] flex items-center justify-center overflow-hidden">
         <video
           autoPlay
           loop
