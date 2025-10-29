@@ -7,11 +7,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
-interface ServicePageProps {
-  params: { id: string };
-  searchParams: { [key: string]: string | string[] | undefined };
-}
-
 const serviceVideos: { [key: string]: string } = {
   'web-development': 'https://videos.pexels.com/video-files/5740359/5740359-hd_1920_1080_30fps.mp4',
   'mobile-app-development': 'https://videos.pexels.com/video-files/5933240/5933240-hd_1920_1080_25fps.mp4',
@@ -21,7 +16,7 @@ const serviceVideos: { [key: string]: string } = {
   'cybersecurity': 'https://videos.pexels.com/video-files/5361234/5361234-hd_1920_1080_25fps.mp4',
 };
 
-export async function generateMetadata({ params }: ServicePageProps): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
   const service = services.find(s => s.id === params.id);
   if (!service) {
     return {
@@ -34,7 +29,7 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
   };
 }
 
-export default function ServicePage({ params }: ServicePageProps) {
+export default function ServicePage({ params }: { params: { id: string } }) {
   const service = services.find(s => s.id === params.id);
 
   if (!service) {
