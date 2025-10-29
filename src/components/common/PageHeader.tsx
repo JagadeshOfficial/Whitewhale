@@ -6,16 +6,18 @@ interface PageHeaderProps {
   title: string;
   description: string;
   imageUrl?: string;
+  videoUrl?: string;
   ctaLabel?: string;
   ctaLink?: string;
   withBackground?: boolean;
 }
 
-export function PageHeader({ 
-  title, 
-  description, 
-  imageUrl, 
-  ctaLabel, 
+export function PageHeader({
+  title,
+  description,
+  imageUrl,
+  videoUrl,
+  ctaLabel,
   ctaLink,
   withBackground = true,
 }: PageHeaderProps) {
@@ -37,15 +39,29 @@ export function PageHeader({
     </div>
   );
 
+  if (videoUrl) {
+    return (
+      <section className="relative w-full h-[40vh] flex items-center justify-center overflow-hidden">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute z-0 w-auto min-w-full min-h-full max-w-none object-cover"
+        >
+          <source src={videoUrl} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div className="absolute inset-0 bg-primary/70" />
+        <div className="text-primary-foreground">{content}</div>
+      </section>
+    );
+  }
+
   if (imageUrl) {
     return (
       <section className="relative w-full h-[40vh] flex items-center justify-center">
-        <Image
-          src={imageUrl}
-          alt={title}
-          fill
-          className="object-cover"
-        />
+        <Image src={imageUrl} alt={title} fill className="object-cover" />
         <div className="absolute inset-0 bg-primary/70" />
         <div className="text-primary-foreground">{content}</div>
       </section>
@@ -53,10 +69,8 @@ export function PageHeader({
   }
 
   return (
-    <section className={withBackground ? "bg-secondary" : ""}>
-      <div className="container mx-auto px-4">
-        {content}
-      </div>
+    <section className={withBackground ? 'bg-secondary' : ''}>
+      <div className="container mx-auto px-4">{content}</div>
     </section>
   );
 }

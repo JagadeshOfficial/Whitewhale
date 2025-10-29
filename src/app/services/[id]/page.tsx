@@ -1,4 +1,3 @@
-
 import { Metadata } from "next";
 import { PageHeader } from "@/components/common/PageHeader";
 import { services } from "@/lib/data";
@@ -11,6 +10,17 @@ import { CheckCircle } from "lucide-react";
 interface ServicePageProps {
   params: { id: string };
 }
+
+// A map of service IDs to Pexels video URLs
+const serviceVideos: { [key: string]: string } = {
+  'web-development': 'https://videos.pexels.com/video-files/3254013/3254013-hd_1920_1080_25fps.mp4',
+  'mobile-app-development': 'https://videos.pexels.com/video-files/5933240/5933240-hd_1920_1080_25fps.mp4',
+  'cloud-services': 'https://videos.pexels.com/video-files/4780517/4780517-hd_1920_1080_24fps.mp4',
+  'ui-ux-design': 'https://videos.pexels.com/video-files/3209828/3209828-hd_1920_1080_25fps.mp4',
+  'artificial-intelligence-machine-learning': 'https://videos.pexels.com/video-files/853874/853874-hd_1920_1080_25fps.mp4',
+  'cybersecurity': 'https://videos.pexels.com/video-files/5361234/5361234-hd_1920_1080_25fps.mp4',
+  'venture-capital': 'https://videos.pexels.com/video-files/7578844/7578844-hd_1920_1080_25fps.mp4',
+};
 
 export async function generateMetadata({ params }: ServicePageProps): Promise<Metadata> {
   const service = services.find(s => s.id === params.id);
@@ -37,7 +47,7 @@ export default function ServicePage({ params }: ServicePageProps) {
       <PageHeader
         title={service.title}
         description={service.description}
-        imageUrl={`https://picsum.photos/seed/${service.id}/1920/1080`}
+        videoUrl={serviceVideos[service.id] || 'https://videos.pexels.com/video-files/3254013/3254013-hd_1920_1080_25fps.mp4'}
       />
 
       <section className="py-16 sm:py-24">
