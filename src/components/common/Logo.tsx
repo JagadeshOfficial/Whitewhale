@@ -1,10 +1,16 @@
 
-import Image from 'next/image';
-
 export function Logo() {
   return (
     <div className="flex items-center gap-2" aria-label="WHITEWHALE SOFTWARE SOLUTIONS">
-      <Image src="/logo.png" alt="WHITEWHALE SOFTWARE SOLUTIONS Logo" width={32} height={32} />
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        className="h-8 w-8"
+      >
+        <path d="M12.551 3.225a3.187 3.187 0 0 0-1.102 0c-2.348.885-4.483 3.153-5.368 5.432-1.74 4.489 2.197 9.431 2.197 9.431.144.24.416.38.704.38h1.036c.288 0 .56-.14.704-.38 0 0 3.937-4.942 2.197-9.431-.885-2.279-3.02-4.547-5.368-5.432Zm-1.113 1.157a1.99 1.99 0 0 1 .562 0c1.785.674 3.44 2.585 4.145 4.455.93 2.395-1.52 6.09-1.52 6.09l-.43.68H9.814l-.43-.68s-2.45-3.695-1.52-6.09c.704-1.87 2.36-3.781 4.145-4.455Z" />
+        <path d="M12.922 21.059c-1.895 0-3.626-1.03-5.02-2.127-1.058-.833-1.63-2.199-1.55-3.524a.75.75 0 0 1 1.493-.162c-.056.915.352 1.832 1.077 2.427 1.205.992 2.662 1.636 4.303 1.636 2.005 0 3.737-1.026 4.885-2.527a.75.75 0 0 1 1.217.887c-1.464 1.905-3.62 3.23-5.905 3.23Z" />
+      </svg>
       <span className="font-headline text-xl font-bold text-current">
         WhiteWhale
       </span>

@@ -10,9 +10,6 @@ export const metadata: Metadata = {
     template: '%s | WHITEWHALE SOFTWARE SOLUTIONS',
   },
   description: 'A software company building innovative digital products and solutions.',
-  icons: {
-    icon: '/logo.png',
-  }
 };
 
 export default function RootLayout({
