@@ -81,7 +81,8 @@ export function Header() {
               variant="ghost"
               className={cn(
                 "text-sm font-medium",
-                pathname.startsWith(link.href || '') ? "text-primary" : ""
+                pathname.startsWith(link.href || '') ? (isScrolled ? "text-primary" : "text-primary-foreground font-bold") : "",
+                isScrolled ? "text-foreground" : "text-primary-foreground",
               )}
             >
               {link.label}
@@ -104,12 +105,12 @@ export function Header() {
       : "text-sm font-medium";
     
     return (
-      <Button key={link.href} asChild variant="ghost">
+      <Button key={link.href} asChild variant="ghost" className={cn(isScrolled ? "text-foreground" : "text-primary-foreground")}>
         <Link
           href={link.href}
           className={cn(
             commonClasses,
-            isActive ? "text-primary font-bold" : "",
+            isActive ? (isScrolled ? "text-primary font-bold" : "text-primary-foreground font-bold") : "",
             isMobile && "block"
           )}
           onClick={() => isMobile && setIsMobileMenuOpen(false)}
