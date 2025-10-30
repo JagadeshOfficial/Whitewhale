@@ -1,18 +1,20 @@
 
-import { Metadata } from 'next';
+import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { PageHeader } from '@/components/common/PageHeader';
 import { services } from '@/lib/data';
 import { CheckCircle } from 'lucide-react';
 
-export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
-  const { id } = params;
-  const service = services.find((s) => s.id === id);
+interface Props {
+  params: { id: string };
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const service = services.find((s) => s.id === params.id);
 
   if (!service) {
     return {
       title: 'Service Not Found',
-      description: 'The requested service could not be found.',
     };
   }
 
@@ -22,9 +24,11 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
   };
 }
 
-export default function ServicePage({ params }: { params: { id: string } }) {
+export default function ServicePage({ params }: Props) {
   const service = services.find((s) => s.id === params.id);
 
+  // If the service is not found, call notFound() immediately.
+  // This is the correct way to trigger a 404 page from a server component.
   if (!service) {
     notFound();
   }
