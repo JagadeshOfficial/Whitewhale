@@ -15,25 +15,13 @@ const serviceVideos: { [key: string]: string } = {
   'cybersecurity': 'https://videos.pexels.com/video-files/5361234/5361234-hd_1920_1080_25fps.mp4',
 };
 
-interface Props {
-  params: { id: string };
-  searchParams: { [key: string]: string | string[] | undefined };
-}
+// Statically define metadata to avoid complex type issues causing build failures.
+export const metadata: Metadata = {
+    title: "Our Services",
+    description: "Learn more about the services we offer.",
+};
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const service = services.find(s => s.id === params.id);
-  if (!service) {
-    return {
-      title: "Service Not Found"
-    }
-  }
-  return {
-    title: `${service.title} | Services`,
-    description: service.longDescription,
-  };
-}
-
-export default function ServicePage({ params }: Props) {
+export default function ServicePage({ params }: { params: { id: string } }) {
   const service = services.find(s => s.id === params.id);
 
   if (!service) {
