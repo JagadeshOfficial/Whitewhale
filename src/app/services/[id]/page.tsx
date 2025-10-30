@@ -5,23 +5,15 @@ import { PageHeader } from '@/components/common/PageHeader';
 import { services } from '@/lib/data';
 import { CheckCircle } from 'lucide-react';
 
-// This is the correct props type for a dynamic page.
+// Using a static metadata object to avoid the build issue with dynamic generation in Next.js 15.
+export const metadata: Metadata = {
+  title: 'Service Details | WHITEWHALE SOFTWARE SOLUTIONS',
+  description: 'Learn more about our software development services.',
+};
+
 interface ServicePageProps {
   params: {
     id: string;
-  };
-}
-
-export async function generateMetadata({ params }: ServicePageProps): Promise<Metadata> {
-  const service = services.find((s) => s.id === params.id);
-  if (!service) {
-    return {
-      title: "Service Not Found",
-    }
-  }
-  return {
-    title: `${service.title} | WHITEWHALE SOFTWARE SOLUTIONS`,
-    description: service.longDescription,
   };
 }
 
