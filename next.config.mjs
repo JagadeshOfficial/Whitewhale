@@ -1,4 +1,3 @@
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
@@ -18,6 +17,14 @@ const nextConfig = {
             {
                 protocol: 'https'
                 ,hostname: 'whitewhalesoft.in'
+            },
+            {
+                protocol: 'https'
+                ,hostname: 'placehold.co'
+            },
+            {
+                protocol: 'https'
+                ,hostname: 'images.pexels.com'
             }
         ]
     }

@@ -33,15 +33,22 @@ export default function ServicesPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {displayServices.map((service) => (
-              <Card key={service.id} className="flex flex-col overflow-hidden group">
-                <CardHeader>
-                  <service.icon className="h-10 w-10 text-primary mb-2" />
-                  <CardTitle className="font-headline text-2xl">{service.title}</CardTitle>
-                </CardHeader>
-                <CardContent className="flex-grow">
-                  <p className="text-muted-foreground">{service.description}</p>
-                </CardContent>
-              </Card>
+              <Link href={`/services/${service.id}`} key={service.id} className="flex">
+                <Card className="flex flex-col overflow-hidden group w-full">
+                  <CardHeader>
+                    <service.icon className="h-10 w-10 text-primary mb-2" />
+                    <CardTitle className="font-headline text-2xl">{service.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent className="flex-grow">
+                    <p className="text-muted-foreground">{service.description}</p>
+                  </CardContent>
+                  <CardFooter>
+                    <Button variant="link" className="p-0 text-primary group-hover:underline">
+                      Learn More <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </CardFooter>
+                </Card>
+              </Link>
             ))}
           </div>
         </div>

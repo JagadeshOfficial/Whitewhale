@@ -9,6 +9,7 @@ export const services: Service[] = [
     description: 'Custom websites, e-commerce, CMS platforms.',
     longDescription: 'We build beautiful and intuitive web and mobile applications that captivate users and deliver exceptional experiences. Our team leverages the latest technologies to create cross-platform apps that are fast, reliable, and easy to use. Whether it\'s a consumer-facing app or an internal business tool, we have you covered.',
     icon: Globe,
+    imageUrl: 'https://images.unsplash.com/photo-1556740738-b6a63e27c4df?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c29mdHdhcmUlMjBkZXZlbG9wbWVudHxlbnwwfHwwfHx8MA%3D%3D'
   },
   {
     id: 'mobile-app-development',
@@ -16,6 +17,7 @@ export const services: Service[] = [
     description: 'Android, iOS, and cross-platform mobile applications.',
     longDescription: 'We build beautiful and intuitive web and mobile applications that captivate users and deliver exceptional experiences. Our team leverages the latest technologies to create cross-platform apps that are fast, reliable, and easy to use. Whether it\'s a consumer-facing app or an internal business tool, we have you covered.',
     icon: Smartphone,
+    imageUrl: 'https://images.unsplash.com/photo-1607252650355-f7fd0460ccdb?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bW9iaWxlJTIwYXBwJTIwZGV2ZWxvcG1lbnR8ZW58MHx8MHx8fDA%3D'
   },
   {
     id: 'cloud-services',
@@ -23,6 +25,7 @@ export const services: Service[] = [
     description: 'Cloud computing, storage, and migration solutions.',
     longDescription: 'Harness the power of the cloud with our comprehensive cloud services. We offer cloud strategy, migration, and management services to help you build a scalable and resilient infrastructure. Our expertise spans across major cloud platforms, including AWS, Azure, and Google Cloud.',
     icon: Cloud,
+    imageUrl: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8QUklMjB0ZWNobm9sb2d5fGVufDB8fDB8fHww'
   },
   {
     id: 'ui-ux-design',
@@ -30,6 +33,7 @@ export const services: Service[] = [
     description: 'User interface and user experience design for websites and apps.',
     longDescription: 'Great software is more than just code; it\'s about creating a seamless and intuitive user experience. Our UI/UX design team works to understand your users and design interfaces that are not only beautiful but also easy to use and navigate.',
     icon: PenTool,
+    imageUrl: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8QUklMjB0ZWNobm9sb2d5fGVufDB8fDB8fHww'
   },
   {
     id: 'artificial-intelligence-machine-learning',
@@ -37,6 +41,7 @@ export const services: Service[] = [
     description: 'AI tools, chatbots, and predictive analytics.',
     longDescription: 'Harness the power of Artificial Intelligence with our custom AI and machine learning solutions. We help businesses automate complex processes, gain valuable insights from data, and create intelligent products. From natural language processing to predictive analytics, we build AI-driven systems that deliver tangible results.',
     icon: Cpu,
+    imageUrl: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8QUklMjB0ZWNobm9sb2d5fGVufDB8fDB8fHww'
   },
   {
     id: 'cybersecurity',
@@ -44,6 +49,7 @@ export const services: Service[] = [
     description: 'Data protection, security audits, and threat prevention.',
     longDescription: 'In an increasingly digital world, security is paramount. Our cybersecurity services are designed to protect your data and infrastructure from evolving threats. We offer security audits, penetration testing, and a range of other services to help you stay ahead of the curve.',
     icon: Shield,
+    imageUrl: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8QUklMjB0ZWNobm9sb2d5fGVufDB8fDB8fHww'
   },
   {
     id: 'venture-capital',

@@ -13,6 +13,7 @@ export interface Service {
   description: string;
   longDescription: string;
   icon: LucideIcon;
+  imageUrl?: string;
 }
 
 export interface TeamMember {

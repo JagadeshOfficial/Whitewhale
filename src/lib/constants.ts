@@ -10,16 +10,11 @@ export const NAV_LINKS: NavLink[] = [
     subLinks: services.filter(s => s.id !== 'venture-capital' && s.id !== 'equity-markets' && s.id !== 'secondaries').map(service => ({ href: `/services/${service.id}`, label: service.title })),
   },
   {
-    href: "/investments",
-    label: "Investments",
-    subLinks: [
-      { href: "/venture-capital", label: "Venture Capital" },
-      { href: "/equity-markets", label: "Equity Markets" },
-      { href: "/secondaries", label: "Secondaries" },
-    ]
+    href: "/services/it-outsourcing",
+    label: "IT Outsourcing",
   },
-  { href: "/studies", label: "Case Studies"},
+  { href: "/studies", label: "Innovation in Action"},
   { href: "/about", label: "About" },
-  { href: "/careers", label: "Careers" },
+  { href: "/careers", label: "Join Our Team" },
   { href: "/contact", label: "Contact" },
 ];

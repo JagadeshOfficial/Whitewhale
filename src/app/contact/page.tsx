@@ -2,7 +2,7 @@
 import { Metadata } from "next";
 import { PageHeader } from "@/components/common/PageHeader";
 import { ContactForm } from "./ContactForm";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Waves, MapPin } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Contact Us",
@@ -14,17 +14,18 @@ export default function ContactPage() {
     <div>
       <PageHeader
         title="Contact Us"
-        description="We're here to answer your questions. Reach out to us and we'll respond as soon as we can."
-        videoUrl="https://videos.pexels.com/video-files/4255476/4255476-hd_1920_1080_25fps.mp4"
-      />
+        imageUrl="https://images.unsplash.com/photo-1574285013029-29296a718302?q=80&w=2070&auto=format&fit=crop"
+      >
+        <Waves className="h-12 w-12 mt-4 text-white" />
+      </PageHeader>
 
       <section className="py-16 sm:py-24">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-3xl font-headline font-bold">Get In Touch</h2>
+              <h2 className="text-3xl font-headline font-bold">Drop us a line</h2>
               <p className="mt-2 text-lg text-muted-foreground">
-                Have a project in mind? Use the form to send us a message, or contact us directly using the information below.
+                Use the form to send us a message, or contact us directly using the information below.
               </p>
               <div className="mt-8 space-y-6">
                 <div className="flex items-start gap-4">

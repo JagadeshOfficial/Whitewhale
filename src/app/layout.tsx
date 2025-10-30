@@ -30,9 +30,9 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet" />
       </head>
       <body className="font-body antialiased">
-        <div className="relative flex min-h-dvh flex-col bg-background">
+        <div className="min-h-dvh w-full bg-background">
           <Header />
-          <main className="flex-1">{children}</main>
+          <main>{children}</main>
           <Footer />
         </div>
         <Toaster />

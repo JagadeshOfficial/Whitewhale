@@ -5,6 +5,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { jobOpenings } from '@/lib/data';
 import { MapPin } from 'lucide-react';
 import { ApplyForm } from './ApplyForm';
+import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: 'Careers | WHITEWHALE SOFTWARE SOLUTIONS',
@@ -17,8 +18,38 @@ export default function CareersPage() {
       <PageHeader
         title="Join Our Team"
         description="We are always looking for talented individuals to join us. Explore our open positions and find your next opportunity."
-        videoUrl="https://videos.pexels.com/video-files/5495804/5495804-hd_1920_1080_25fps.mp4"
+        videoUrl="https://videos.pexels.com/video-files/3254013/3254013-hd_1920_1080_25fps.mp4"
       />
+
+      <section className="relative w-full h-[40vh] flex items-center justify-center">
+        <Image
+            src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2070&auto=format&fit=crop"
+            alt="Team Innovation"
+            fill
+            className="object-cover"
+        />
+        <div className="absolute inset-0 bg-black/60" />
+        <div className="relative z-10 text-center px-4 max-w-3xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-headline font-bold text-primary-foreground">
+                Join a team where innovation meets impact.
+            </h2>
+        </div>
+      </section>
+
+      <section className="relative w-full h-[40vh] flex items-center justify-center">
+        <Image
+            src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=2070&auto=format&fit=crop"
+            alt="Career Growth"
+            fill
+            className="object-cover"
+        />
+        <div className="absolute inset-0 bg-black/60" />
+        <div className="relative z-10 text-center px-4 max-w-3xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-headline font-bold text-primary-foreground">
+                Build your career while shaping the future of technology.
+            </h2>
+        </div>
+      </section>
 
       <section className="py-16 sm:py-24">
         <div className="container mx-auto px-4">
