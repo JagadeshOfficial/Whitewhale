@@ -8,6 +8,8 @@ import { services } from '@/lib/data';
 import { PageHeader } from '@/components/common/PageHeader';
 
 export default function Home() {
+  const displayServices = services.filter(s => s.id !== 'venture-capital' && s.id !== 'equity-markets' && s.id !== 'secondaries');
+
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
@@ -50,7 +52,7 @@ export default function Home() {
           </p>
         </div>
         <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {services.slice(0, 6).map((service) => (
+          {displayServices.map((service) => (
             <Card key={service.title} className="flex flex-col text-center items-center hover:shadow-lg transition-shadow duration-300">
               <CardHeader>
                 <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary text-primary-foreground mb-4">
@@ -61,13 +63,6 @@ export default function Home() {
               <CardContent className="flex-grow">
                 <p className="text-muted-foreground">{service.description}</p>
               </CardContent>
-              <CardFooter>
-                <Button asChild variant="link" className="text-primary font-bold">
-                  <Link href={`/services/${service.id}`}>
-                    Learn More <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </Button>
-              </CardFooter>
             </Card>
           ))}
         </div>

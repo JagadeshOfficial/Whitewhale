@@ -13,6 +13,8 @@ export const metadata: Metadata = {
 };
 
 export default function ServicesPage() {
+  const displayServices = services.filter(s => s.id !== 'venture-capital' && s.id !== 'equity-markets' && s.id !== 'secondaries');
+
   return (
     <div className="bg-background">
       <PageHeader
@@ -30,7 +32,7 @@ export default function ServicesPage() {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service) => (
+            {displayServices.map((service) => (
               <Card key={service.id} className="flex flex-col overflow-hidden group">
                 <CardHeader>
                   <service.icon className="h-10 w-10 text-primary mb-2" />
@@ -39,13 +41,6 @@ export default function ServicesPage() {
                 <CardContent className="flex-grow">
                   <p className="text-muted-foreground">{service.description}</p>
                 </CardContent>
-                 <CardFooter>
-                    <Button asChild variant="link" className="text-primary font-bold">
-                        <Link href={`/services/${service.id}`}>
-                            Learn More <ArrowRight className="ml-2 h-4 w-4" />
-                        </Link>
-                    </Button>
-                </CardFooter>
               </Card>
             ))}
           </div>

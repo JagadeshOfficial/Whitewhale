@@ -1,94 +1,97 @@
-import { type Metadata } from "next";
-import { PageHeader } from "@/components/common/PageHeader";
-import { services } from "@/lib/data";
-import { notFound } from "next/navigation";
-import Image from "next/image";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
 
-const serviceVideos: { [key: string]: string } = {
-  'web-development': 'https://videos.pexels.com/video-files/5740359/5740359-hd_1920_1080_30fps.mp4',
-  'mobile-app-development': 'https://videos.pexels.com/video-files/5933240/5933240-hd_1920_1080_25fps.mp4',
-  'cloud-services': 'https://videos.pexels.com/video-files/4780517/4780517-hd_1920_1080_24fps.mp4',
-  'ui-ux-design': 'https://videos.pexels.com/video-files/3209828/3209828-hd_1920_1080_25fps.mp4',
-  'artificial-intelligence-machine-learning': 'https://videos.pexels.com/video-files/853874/853874-hd_1920_1080_25fps.mp4',
-  'cybersecurity': 'https://videos.pexels.com/video-files/5361234/5361234-hd_1920_1080_25fps.mp4',
-};
+import { Metadata } from 'next';
+import { notFound } from 'next/navigation';
+import { PageHeader } from '@/components/common/PageHeader';
+import { services } from '@/lib/data';
+import { CheckCircle } from 'lucide-react';
 
+// This is the correct props type for a dynamic page.
 interface ServicePageProps {
-  params: { id: string };
-};
-
-export async function generateStaticParams() {
-  return services.map((service) => ({
-    id: service.id,
-  }));
+  params: {
+    id: string;
+  };
 }
 
 export async function generateMetadata({ params }: ServicePageProps): Promise<Metadata> {
-  const service = services.find(s => s.id === params.id);
+  const service = services.find((s) => s.id === params.id);
   if (!service) {
     return {
       title: "Service Not Found",
-      description: "The requested service could not be found.",
-    };
+    }
   }
   return {
-    title: `${service.title} | Our Services`,
-    description: service.description,
+    title: `${service.title} | WHITEWHALE SOFTWARE SOLUTIONS`,
+    description: service.longDescription,
   };
 }
 
 export default function ServicePage({ params }: ServicePageProps) {
-  const service = services.find(s => s.id === params.id);
+  const service = services.find((s) => s.id === params.id);
 
   if (!service) {
     notFound();
   }
+
+  const relatedCaseStudies = [
+    { id: 1, title: "Boosting E-commerce Sales", description: "How we helped a retail client increase their online sales by 300%." },
+    { id: 2, title: "AI-Powered Fraud Detection", description: "Developing a real-time fraud detection system for a fintech startup." },
+  ];
 
   return (
     <div className="bg-background">
       <PageHeader
         title={service.title}
         description={service.description}
-        videoUrl={serviceVideos[service.id] || 'https://videos.pexels.com/video-files/3254013/3254013-hd_1920_1080_25fps.mp4'}
       />
 
       <section className="py-16 sm:py-24">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="prose prose-lg max-w-none text-muted-foreground">
-                <div className="flex items-center gap-4 mb-6">
-                    <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary">
-                        <service.icon className="h-8 w-8" />
-                    </div>
-                    <h2 className="text-3xl font-headline text-foreground mb-0">{`Our ${service.title} Expertise`}</h2>
-                </div>
-              <p>{service.longDescription}</p>
-              <Button asChild size="lg" className="mt-4">
-                  <Link href="/contact">Get a Quote</Link>
-              </Button>
-            </div>
-            <div className="relative h-96 rounded-lg overflow-hidden shadow-lg">
-              <Image
-                src={`https://picsum.photos/seed/${service.id}-detail/800/600`}
-                alt={`${service.title} illustration`}
-                fill
-                className="object-cover"
-                data-ai-hint="abstract technology"
-              />
-            </div>
+          <div className="max-w-3xl mx-auto prose prose-lg text-muted-foreground">
+            <p>{service.longDescription}</p>
           </div>
         </div>
       </section>
 
-       <PageHeader
-        title="Ready to Start Your Project?"
-        description={`Let's discuss how our ${service.title} services can help you achieve your goals.`}
-        ctaLabel="Contact Us Today"
-        ctaLink="/contact"
-        withBackground={true}
-      />
+      <section className="bg-secondary py-16 sm:py-24">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-headline font-bold">Our Approach</h2>
+            <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
+              We combine deep industry expertise with a hands-on approach to help our companies succeed.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="flex items-start gap-4">
+              <CheckCircle className="h-6 w-6 text-primary mt-1" />
+              <div>
+                <h3 className="font-semibold text-lg">Discovery & Strategy</h3>
+                <p className="text-muted-foreground">We start by understanding your goals and challenges to define a clear roadmap.</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-4">
+              <CheckCircle className="h-6 w-6 text-primary mt-1" />
+              <div>
+                <h3 className="font-semibold text-lg">Agile Development</h3>
+                <p className="text-muted-foreground">We use an iterative process to build, test, and refine your product efficiently.</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-4">
+              <CheckCircle className="h-6 w-6 text-primary mt-1" />
+              <div>
+                <h3 className="font-semibold text-lg">Quality Assurance</h3>
+                <p className="text-muted-foreground">Rigorous testing ensures your solution is reliable, scalable, and secure.</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-4">
+              <CheckCircle className="h-6 w-6 text-primary mt-1" />
+              <div>
+                <h3 className="font-semibold text-lg">Deployment & Support</h3>
+                <p className="text-muted-foreground">We handle the launch and provide ongoing support to ensure long-term success.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

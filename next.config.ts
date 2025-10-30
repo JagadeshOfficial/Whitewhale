@@ -17,6 +17,10 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'logodix.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'picsum.photos',
+      },
     ],
   },
 };
