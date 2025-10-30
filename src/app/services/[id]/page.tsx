@@ -34,7 +34,6 @@ export function generateMetadata({ params }: Props): Metadata {
   };
 }
 
-
 export default function ServicePage({ params }: Props) {
   const service = services.find(s => s.id === params.id);
 
