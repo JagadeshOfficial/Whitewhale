@@ -15,12 +15,17 @@ const serviceVideos: { [key: string]: string } = {
   'cybersecurity': 'https://videos.pexels.com/video-files/5361234/5361234-hd_1920_1080_25fps.mp4',
 };
 
-type Props = {
+interface ServicePageProps {
   params: { id: string };
-  searchParams: { [key: string]: string | string[] | undefined };
 };
 
-export function generateMetadata({ params }: Props): Metadata {
+export async function generateStaticParams() {
+  return services.map((service) => ({
+    id: service.id,
+  }));
+}
+
+export async function generateMetadata({ params }: ServicePageProps): Promise<Metadata> {
   const service = services.find(s => s.id === params.id);
   if (!service) {
     return {
@@ -34,7 +39,7 @@ export function generateMetadata({ params }: Props): Metadata {
   };
 }
 
-export default function ServicePage({ params }: Props) {
+export default function ServicePage({ params }: ServicePageProps) {
   const service = services.find(s => s.id === params.id);
 
   if (!service) {
