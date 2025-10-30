@@ -1,49 +1,30 @@
 
 import type { Metadata } from 'next';
-import { notFound } from 'next/navigation';
-import { PageHeader } from '@/components/common/PageHeader';
-import { services } from '@/lib/data';
 import { CheckCircle } from 'lucide-react';
 
-interface Props {
-  params: { id: string };
-}
+export const metadata: Metadata = {
+  title: 'Our Approach | WHITEWHALE SOFTWARE SOLUTIONS',
+  description: 'We combine deep industry expertise with a hands-on approach to help our companies succeed.',
+};
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const service = services.find((s) => s.id === params.id);
-
-  if (!service) {
-    return {
-      title: 'Service Not Found',
-    };
-  }
-
-  return {
-    title: `${service.title} | WHITEWHALE SOFTWARE SOLUTIONS`,
-    description: service.description,
-  };
-}
-
-export default function ServicePage({ params }: Props) {
-  const service = services.find((s) => s.id === params.id);
-
-  // If the service is not found, call notFound() immediately.
-  // This is the correct way to trigger a 404 page from a server component.
-  if (!service) {
-    notFound();
-  }
-
+export default function ServicePage() {
   return (
     <div className="bg-background">
-      <PageHeader
-        title={service.title}
-        description={service.description}
-      />
+      <section className="bg-secondary py-20 text-center">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl md:text-5xl font-headline font-bold tracking-tight">
+            Our Approach
+          </h1>
+          <p className="mt-4 text-lg md:text-xl max-w-2xl mx-auto text-muted-foreground">
+            We combine deep industry expertise with a hands-on approach to help our companies succeed.
+          </p>
+        </div>
+      </section>
 
       <section className="py-16 sm:py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto prose prose-lg text-muted-foreground">
-            <p>{service.longDescription}</p>
+            <p>We believe in a collaborative process, working closely with our clients to understand their unique needs and deliver tailored solutions. Our methodology is built on a foundation of strategy, design, and technology, ensuring that every project we undertake is not only technically sound but also aligned with business goals.</p>
           </div>
         </div>
       </section>
@@ -51,9 +32,9 @@ export default function ServicePage({ params }: Props) {
       <section className="bg-secondary py-16 sm:py-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-headline font-bold">Our Approach</h2>
+            <h2 className="text-3xl md:text-4xl font-headline font-bold">Our Process</h2>
             <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-              We combine deep industry expertise with a hands-on approach to help our companies succeed.
+              A structured process to ensure quality and success.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
