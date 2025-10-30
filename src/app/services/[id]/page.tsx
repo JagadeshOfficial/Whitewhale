@@ -5,29 +5,29 @@ import { PageHeader } from '@/components/common/PageHeader';
 import { services } from '@/lib/data';
 import { CheckCircle } from 'lucide-react';
 
-// Using a static metadata object to avoid the build issue with dynamic generation in Next.js 15.
-export const metadata: Metadata = {
-  title: 'Service Details | WHITEWHALE SOFTWARE SOLUTIONS',
-  description: 'Learn more about our software development services.',
-};
+export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
+  const { id } = params;
+  const service = services.find((s) => s.id === id);
 
-interface ServicePageProps {
-  params: {
-    id: string;
+  if (!service) {
+    return {
+      title: 'Service Not Found',
+      description: 'The requested service could not be found.',
+    };
+  }
+
+  return {
+    title: `${service.title} | WHITEWHALE SOFTWARE SOLUTIONS`,
+    description: service.description,
   };
 }
 
-export default function ServicePage({ params }: ServicePageProps) {
+export default function ServicePage({ params }: { params: { id: string } }) {
   const service = services.find((s) => s.id === params.id);
 
   if (!service) {
     notFound();
   }
-
-  const relatedCaseStudies = [
-    { id: 1, title: "Boosting E-commerce Sales", description: "How we helped a retail client increase their online sales by 300%." },
-    { id: 2, title: "AI-Powered Fraud Detection", description: "Developing a real-time fraud detection system for a fintech startup." },
-  ];
 
   return (
     <div className="bg-background">
