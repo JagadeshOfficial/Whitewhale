@@ -1,4 +1,3 @@
-
 import { Metadata } from "next";
 import { PageHeader } from "@/components/common/PageHeader";
 import { services } from "@/lib/data";
@@ -16,12 +15,7 @@ const serviceVideos: { [key: string]: string } = {
   'cybersecurity': 'https://videos.pexels.com/video-files/5361234/5361234-hd_1920_1080_25fps.mp4',
 };
 
-type Props = {
-  params: { id: string };
-  searchParams: { [key: string]: string | string[] | undefined };
-};
-
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
   const service = services.find(s => s.id === params.id);
   if (!service) {
     return {
@@ -34,7 +28,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default function ServicePage({ params }: Props) {
+export default function ServicePage({ params }: { params: { id: string } }) {
   const service = services.find(s => s.id === params.id);
 
   if (!service) {
