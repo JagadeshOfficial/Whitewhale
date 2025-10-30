@@ -1,4 +1,4 @@
-import { Metadata } from "next";
+import { type Metadata } from "next";
 import { PageHeader } from "@/components/common/PageHeader";
 import { services } from "@/lib/data";
 import { notFound } from "next/navigation";
@@ -15,13 +15,27 @@ const serviceVideos: { [key: string]: string } = {
   'cybersecurity': 'https://videos.pexels.com/video-files/5361234/5361234-hd_1920_1080_25fps.mp4',
 };
 
-// Statically define metadata to avoid complex type issues causing build failures.
-export const metadata: Metadata = {
-    title: "Our Services",
-    description: "Learn more about the services we offer.",
+type Props = {
+  params: { id: string };
+  searchParams: { [key: string]: string | string[] | undefined };
 };
 
-export default function ServicePage({ params }: { params: { id: string } }) {
+export function generateMetadata({ params }: Props): Metadata {
+  const service = services.find(s => s.id === params.id);
+  if (!service) {
+    return {
+      title: "Service Not Found",
+      description: "The requested service could not be found.",
+    };
+  }
+  return {
+    title: `${service.title} | Our Services`,
+    description: service.description,
+  };
+}
+
+
+export default function ServicePage({ params }: Props) {
   const service = services.find(s => s.id === params.id);
 
   if (!service) {
