@@ -14,9 +14,9 @@ export default function ContactPage() {
     <div>
       <PageHeader
         title="Contact Us"
-        imageUrl="https://images.unsplash.com/photo-1574285013029-29296a718302?q=80&w=2070&auto=format&fit=crop"
+        videoUrl="https://videos.pexels.com/video-files/3254013/3254013-hd_1920_1080_25fps.mp4"
       >
-        <Waves className="h-12 w-12 mt-4 text-white" />
+       
       </PageHeader>
 
       <section className="py-16 sm:py-24">

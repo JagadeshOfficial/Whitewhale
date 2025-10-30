@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -44,7 +45,7 @@ export function PageHeader({
 
   if (videoUrl) {
     return (
-      <section className="relative w-full h-screen flex items-center justify-center overflow-hidden -mt-16">
+      <section className="relative w-full h-screen flex items-center justify-center overflow-hidden">
         <video
           autoPlay
           loop
@@ -64,7 +65,7 @@ export function PageHeader({
 
   if (imageUrl) {
     return (
-      <section className="relative w-full h-[50vh] flex items-center justify-center -mt-16">
+      <section className="relative w-full h-[50vh] flex items-center justify-center">
         <Image src={imageUrl} alt={title} fill className="object-cover" />
         <div className="absolute inset-0 bg-black/50" />
         <div className="text-primary-foreground">{content}</div>

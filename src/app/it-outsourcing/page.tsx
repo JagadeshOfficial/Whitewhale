@@ -14,8 +14,8 @@ export default function ITOutsourcingPage() {
     <div>
       <PageHeader 
         title="IT Outsourcing"
-        description="Focus on your core business while we handle your technology needs."
-        imageUrl="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop"
+        description="Your vision, our expertise — together we create digital excellence."
+        videoUrl="https://videos.pexels.com/video-files/3254013/3254013-hd_1920_1080_25fps.mp4"
       />
 
       <div className="py-16 sm:py-24">
@@ -52,7 +52,7 @@ export default function ITOutsourcingPage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-headline font-bold">Our Comprehensive IT Outsourcing Services</h2>
             <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-              We offer a wide range of IT outsourcing services to meet your specific business needs.
+              Turning technology challenges into opportunities for growth.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
