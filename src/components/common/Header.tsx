@@ -13,11 +13,12 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetDescription, SheetTrigger } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
 import { NAV_LINKS } from "@/lib/constants";
 import { Logo } from "./Logo";
 import type { NavLink } from "@/lib/types";
+import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 
 export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -145,16 +146,22 @@ export function Header() {
                   </Button>
                 </SheetTrigger>
                 <SheetContent side="right" className="w-full sm:w-[320px] p-0 bg-background">
+                  <SheetHeader className="flex flex-row items-center justify-between p-4 border-b">
+                     <Link href="/" onClick={() => setIsMobileMenuOpen(false)}>
+                        <Logo />
+                      </Link>
+                    <SheetTitle>
+                        <VisuallyHidden>Navigation Menu</VisuallyHidden>
+                    </SheetTitle>
+                    <SheetDescription>
+                        <VisuallyHidden>Main navigation links for the site.</VisuallyHidden>
+                    </SheetDescription>
+                    <Button variant="ghost" size="icon" onClick={() => setIsMobileMenuOpen(false)}>
+                      <X className="h-6 w-6" />
+                      <span className="sr-only">Close menu</span>
+                    </Button>
+                  </SheetHeader>
                   <div className="flex flex-col h-full text-foreground">
-                    <div className="flex items-center justify-between p-4 border-b">
-                      <Link href="/" onClick={() => setIsMobileMenuOpen(false)}>
-                          <Logo />
-                        </Link>
-                      <Button variant="ghost" size="icon" onClick={() => setIsMobileMenuOpen(false)}>
-                        <X className="h-6 w-6" />
-                        <span className="sr-only">Close menu</span>
-                      </Button>
-                    </div>
                     <nav className="flex flex-col gap-4 p-4">
                       {NAV_LINKS.map((link) => renderNavLink(link, true))}
                     </nav>
