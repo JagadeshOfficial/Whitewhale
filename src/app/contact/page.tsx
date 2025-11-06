@@ -15,6 +15,7 @@ export default function ContactPage() {
       <PageHeader
         title="Contact Us"
         videoUrl="https://videos.pexels.com/video-files/3254013/3254013-hd_1920_1080_25fps.mp4"
+        description="Got a challenge or a vision? Our experts are just a message away to help turn your ideas into digital success."
       >
        
       </PageHeader>

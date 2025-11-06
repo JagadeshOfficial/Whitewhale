@@ -1,0 +1,53 @@
+[
+  {
+    "id": "frontend-engineer",
+    "title": "Senior Frontend Engineer",
+    "location": "Remote",
+    "department": "Engineering",
+    "description": "We are looking for an experienced Frontend Engineer to join our team. You will be responsible for building and maintaining our web applications, and working with the latest technologies.",
+    "responsibilities": [
+      "Develop new user-facing features",
+      "Build reusable code and libraries for future use",
+      "Ensure the technical feasibility of UI/UX designs",
+      "Optimize application for maximum speed and scalability"
+    ],
+    "qualifications": [
+      "5+ years of experience in frontend development",
+      "Proficient in React, Next.js, and TypeScript",
+      "Experience with Tailwind CSS",
+      "Strong understanding of web performance"
+    ]
+  },
+  {
+    "id": "backend-engineer",
+    "title": "Senior Backend Engineer",
+    "location": "Hyderabad, India",
+    "department": "Engineering",
+    "description": "We are seeking a Senior Backend Engineer to design, build, and maintain the server-side of our web applications. You will work with a team of talented engineers to deliver high-quality software.",
+    "responsibilities": [
+      "Design and implement scalable and reliable backend services",
+      "Work with databases, APIs, and other backend technologies",
+      "Collaborate with front-end developers and other team members",
+      "Write clean, maintainable, and testable code"
+    ],
+    "qualifications": [
+      "5+ years of experience in backend development",
+      "Proficient in Node.js, Python, or Go",
+      "Experience with SQL and NoSQL databases",
+      "Knowledge of cloud platforms like AWS or Google Cloud"
+    ]
+  },
+  {
+    "id": "job-1232",
+    "title": "Java Developer",
+    "location": "KPHB",
+    "department": "Computer sicent",
+    "description": "kjsdjfb\\fhvbsjhbvfhsfsbfvhksbsvifafiaf",
+    "responsibilities": [
+      "dvjvbhjdbhvkdsvkvhskvhdbvsvsv"
+    ],
+    "qualifications": [
+      "fjshbdsjvsbhjdhjd"
+    ]
+  }
+]

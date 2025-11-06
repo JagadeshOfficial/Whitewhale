@@ -1,54 +1,49 @@
 
 import { Metadata } from 'next';
 import { PageHeader } from '@/components/common/PageHeader';
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { services } from '@/lib/data';
+import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 export const metadata: Metadata = {
   title: 'Our Services | WHITEWHALE SOFTWARE SOLUTIONS',
-  description: 'Explore the wide range of software development services we offer to help your business grow.',
+  description: 'Explore the wide range of services we offer to help your business grow and succeed.',
 };
 
 export default function ServicesPage() {
-  const displayServices = services.filter(s => s.id !== 'venture-capital' && s.id !== 'equity-markets' && s.id !== 'secondaries');
-
   return (
     <div className="bg-background">
       <PageHeader
         title="Our Services"
-        description="From custom software to mobile apps, we have the expertise to bring your vision to life."
-        videoUrl="https://videos.pexels.com/video-files/3254013/3254013-hd_1920_1080_25fps.mp4"
+        description="We offer a wide range of services to help your business grow and succeed. Explore our offerings below."
+        videoUrl="/videos/contact-background.mp4"
       />
 
       <section className="py-16 sm:py-24">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-headline font-bold">What We Do</h2>
-            <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
-              We offer a comprehensive suite of software development services, tailored to meet the unique needs of your business. Whether you're a startup or an enterprise, we have the skills and experience to help you succeed.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {displayServices.map((service) => (
-              <Link href={`/services/${service.id}`} key={service.id} className="flex">
-                <Card className="flex flex-col overflow-hidden group w-full">
-                  <CardHeader>
-                    <service.icon className="h-10 w-10 text-primary mb-2" />
-                    <CardTitle className="font-headline text-2xl">{service.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent className="flex-grow">
-                    <p className="text-muted-foreground">{service.description}</p>
-                  </CardContent>
-                  <CardFooter>
-                    <Button variant="link" className="p-0 text-primary group-hover:underline">
-                      Learn More <ArrowRight className="ml-2 h-4 w-4" />
+          <div className="grid gap-12">
+            {services.map((service, index) => (
+              <div key={service.id} className={`grid md:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'md:grid-flow-col-dense' : ''}`}>
+                <div className={`relative w-full h-80 rounded-lg overflow-hidden ${index % 2 === 1 ? 'md:col-start-2' : ''}`}>
+                  <Image
+                    src={service.imageUrl || 'https://picsum.photos/seed/' + service.id + '/800/600'}
+                    alt={service.title}
+                    layout="fill"
+                    objectFit="cover"
+                    className="shadow-lg"
+                  />
+                </div>
+                <div className={`${index % 2 === 1 ? 'md:col-start-1' : ''}`}>
+                  <h3 className="text-3xl font-headline font-bold">{service.title}</h3>
+                  <p className="mt-4 text-lg text-muted-foreground">{service.longDescription}</p>
+                  <div className="mt-6">
+                    <Button asChild>
+                      <Link href={`/services/${service.id}`}>Learn More</Link>
                     </Button>
-                  </CardFooter>
-                </Card>
-              </Link>
+                  </div>
+                </div>
+              </div>
             ))}
           </div>
         </div>

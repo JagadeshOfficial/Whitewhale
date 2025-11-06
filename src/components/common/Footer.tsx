@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin } from 'lucide-react';
+import { Mail, Phone, MapPin, Twitter, Linkedin } from 'lucide-react';
 import { NAV_LINKS } from '@/lib/constants';
 import { Logo } from '@/components/common/Logo';
 
@@ -19,9 +19,8 @@ export function Footer() {
               Engineering Digital Excellence.
             </p>
             <div className="flex space-x-4 mt-4">
-              <Link href="#" aria-label="Facebook" className="text-muted-foreground hover:text-foreground"><Facebook size={20} /></Link>
-              <Link href="#" aria-label="Twitter" className="text-muted-foreground hover:text-foreground"><Twitter size={20} /></Link>
-              <Link href="#" aria-label="LinkedIn" className="text-muted-foreground hover:text-foreground"><Linkedin size={20} /></Link>
+              <Link href="https://twitter.com/whiwtewhale2023" aria-label="Twitter" className="text-muted-foreground hover:text-foreground"><Twitter size={20} /></Link>
+              <Link href="https://www.linkedin.com/in/white-w-705173285/" aria-label="LinkedIn" className="text-muted-foreground hover:text-foreground"><Linkedin size={20} /></Link>
             </div>
           </div>
           

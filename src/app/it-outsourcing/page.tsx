@@ -1,104 +1,150 @@
 
 import { Metadata } from "next";
+import Image from "next/image";
 import { PageHeader } from "@/components/common/PageHeader";
-import { SideBySide } from "@/components/common/SideBySide";
-import { CheckCircle, Users, Briefcase, Globe } from "lucide-react";
+import { CheckCircle, Code, Cloud, ClipboardCheck, Users, Wrench, Globe, ShieldCheck, Zap, BarChart2 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "IT Outsourcing",
-  description: "Leverage our expert IT outsourcing services to reduce costs, improve efficiency, and access specialized talent. Focus on your core business while we handle your technology needs.",
+  title: "IT Outsourcing Services",
+  description: "Empowering businesses through smart IT partnerships. We deliver scalable, secure, and cost-efficient IT solutions tailored to your goals.",
 };
 
 export default function ITOutsourcingPage() {
   return (
     <div>
       <PageHeader 
-        title="IT Outsourcing"
-        description="Your vision, our expertise — together we create digital excellence."
-        videoUrl="https://videos.pexels.com/video-files/3254013/3254013-hd_1920_1080_25fps.mp4"
+        title="IT Outsourcing Services"
+        description="Empowering Businesses Through Smart IT Partnerships"
+        videoUrl="/videos/contact-background.mp4"
       />
 
-      <div className="py-16 sm:py-24">
+      <section className="py-16 sm:py-24">
         <div className="container mx-auto px-4">
-          <SideBySide
-            imageSrc="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=2070&auto=format&fit=crop"
-            imageAlt="IT Outsourcing Team"
-            imagePosition="left"
-            title="Unlock Your Business Potential with Expert IT Outsourcing"
-            text="In today's fast-paced digital landscape, maintaining a competitive edge requires a strategic approach to technology. Our IT outsourcing services provide a cost-effective solution to access specialized expertise, streamline operations, and drive innovation without the overhead of an in-house team."
-          >
-            <li className="flex items-start">
-              <CheckCircle className="h-6 w-6 text-primary mt-1 mr-3 flex-shrink-0" />
-              <span><strong className="text-foreground">Cost Savings:</strong> Reduce operational costs by eliminating the need for recruitment, training, and infrastructure management.</span>
-            </li>
-            <li className="flex items-start">
-              <CheckCircle className="h-6 w-6 text-primary mt-1 mr-3 flex-shrink-0" />
-              <span><strong className="text-foreground">Access to Expertise:</strong> Instantly tap into a pool of certified IT professionals with extensive industry experience.</span>
-            </li>
-            <li className="flex items-start">
-              <CheckCircle className="h-6 w-6 text-primary mt-1 mr-3 flex-shrink-0" />
-              <span><strong className="text-foreground">Focus on Core Business:</strong> Free up your internal resources to concentrate on strategic initiatives and core business functions.</span>
-            </li>
-            <li className="flex items-start">
-              <CheckCircle className="h-6 w-6 text-primary mt-1 mr-3 flex-shrink-0" />
-              <span><strong className="text-foreground">Scalability & Flexibility:</strong> Scale your IT resources up or down based on your business needs, ensuring you always have the right level of support.</span>
-            </li>
-          </SideBySide>
-        </div>
-      </div>
-
-      <section className="bg-secondary py-16 sm:py-24">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-headline font-bold">Our Comprehensive IT Outsourcing Services</h2>
-            <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-              Turning technology challenges into opportunities for growth.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-background p-8 rounded-lg text-center shadow-lg">
-              <Users className="h-12 w-12 text-primary mx-auto mb-4" />
-              <h3 className="font-semibold text-xl mb-2">IT Staff Augmentation</h3>
-              <p className="text-muted-foreground">Supplement your existing team with our skilled IT professionals to fill skill gaps and meet project demands.</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <div>
+                <Image 
+                    src="https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=2070&auto=format&fit=crop" 
+                    alt="Expert IT Outsourcing Team" 
+                    width={600}
+                    height={400}
+                    className="w-full h-auto rounded-lg shadow-lg"
+                />
             </div>
-            <div className="bg-background p-8 rounded-lg text-center shadow-lg">
-              <Briefcase className="h-12 w-12 text-primary mx-auto mb-4" />
-              <h3 className="font-semibold text-xl mb-2">Managed Teams</h3>
-              <p className="text-muted-foreground">Get a dedicated, fully-managed team of experts to handle your IT projects from start to finish.</p>
-            </div>
-            <div className="bg-background p-8 rounded-lg text-center shadow-lg">
-              <Globe className="h-12 w-12 text-primary mx-auto mb-4" />
-              <h3 className="font-semibold text-xl mb-2">Offshore Development Center</h3>
-              <p className="text-muted-foreground">Establish a dedicated offshore development center with our help to reduce costs and accelerate growth.</p>
+            <div>
+              <h2 className="text-3xl md:text-4xl font-headline font-bold">Redefining IT Outsourcing</h2>
+              <p className="mt-4 text-lg text-muted-foreground">
+                At WHITEWHALE SOFTWARE SOLUTIONS, we redefine IT outsourcing by combining deep technical expertise with business intelligence. Our goal is simple — to help enterprises focus on growth while we manage their technology backbone. From application development to cloud infrastructure, we deliver scalable, secure, and cost-efficient IT solutions tailored to your goals.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      <div className="py-16 sm:py-24">
+      <section className="bg-secondary py-16 sm:py-24">
         <div className="container mx-auto px-4">
-          <SideBySide
-            imageSrc="https://images.unsplash.com/photo-1542744095-291d1f67b221?q=80&w=2070&auto=format&fit=crop"
-            imageAlt="Strategic IT Partnership"
-            imagePosition="right"
-            title="Your Strategic Partner in Growth"
-            text="We do more than just manage your IT. We align our services with your business goals, acting as a strategic partner to help you navigate the complexities of technology and drive sustainable growth. Our proactive approach ensures that your IT infrastructure is not just stable and reliable, but also a catalyst for innovation."
-          >
-            <li className="flex items-start">
-              <CheckCircle className="h-6 w-6 text-primary mt-1 mr-3 flex-shrink-0" />
-              <span><strong className="text-foreground">Proactive Support:</strong> We anticipate and resolve issues before they impact your business, ensuring maximum uptime.</span>
-            </li>
-            <li className="flex items-start">
-              <CheckCircle className="h-6 w-6 text-primary mt-1 mr-3 flex-shrink-0" />
-              <span><strong className="text-foreground">Strategic Guidance:</strong> We provide expert advice to help you make informed technology decisions that support your long-term goals.</span>
-            </li>
-            <li className="flex items-start">
-              <CheckCircle className="h-6 w-6 text-primary mt-1 mr-3 flex-shrink-0" />
-              <span><strong className="text-foreground">Enhanced Security:</strong> Protect your business with our robust security measures and proactive threat monitoring.</span>
-            </li>
-          </SideBySide>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-headline font-bold">Why Choose Us</h2>
+            <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
+              Your trusted partner for quality, security, and cost-efficiency.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center p-6 bg-background rounded-lg shadow-md">
+              <div className="flex items-center justify-center h-16 w-16 rounded-full bg-primary/10 text-primary mx-auto mb-4">
+                <Users className="h-8 w-8" />
+              </div>
+              <h3 className="font-semibold text-xl mb-2">Expert Talent Pool</h3>
+              <p className="text-muted-foreground">Certified professionals across technologies like Java, Python, .NET, Cloud, and AI.</p>
+            </div>
+            <div className="text-center p-6 bg-background rounded-lg shadow-md">
+              <div className="flex items-center justify-center h-16 w-16 rounded-full bg-primary/10 text-primary mx-auto mb-4">
+                <Globe className="h-8 w-8" />
+              </div>
+              <h3 className="font-semibold text-xl mb-2">Global Delivery Model</h3>
+              <p className="text-muted-foreground">Agile teams distributed across time zones for faster turnaround.</p>
+            </div>
+            <div className="text-center p-6 bg-background rounded-lg shadow-md">
+              <div className="flex items-center justify-center h-16 w-16 rounded-full bg-primary/10 text-primary mx-auto mb-4">
+                <ShieldCheck className="h-8 w-8" />
+              </div>
+              <h3 className="font-semibold text-xl mb-2">Quality & Security</h3>
+              <p className="text-muted-foreground">ISO-compliant processes ensuring confidentiality and data protection.</p>
+            </div>
+            <div className="text-center p-6 bg-background rounded-lg shadow-md">
+              <div className="flex items-center justify-center h-16 w-16 rounded-full bg-primary/10 text-primary mx-auto mb-4">
+                <Zap className="h-8 w-8" />
+              </div>
+              <h3 className="font-semibold text-xl mb-2">Cost Optimization</h3>
+              <p className="text-muted-foreground">Flexible engagement models that reduce operational expenses without compromising quality.</p>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
+
+      <section className="bg-background py-16 sm:py-24">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-headline font-bold">What We Offer</h2>
+            <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
+              Comprehensive solutions to cover all your technology needs.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="bg-secondary p-8 rounded-lg text-center shadow-lg">
+              <Code className="h-12 w-12 text-primary mx-auto mb-4" />
+              <h3 className="font-semibold text-xl mb-2">Software Development Outsourcing</h3>
+              <p className="text-muted-foreground">End-to-end custom web and mobile application development.</p>
+            </div>
+            <div className="bg-secondary p-8 rounded-lg text-center shadow-lg">
+              <Cloud className="h-12 w-12 text-primary mx-auto mb-4" />
+              <h3 className="font-semibold text-xl mb-2">Infrastructure & Cloud Management</h3>
+              <p className="text-muted-foreground">Optimize operations with 24/7 monitoring, cloud migration, and DevOps automation.</p>
+            </div>
+            <div className="bg-secondary p-8 rounded-lg text-center shadow-lg">
+              <ClipboardCheck className="h-12 w-12 text-primary mx-auto mb-4" />
+              <h3 className="font-semibold text-xl mb-2">QA & Testing Services</h3>
+              <p className="text-muted-foreground">Ensure performance, reliability, and scalability with our specialized testing teams.</p>
+            </div>
+            <div className="bg-secondary p-8 rounded-lg text-center shadow-lg">
+              <Users className="h-12 w-12 text-primary mx-auto mb-4" />
+              <h3 className="font-semibold text-xl mb-2">IT Staff Augmentation</h3>
+              <p className="text-muted-foreground">Get access to experienced developers, analysts, and architects — when and where you need them.</p>
+            </div>
+            <div className="bg-secondary p-8 rounded-lg text-center shadow-lg">
+              <Wrench className="h-12 w-12 text-primary mx-auto mb-4" />
+              <h3 className="font-semibold text-xl mb-2">Maintenance & Support</h3>
+              <p className="text-muted-foreground">Continuous improvement and support to keep your systems running at peak efficiency.</p>
+            </div>
+            <div className="bg-secondary p-8 rounded-lg text-center shadow-lg">
+              <BarChart2 className="h-12 w-12 text-primary mx-auto mb-4" />
+              <h3 className="font-semibold text-xl mb-2">Data Analytics & BI</h3>
+              <p className="text-muted-foreground">Unlock insights from your data with our business intelligence and analytics solutions.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 sm:py-24">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <div className="md:order-2">
+                <Image 
+                    src="https://images.pexels.com/photos/5833267/pexels-photo-5833267.jpeg" 
+                    alt="Business growth chart" 
+                    width={600}
+                    height={400}
+                    className="w-full h-auto rounded-lg shadow-lg"
+                />
+            </div>
+            <div className="md:order-1">
+              <h2 className="text-3xl md:text-4xl font-headline font-bold">Your Technology Partner for Growth</h2>
+              <p className="mt-4 text-lg text-muted-foreground">
+                With our IT outsourcing services, you gain more than technical support — you gain a strategic partner who understands your business vision. Let us handle the complexity of technology so you can focus on innovation, customers, and competitive advantage.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
     </div>
   );

@@ -1,23 +1,24 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 210 20% 98%; /* Almost white */
-    --foreground: 220 15% 20%; /* Dark Slate Gray */
-    --header-foreground: 210 40% 98%; /* Light color for over video */
+    --background: 210 20% 98%;
+    --foreground: 220 15% 20%;
+    --header-foreground: 210 40% 98%;
     --card: 0 0% 100%;
     --card-foreground: 220 15% 20%;
     --popover: 0 0% 100%;
     --popover-foreground: 220 15% 20%;
-    --primary: 217 60% 30%; /* Deep Navy Blue */
+    --primary: 217 60% 30%;
     --primary-foreground: 210 40% 98%;
-    --secondary: 210 30% 94%; /* Light Gray */
+    --secondary: 210 30% 94%;
     --secondary-foreground: 220 15% 20%;
     --muted: 210 30% 94%;
     --muted-foreground: 220 10% 45%;
-    --accent: 35 80% 55%; /* Rich Gold */
+    --accent: 35 80% 55%;
     --accent-foreground: 220 15% 20%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
@@ -66,14 +67,29 @@
     @apply border-border;
   }
   html,
-body {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  overflow-x: clip; /* Recommended for preventing horizontal scroll */
-}
+  body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: clip;
+  }
   section {
     @apply w-full py-12 md:py-24 lg:py-32;
+  }
+}
+
+@layer utilities {
+  @keyframes scroll-left {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-scroll-left {
+    animation: scroll-left 40s linear infinite;
   }
 }

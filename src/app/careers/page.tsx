@@ -2,61 +2,36 @@
 import { Metadata } from 'next';
 import { PageHeader } from '@/components/common/PageHeader';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { jobOpenings } from '@/lib/data';
+import { JobOpening } from '@/lib/types';
 import { MapPin } from 'lucide-react';
 import { ApplyForm } from './ApplyForm';
-import Image from 'next/image';
+import { getJobs } from '@/lib/jobs';
 
 export const metadata: Metadata = {
   title: 'Careers | WHITEWHALE SOFTWARE SOLUTIONS',
   description: 'Join our team of innovators and help us build the future of software.',
 };
 
-export default function CareersPage() {
+export default async function CareersPage() {
+  const jobOpenings: JobOpening[] = await getJobs();
+
   return (
     <div className="bg-background">
       <PageHeader
-        title="Join Our Team"
-        description="We are always looking for talented individuals to join us. Explore our open positions and find your next opportunity."
-        videoUrl="https://videos.pexels.com/video-files/3254013/3254013-hd_1920_1080_25fps.mp4"
+        title="Join Our Team. Build the Future."
+        description="At WhiteWhale Software Solutions, we’re not just building software — we’re shaping the digital future."
+        videoUrl="/videos/contact-background.mp4"
       />
-
-      <section className="relative w-full h-[40vh] flex items-center justify-center">
-        <Image
-            src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2070&auto=format&fit=crop"
-            alt="Team Innovation"
-            fill
-            className="object-cover"
-        />
-        <div className="absolute inset-0 bg-black/60" />
-        <div className="relative z-10 text-center px-4 max-w-3xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-headline font-bold text-primary-foreground">
-                Join a team where innovation meets impact.
-            </h2>
-        </div>
-      </section>
-
-      <section className="relative w-full h-[40vh] flex items-center justify-center">
-        <Image
-            src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=2070&auto=format&fit=crop"
-            alt="Career Growth"
-            fill
-            className="object-cover"
-        />
-        <div className="absolute inset-0 bg-black/60" />
-        <div className="relative z-10 text-center px-4 max-w-3xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-headline font-bold text-primary-foreground">
-                Build your career while shaping the future of technology.
-            </h2>
-        </div>
-      </section>
 
       <section className="py-16 sm:py-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-headline font-bold">Current Openings</h2>
-            <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-              Find where you fit in. We're a growing team with a passion for innovation and excellence.
+            <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
+              We’re always on the lookout for passionate innovators, problem solvers, and tech enthusiasts who are ready to make an impact.
+            </p>
+            <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
+              Whether you’re a fresher eager to learn or a professional ready to take your career to the next level, we offer opportunities that challenge, inspire, and reward.
             </p>
           </div>
           <div className="max-w-4xl mx-auto space-y-6">

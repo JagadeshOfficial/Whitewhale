@@ -1,86 +1,87 @@
 
-import { Code, Smartphone, BrainCircuit, Target, Users, BarChart2, Globe, Cloud, PenTool, Cpu, Shield } from 'lucide-react';
+import { Code, Smartphone, BrainCircuit, Target, Users, BarChart2, Globe, Cloud, PenTool, Cpu, Shield, DollarSign, Handshake, Lightbulb, TrendingUp, Bug, Database, Eye, Lock, Palette, Search, Server } from 'lucide-react';
 import type { Service, TeamMember, Client, JobOpening, CaseStudy } from './types';
 
 export const services: Service[] = [
   {
     id: 'web-development',
     title: 'Web Development',
-    description: 'Custom websites, e-commerce, CMS platforms.',
-    longDescription: 'We build beautiful and intuitive web and mobile applications that captivate users and deliver exceptional experiences. Our team leverages the latest technologies to create cross-platform apps that are fast, reliable, and easy to use. Whether it\'s a consumer-facing app or an internal business tool, we have you covered.',
+    description: 'Custom websites, e-commerce stores, and content management systems.',
+    longDescription: 'We build beautiful, high-performance websites and web applications that are tailored to your specific business needs. Our team of expert developers uses the latest technologies to create solutions that are scalable, secure, and optimized for performance.',
     icon: Globe,
-    imageUrl: 'https://images.unsplash.com/photo-1556740738-b6a63e27c4df?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c29mdHdhcmUlMjBkZXZlbG9wbWVudHxlbnwwfHwwfHx8MA%3D%3D'
+    imageUrl: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop'
   },
   {
     id: 'mobile-app-development',
     title: 'Mobile App Development',
-    description: 'Android, iOS, and cross-platform mobile applications.',
-    longDescription: 'We build beautiful and intuitive web and mobile applications that captivate users and deliver exceptional experiences. Our team leverages the latest technologies to create cross-platform apps that are fast, reliable, and easy to use. Whether it\'s a consumer-facing app or an internal business tool, we have you covered.',
+    description: 'Native and cross-platform mobile apps for iOS and Android.',
+    longDescription: 'We design and develop mobile apps that offer a rich user experience and drive engagement. From concept to launch, we are your trusted partner in creating intuitive and high-performance mobile applications for all platforms.',
     icon: Smartphone,
-    imageUrl: 'https://images.unsplash.com/photo-1607252650355-f7fd0460ccdb?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bW9iaWxlJTIwYXBwJTIwZGV2ZWxvcG1lbnR8ZW58MHx8MHx8fDA%3D'
-  },
-  {
-    id: 'cloud-services',
-    title: 'Cloud Services',
-    description: 'Cloud computing, storage, and migration solutions.',
-    longDescription: 'Harness the power of the cloud with our comprehensive cloud services. We offer cloud strategy, migration, and management services to help you build a scalable and resilient infrastructure. Our expertise spans across major cloud platforms, including AWS, Azure, and Google Cloud.',
-    icon: Cloud,
-    imageUrl: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8QUklMjB0ZWNobm9sb2d5fGVufDB8fDB8fHww'
+    imageUrl: 'https://images.unsplash.com/photo-1607252650355-f7fd0460ccdb?q=80&w=2070&auto=format&fit=crop'
   },
   {
     id: 'ui-ux-design',
     title: 'UI/UX Design',
     description: 'User interface and user experience design for websites and apps.',
-    longDescription: 'Great software is more than just code; it\'s about creating a seamless and intuitive user experience. Our UI/UX design team works to understand your users and design interfaces that are not only beautiful but also easy to use and navigate.',
+    longDescription: 'We create designs that not only look good but also drive business results. Our human-centered approach ensures that your users will have a seamless and engaging experience that is intuitive and easy to use.',
     icon: PenTool,
-    imageUrl: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8QUklMjB0ZWNobm9sb2d5fGVufDB8fDB8fHww'
+    imageUrl: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop'
+  },
+  {
+    id: 'cloud-services',
+    title: 'Cloud Services',
+    description: 'Cloud computing, storage, and migration solutions.',
+    longDescription: 'We help you leverage the full potential of the cloud to drive innovation, improve agility, and accelerate business growth. Our team of certified cloud experts is here to guide you every step of the way.',
+    icon: Cloud,
+    imageUrl: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop'
   },
   {
     id: 'artificial-intelligence-machine-learning',
     title: 'Artificial Intelligence & Machine Learning',
     description: 'AI tools, chatbots, and predictive analytics.',
-    longDescription: 'Harness the power of Artificial Intelligence with our custom AI and machine learning solutions. We help businesses automate complex processes, gain valuable insights from data, and create intelligent products. From natural language processing to predictive analytics, we build AI-driven systems that deliver tangible results.',
+    longDescription: 'We help you leverage the power of AI to automate processes, gain insights from your data, and create intelligent products that drive business value. Our team of AI and machine learning experts has a proven track record of success.',
     icon: Cpu,
-    imageUrl: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8QUklMjB0ZWNobm9sb2d5fGVufDB8fDB8fHww'
+    imageUrl: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop'
   },
   {
     id: 'cybersecurity',
     title: 'Cybersecurity',
-    description: 'Data protection, security audits, and threat prevention.',
-    longDescription: 'In an increasingly digital world, security is paramount. Our cybersecurity services are designed to protect your data and infrastructure from evolving threats. We offer security audits, penetration testing, and a range of other services to help you stay ahead of the curve.',
+    description: 'Cybersecurity assessments, penetration testing, and incident response.',
+    longDescription: 'We provide comprehensive cybersecurity solutions to protect your business from modern threats. Our team of certified cybersecurity experts is here to help you stay ahead of the curve and keep your data safe.',
     icon: Shield,
-    imageUrl: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8QUklMjB0ZWNobm9sb2d5fGVufDB8fDB8fHww'
+    imageUrl: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop'
   },
   {
     id: 'venture-capital',
     title: 'Venture Capital',
-    description: "Investing in visionary founders building the future.",
-    longDescription: "We partner with early-stage, mission-driven founders who are creating the next generation of transformative companies. Our approach goes beyond capital, providing hands-on support in strategy, product, and growth.",
-    icon: BrainCircuit
+    description: "Investing in and mentoring early-stage startups.",
+    longDescription: "We are more than just investors; we are partners. We work closely with our portfolio companies to help them build successful businesses and create long-term value.",
+    icon: BrainCircuit,
+    imageUrl: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop'
   },
 ];
 
 export const investmentApproach = [
-    {
-      title: "Agile Development",
-      description: "Our iterative approach ensures we can adapt to changing requirements and deliver value quickly and efficiently.",
-      icon: Target,
-    },
-    {
-      title: "User-Centric Design",
-      description: "We place users at the center of our design process, creating intuitive and engaging experiences.",
-      icon: Users,
-    },
-    {
-      title: "Scalable Architecture",
-      description: "We build robust and scalable systems that can grow with your business and handle increasing demand.",
-      icon: BarChart2,
-    },
-    {
-      title: "Cutting-Edge Technology",
-      description: "We stay at the forefront of technology to deliver modern, high-performance solutions.",
-      icon: BrainCircuit,
-    },
+  {
+    title: "Innovative Ideas",
+    description: "We invest in disruptive ideas that have the potential to create new markets and challenge the status quo.",
+    icon: Lightbulb,
+  },
+  {
+    title: "Strong Teams",
+    description: "We back passionate and resilient founders with a proven track record of success and a clear vision for the future.",
+    icon: Handshake,
+  },
+  {
+    title: "Scalable Markets",
+    description: "We look for startups that are targeting large and growing markets with a clear path to monetization and profitability.",
+    icon: TrendingUp,
+  },
+  {
+    title: "Early-Stage Focus",
+    description: "We invest in early-stage startups, from pre-seed to Series A, and provide them with the resources they need to succeed.",
+    icon: DollarSign,
+  },
 ]
 
 export const teamMembers: TeamMember[] = [
@@ -118,66 +119,6 @@ export const clients: Client[] = [
     { id: '5', name: "NextGen Mobility", logoUrl: "https://logodix.com/logo/25619.png"},
     { id: '6', name: "DataWeave", logoUrl: "https://logodix.com/logo/28434.png"},
 ]
-
-export const jobOpenings: JobOpening[] = [
-  {
-    id: "frontend-engineer",
-    title: "Senior Frontend Engineer",
-    location: "Remote",
-    department: "Engineering",
-    description: "We are looking for an experienced Frontend Engineer to join our team. You will be responsible for building and maintaining our web applications, and working with the latest technologies.",
-    responsibilities: [
-      "Develop new user-facing features",
-      "Build reusable code and libraries for future use",
-      "Ensure the technical feasibility of UI/UX designs",
-      "Optimize application for maximum speed and scalability",
-    ],
-    qualifications: [
-      "5+ years of experience in frontend development",
-      "Proficient in React, Next.js, and TypeScript",
-      "Experience with Tailwind CSS",
-      "Strong understanding of web performance",
-    ]
-  },
-  {
-    id: "backend-engineer",
-    title: "Senior Backend Engineer",
-    location: "Hyderabad, India",
-    department: "Engineering",
-    description: "We are seeking a Senior Backend Engineer to design, build, and maintain the server-side of our web applications. You will work with a team of talented engineers to deliver high-quality software.",
-    responsibilities: [
-      "Design and implement scalable and reliable backend services",
-      "Work with databases, APIs, and other backend technologies",
-      "Collaborate with front-end developers and other team members",
-      "Write clean, maintainable, and testable code",
-    ],
-    qualifications: [
-      "5+ years of experience in backend development",
-      "Proficient in Node.js, Python, or Go",
-      "Experience with SQL and NoSQL databases",
-      "Knowledge of cloud platforms like AWS or Google Cloud",
-    ]
-  },
-    {
-    id: "product-manager",
-    title: "Product Manager",
-    location: "Springfield, USA",
-    department: "Product",
-    description: "We're looking for a Product Manager to guide the development of our products. You'll be responsible for the product planning and execution throughout the Product Lifecycle.",
-    responsibilities: [
-      "Define the product vision, roadmap, and growth opportunities",
-      "Gather and prioritize product and customer requirements",
-      "Work closely with engineering, sales, marketing, and support to ensure revenue and customer satisfaction goals are met",
-      "Act as a product evangelist to build awareness and understanding",
-    ],
-    qualifications: [
-      "3+ years of experience in product management",
-      "Experience in a software development environment",
-      "Excellent written and verbal communication skills",
-      "Proven ability to influence cross-functional teams without formal authority",
-    ]
-  }
-];
 
 export const caseStudies: CaseStudy[] = [
   {

@@ -3,20 +3,19 @@ import Image from "next/image";
 import { Metadata } from "next";
 import { PageHeader } from "@/components/common/PageHeader";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Check } from "lucide-react";
-import { teamMembers } from "@/lib/data";
+import { Award, HeartHandshake, Lightbulb, ShieldCheck, Users } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "About Us | Whitewhale Software Solutions",
-  description: "Learn about our mission, vision, and the dedicated team at Whitewhale Software Solutions.",
+  description: "Learn about our mission, vision, and the core values that drive Whitewhale Software Solutions.",
 };
 
 const coreValues = [
-    { name: "Innovation", description: "Constantly exploring emerging technologies to create forward-thinking solutions." },
-    { name: "Collaboration", description: "Teamwork, trust, and open communication drive our success." },
-    { name: "Excellence", description: "Delivering quality, precision, and performance in every project." },
-    { name: "Integrity", description: "Acting with honesty, fairness, and long-term commitment." },
-    { name: "Customer Success", description: "Measuring our growth by the value we create for our clients." },
+    { name: "Innovation", description: "Constantly exploring emerging technologies to create forward-thinking solutions.", icon: <Lightbulb className="h-8 w-8" /> },
+    { name: "Collaboration", description: "Teamwork, trust, and open communication drive our success.", icon: <Users className="h-8 w-8" /> },
+    { name: "Excellence", description: "Delivering quality, precision, and performance in every project.", icon: <Award className="h-8 w-8" /> },
+    { name: "Integrity", description: "Acting with honesty, fairness, and long-term commitment.", icon: <ShieldCheck className="h-8 w-8" /> },
+    { name: "Customer Success", description: "Measuring our growth by the value we create for our clients.", icon: <HeartHandshake className="h-8 w-8" /> },
 ]
 
 export default function AboutPage() {
@@ -25,14 +24,14 @@ export default function AboutPage() {
       <PageHeader
         title="About Whitewhale Software Solutions"
         description="Innovating the Future, One Line of Code at a Time."
-        videoUrl="https://videos.pexels.com/video-files/3254013/3254013-hd_1920_1080_25fps.mp4"
+        videoUrl="/videos/contact-background.mp4"
       />
 
       <section className="py-16 sm:py-24">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="prose prose-lg max-w-none text-muted-foreground">
-              <h2 className="text-3xl font-headline text-foreground mb-4">About Us</h2>
+              <h2 className="text-3xl font-headline text-foreground mb-4">Who We Are</h2>
               <p>
                 At Whitewhale Software Solutions, innovation drives everything we do. Founded three years ago, we’ve grown into a modern tech company specializing in Java, Python, Blockchain, Cloud Computing, and Mobile Application Development. We craft scalable, secure, and high-performance digital solutions that help startups and enterprises thrive in the digital era.
               </p>
@@ -45,11 +44,10 @@ export default function AboutPage() {
             </div>
             <div className="relative h-96 rounded-lg overflow-hidden shadow-lg">
               <Image
-                src="https://picsum.photos/seed/office-team/800/600"
-                alt="Our Team Collaborating"
+                src="https://images.pexels.com/photos/3861958/pexels-photo-3861958.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt="Modern Office Space"
                 fill
                 className="object-cover"
-                data-ai-hint="team collaboration"
               />
             </div>
           </div>
@@ -59,8 +57,16 @@ export default function AboutPage() {
       <section className="bg-secondary py-16 sm:py-24">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
+             <div className="relative h-96 rounded-lg overflow-hidden shadow-lg">
+              <Image
+                src="https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=2070&auto=format&fit=crop"
+                alt="Team discussing a project"
+                fill
+                className="object-cover"
+              />
+            </div>
             <div className="space-y-8">
-              <Card className="bg-card shadow-md">
+              <Card className="bg-card shadow-md border-none">
                 <CardHeader>
                   <CardTitle className="font-headline text-2xl">Our Mission</CardTitle>
                 </CardHeader>
@@ -68,7 +74,7 @@ export default function AboutPage() {
                   <p className="text-muted-foreground">To empower businesses with smart, scalable, and future-ready software solutions that combine creativity, technology, and innovation across multiple platforms.</p>
                 </CardContent>
               </Card>
-              <Card className="bg-card shadow-md">
+              <Card className="bg-card shadow-md border-none">
                 <CardHeader>
                   <CardTitle className="font-headline text-2xl">Our Vision</CardTitle>
                 </CardHeader>
@@ -77,43 +83,32 @@ export default function AboutPage() {
                 </CardContent>
               </Card>
             </div>
-            <div className="prose prose-lg max-w-none text-muted-foreground">
-                 <h2 className="text-3xl font-headline text-foreground mb-6">Our Core Values</h2>
-                 <p>At Whitewhale Software Solutions, our core values define who we are and how we work. We believe in Innovation, constantly exploring emerging technologies to create forward-thinking solutions. Our culture thrives on Collaboration, where teamwork, trust, and open communication drive success. We pursue Excellence in every project, delivering quality, precision, and performance. Integrity lies at the heart of our work, guiding us to act with honesty, fairness, and long-term commitment. Above all, we are dedicated to Customer Success, measuring our growth by the value we create for our clients.</p>
-            </div>
           </div>
         </div>
       </section>
 
-      <section className="py-16 sm:py-24">
+       <section className="py-16 sm:py-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-headline font-bold">Meet Our Team</h2>
+            <h2 className="text-4xl md:text-5xl font-headline font-bold">Our Core Values</h2>
             <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-              The driving force behind our success is our team of dedicated professionals.
+              The principles that guide our work and culture.
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {teamMembers.map((member) => (
-              <Card key={member.id} className="text-center border rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
-                <CardContent className="p-6">
-                  <div className="relative h-48 w-48 rounded-full mx-auto overflow-hidden mb-4">
-                    <Image
-                      src={member.imageUrl}
-                      alt={member.name}
-                      width={300}
-                      height={300}
-                      className="object-cover"
-                    />
-                  </div>
-                  <h3 className="font-headline text-xl font-bold">{member.name}</h3>
-                  <p className="text-accent-foreground">{member.role}</p>
-                </CardContent>
-              </Card>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+            {coreValues.map((value) => (
+              <div key={value.name} className="text-center p-6 bg-secondary rounded-lg shadow-md flex flex-col items-center">
+                 <div className="flex items-center justify-center h-16 w-16 rounded-full bg-primary/10 text-primary mx-auto mb-4">
+                    {value.icon}
+                </div>
+                <h3 className="font-semibold text-xl mb-2 text-foreground">{value.name}</h3>
+                <p className="text-muted-foreground text-sm">{value.description}</p>
+              </div>
             ))}
           </div>
         </div>
       </section>
+
     </div>
   );
 }
