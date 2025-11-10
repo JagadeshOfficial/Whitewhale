@@ -1,4 +1,2 @@
-
-// In production, we just want to load the flows that are actually used.
-// Add any flows that are used in production here.
-import './flows/summarize-investment-reports';
+// This file is not needed for production and can be removed.
+// Genkit flows are loaded on-demand when called from server components/actions.
