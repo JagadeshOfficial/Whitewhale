@@ -37,11 +37,7 @@ export default function ServicesPage() {
                 <div className={`${index % 2 === 1 ? 'md:col-start-1' : ''}`}>
                   <h3 className="text-3xl font-headline font-bold">{service.title}</h3>
                   <p className="mt-4 text-lg text-muted-foreground">{service.longDescription}</p>
-                  <div className="mt-6">
-                    <Button asChild>
-                      <Link href={`/services/${service.id}`}>Learn More</Link>
-                    </Button>
-                  </div>
+                  
                 </div>
               </div>
             ))}
