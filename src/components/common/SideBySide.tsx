@@ -7,7 +7,7 @@ interface SideBySideProps {
   imagePosition: 'left' | 'right';
   title: string;
   text: string;
-  children: React.ReactNode;
+  children?: React.ReactNode;
   imageHeight?: number; // New optional prop for image height
 }
 
