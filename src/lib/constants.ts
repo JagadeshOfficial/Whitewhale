@@ -7,9 +7,8 @@ export const NAV_LINKS: NavLink[] = [
   {
     href: "/services",
     label: "Services",
-    subLinks: services.filter(s => s.id !== 'venture-capital' && s.id !== 'equity-markets' && s.id !== 'secondaries').map(service => ({ href: `/services/${service.id}`, label: service.title })),
+    subLinks: services.filter(s => s.id !== 'venture-capital' && s.id !== 'equity-markets' && s.id !== 'secondaries' && s.id !== 'ats-resume-builder').map(service => ({ href: `/services/${service.id}`, label: service.title })),
   },
-  { href: "/ats-resume-builder", label: "ATS Resume" },
   { href: "/clients", label: "Clients" },
   { href: "/about", label: "About" },
   { href: "/careers", label: "Join Our Team" },
