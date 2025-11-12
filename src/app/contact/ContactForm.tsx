@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useActionState } from 'react';
+import { useEffect, useState, useTransition } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
@@ -30,14 +30,15 @@ const formSchema = z.object({
 
 type FormData = z.infer<typeof formSchema>;
 
-const initialState = {
-  message: '',
-  success: false,
+type State = {
+  message: string;
+  success: boolean;
 };
 
 export function ContactForm() {
   const { toast } = useToast();
-  const [state, formAction] = useActionState(submitContactForm, initialState);
+  const [isPending, startTransition] = useTransition();
+  const [state, setState] = useState<State>({ message: '', success: false });
 
   const form = useForm<FormData>({
     resolver: zodResolver(formSchema),
@@ -67,7 +68,18 @@ export function ContactForm() {
     }
   }, [state, toast, form]);
 
-  const { isSubmitting } = form.formState;
+  const onSubmit = (data: FormData) => {
+    startTransition(async () => {
+      const formData = new FormData();
+      Object.entries(data).forEach(([key, value]) => {
+        if (value) {
+            formData.append(key, value);
+        }
+      });
+      const result = await submitContactForm({ message: '', success: false }, formData);
+      setState(result);
+    });
+  };
 
   return (
     <Card>
@@ -76,7 +88,7 @@ export function ContactForm() {
       </CardHeader>
       <CardContent>
         <Form {...form}>
-          <form action={formAction} className='space-y-6'>
+          <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-6'>
             <FormField
               control={form.control}
               name='name'
@@ -133,8 +145,8 @@ export function ContactForm() {
                 </FormItem>
               )}
             />
-            <Button type='submit' disabled={isSubmitting} className='w-full'>
-              {isSubmitting ? (
+            <Button type='submit' disabled={isPending} className='w-full'>
+              {isPending ? (
                 <>
                   <Loader2 className='mr-2 h-4 w-4 animate-spin' />
                   Sending...

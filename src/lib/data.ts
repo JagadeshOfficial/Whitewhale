@@ -1,56 +1,88 @@
 
-import { Code, Smartphone, BrainCircuit, Target, Users, BarChart2, Globe, Cloud, PenTool, Cpu, Shield, DollarSign, Handshake, Lightbulb, TrendingUp, Bug, Database, Eye, Lock, Palette, Search, Server } from 'lucide-react';
+import { Code, Smartphone, BrainCircuit, Users, BarChart2, Globe, Cloud, PenTool, Cpu, Shield, DollarSign, Handshake, Lightbulb, TrendingUp, Bug, Database, Eye, Lock, Palette, Search, Server } from 'lucide-react';
 import type { Service, TeamMember, Client, JobOpening, CaseStudy } from './types';
 
 export const services: Service[] = [
   {
-    id: 'web-development',
-    title: 'Web Development',
-    description: 'Custom websites, e-commerce stores, and content management systems.',
-    longDescription: 'We build beautiful, high-performance websites and web applications that are tailored to your specific business needs. Our team of expert developers uses the latest technologies to create solutions that are scalable, secure, and optimized for performance.',
-    icon: Globe,
-    imageUrl: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop'
+    id: 'software-development-web-mobile',
+    title: 'Software Development & Web/Mobile Apps',
+    description: 'Transform your ideas into scalable digital solutions.',
+    longDescription: `Our Software Development Services
+
+Transform your ideas into scalable digital solutions. We build high-performance, secure, and future-ready applications tailored to your business goals.
+
+Custom Software Development
+
+End-to-end design and development of enterprise-grade software using modern frameworks like Spring Boot, .NET, and React. We deliver reliable solutions that streamline operations and boost productivity.
+
+Web Application Development
+
+From dynamic portals to full-stack platforms, our experts craft responsive, secure, and cloud-ready web applications that adapt to any device and user demand.
+
+Mobile App Development
+
+Native (Android/iOS) and cross-platform apps built for performance and user engagement. We combine sleek UI with robust backend integration.
+
+API & Microservices Development
+
+Scalable backend architectures with REST and GraphQL APIs, powered by microservices to ensure flexibility, modularity, and fast deployments.
+
+Software Maintenance & Support
+
+Continuous monitoring, updates, and enhancements to keep your applications running smoothly and securely.
+
+→ Let’s Build Your Next-Gen Application. Contact Our Experts Today.`,
+    icon: Code,
+    imageUrl: 'https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
   },
   {
-    id: 'mobile-app-development',
-    title: 'Mobile App Development',
-    description: 'Native and cross-platform mobile apps for iOS and Android.',
-    longDescription: 'We design and develop mobile apps that offer a rich user experience and drive engagement. From concept to launch, we are your trusted partner in creating intuitive and high-performance mobile applications for all platforms.',
-    icon: Smartphone,
-    imageUrl: 'https://images.unsplash.com/photo-1607252650355-f7fd0460ccdb?q=80&w=2070&auto=format&fit=crop'
+    id: 'it-outsourcing-consulting',
+    title: 'IT Outsourcing & Consulting',
+    description: 'Your Trusted Technology Partner',
+    longDescription: 'We provide skilled professionals, strategic IT guidance, and end-to-end outsourcing to help organizations scale with confidence.',
+    icon: Users,
+    imageUrl: 'https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
   },
-  {
-    id: 'ui-ux-design',
-    title: 'UI/UX Design',
-    description: 'User interface and user experience design for websites and apps.',
-    longDescription: 'We create designs that not only look good but also drive business results. Our human-centered approach ensures that your users will have a seamless and engaging experience that is intuitive and easy to use.',
+    {
+    id: 'ats-resume-builder',
+    title: 'ATS Resume Builder',
+    description: 'Create a resume that gets past the bots.',
+    longDescription: 'Our ATS Resume Builder helps you create a resume that is optimized for Applicant Tracking Systems, so you can get your foot in the door and in front of a real person.',
     icon: PenTool,
-    imageUrl: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop'
+    imageUrl: 'https://images.unsplash.com/photo-1597782248610-360a24a205a2?q=80&w=2070&auto=format&fit=crop'
   },
+  // {
+  //   id: 'ui-ux-design',
+  //   title: 'UI/UX Design',
+  //   description: 'User interface and user experience design for websites and apps.',
+  //   longDescription: 'We create designs that not only look good but also drive business results. Our human-centered approach ensures that your users will have a seamless and engaging experience that is intuitive and easy to use.',
+  //   icon: PenTool,
+  //   imageUrl: 'https://images.unsplash.com/photo-1597782248610-360a24a205a2?q=80&w=2070&auto=format&fit=crop' // Updated UI/UX image
+  // },
   {
-    id: 'cloud-services',
-    title: 'Cloud Services',
-    description: 'Cloud computing, storage, and migration solutions.',
-    longDescription: 'We help you leverage the full potential of the cloud to drive innovation, improve agility, and accelerate business growth. Our team of certified cloud experts is here to guide you every step of the way.',
+    id: 'cloud-devops-microservices',
+    title: 'Cloud, DevOps & Microservices',
+    description: 'Empowering Businesses with Cloud-Native Solutions',
+    longDescription: 'Accelerate innovation through cloud transformation, automation, and microservices architecture.',
     icon: Cloud,
     imageUrl: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop'
   },
   {
-    id: 'artificial-intelligence-machine-learning',
-    title: 'Artificial Intelligence & Machine Learning',
-    description: 'AI tools, chatbots, and predictive analytics.',
-    longDescription: 'We help you leverage the power of AI to automate processes, gain insights from your data, and create intelligent products that drive business value. Our team of AI and machine learning experts has a proven track record of success.',
+    id: 'ai-data-analytics-automation',
+    title: 'AI, Data Analytics & Automation',
+    description: 'Intelligent Technology for Smart Decisions',
+    longDescription: 'Harness the power of data and artificial intelligence to transform operations and uncover insights.',
     icon: Cpu,
     imageUrl: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop'
   },
-  {
-    id: 'cybersecurity',
-    title: 'Cybersecurity',
-    description: 'Cybersecurity assessments, penetration testing, and incident response.',
-    longDescription: 'We provide comprehensive cybersecurity solutions to protect your business from modern threats. Our team of certified cybersecurity experts is here to help you stay ahead of the curve and keep your data safe.',
-    icon: Shield,
-    imageUrl: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop'
-  },
+  // {
+  //   id: 'cybersecurity',
+  //   title: 'Cybersecurity',
+  //   description: 'Cybersecurity assessments, penetration testing, and incident response.',
+  //   longDescription: 'We provide comprehensive cybersecurity solutions to protect your business from modern threats. Our team of certified cybersecurity experts is here to help you stay ahead of the curve and keep your data safe.',
+  //   icon: Shield,
+  //   imageUrl: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop'
+  // },
   {
     id: 'venture-capital',
     title: 'Venture Capital',

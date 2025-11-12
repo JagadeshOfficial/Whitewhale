@@ -1,5 +1,6 @@
+'use client';
 
-import { Metadata } from 'next';
+import { useState, useEffect } from 'react';
 import { PageHeader } from '@/components/common/PageHeader';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { JobOpening } from '@/lib/types';
@@ -7,13 +8,16 @@ import { MapPin } from 'lucide-react';
 import { ApplyForm } from './ApplyForm';
 import { getJobs } from '@/lib/jobs';
 
-export const metadata: Metadata = {
-  title: 'Careers | WHITEWHALE SOFTWARE SOLUTIONS',
-  description: 'Join our team of innovators and help us build the future of software.',
-};
+export default function CareersPage() {
+  const [jobOpenings, setJobOpenings] = useState<JobOpening[]>([]);
 
-export default async function CareersPage() {
-  const jobOpenings: JobOpening[] = await getJobs();
+  useEffect(() => {
+    async function fetchJobs() {
+      const jobs = await getJobs();
+      setJobOpenings(jobs);
+    }
+    fetchJobs();
+  }, []);
 
   return (
     <div className="bg-background">

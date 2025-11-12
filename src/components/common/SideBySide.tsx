@@ -8,6 +8,7 @@ interface SideBySideProps {
   title: string;
   text: string;
   children: React.ReactNode;
+  imageHeight?: number; // New optional prop for image height
 }
 
 export function SideBySide({
@@ -17,6 +18,7 @@ export function SideBySide({
   title,
   text,
   children,
+  imageHeight = 400, // Default height of 400
 }: SideBySideProps) {
   return (
     <section className="py-16 sm:py-24">
@@ -32,7 +34,7 @@ export function SideBySide({
               src={imageSrc}
               alt={imageAlt}
               width={600}
-              height={400}
+              height={imageHeight} // Use the new imageHeight prop
               className="rounded-lg shadow-lg"
             />
           </div>
